@@ -1,0 +1,77 @@
+//fondo de la View Home
+ion-content.background{
+    --background: url("../../../images/backgraound-Crear-Guias.png") 0 0/100% 100% no-repeat;
+  }
+  
+  //color del boton
+  .ion-color-pink {
+    --ion-color-base: var(--ion-color-pink);
+    --ion-color-base-rgb: var(--ion-color-pink-rgb);
+    --ion-color-contrast: var(--ion-color-pink-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+    --ion-color-shade: var(--ion-color-pink-shade);
+    --ion-color-tint: var(--ion-color-pink-tint);
+  }
+//color del input1
+.ion-color-pink {
+    --ion-color-base: var(--ion-color-pink);
+    --ion-color-base-rgb: var(--ion-color-pink-rgb);
+    --ion-color-contrast: var(--ion-color-pink-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+    --ion-color-shade: var(--ion-color-pink-shade);
+    --ion-color-tint: var(--ion-color-pink-tint);
+  }
+//color del resto de inputs
+.ion-color-estilo2 {
+    --ion-color-base: var(--ion-color-estilo2);
+    --ion-color-base-rgb: var(--ion-color-estilo2-rgb);
+    --ion-color-contrast: var(--ion-color-estilo2-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-estilo2-contrast-rgb);
+    --ion-color-shade: var(--ion-color-estilo2-shade);
+    --ion-color-tint: var(--ion-color-estilo2-tint);
+  }
+
+    .ion-color-estilo4 {
+    --ion-color-base: var(--ion-color-estilo4);
+    --ion-color-base-rgb: var(--ion-color-estilo4-rgb);
+    --ion-color-contrast: var(--ion-color-estilo4-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-estilo4-contrast-rgb);
+    --ion-color-shade: var(--ion-color-estilo4-shade);
+    --ion-color-tint: var(--ion-color-estilo4-tint);
+  }
+
+
+  .container_form {
+      margin-top: 30px;
+      margin-left: 100px;
+      margin-right: 100px;
+  }
+
+  //Estilo del input del nombre de la guia
+    ion-list.input1{
+    background-color: #F18C8E;
+    border-radius: 40px;
+    }
+
+    ion-list.input2{
+    margin-top: 15px;
+    background-color:#F18C8E;
+    border-radius: 40px;
+    }
+    ion-list.input3{
+    margin-top: 80px;
+    background-color: #FFF5E5;
+    border-radius: 10px; 
+    } 
+    ion-list.input4{
+        margin-top: 20px;
+        background-color: #FFF5E5;
+        border-radius: 10px; 
+        }
+    
+    #titulo{
+        margin-top: 80px;
+        color: black;
+        font-size:20px;
+        text-align: center;
+    }
