@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="pink">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+      <ion-title>NombreGuia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list class="input1">
+    <ion-item color="estilo4">
+      <ion-label position="floating">
+        Nombre de la guia
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="nombreGuiaI">
+      </ion-input  >
+    </ion-item>
+</ion-list>
+<ion-list class="input2">
+  <ion-item color="estilo4">
+    <ion-label position="floating">
+      Cantidad de preguntas que colocaras
+    </ion-label>
+    <ion-input type="number" [(ngModel)]="cantidadPreguntasI">
+    </ion-input>
+  </ion-item>
+</ion-list>
+  <ion-button shape="round" class="btn" color="estilo2" (click)="continuarCreacion()">
+    <p class="texto_btn">
+    Continuar
+    </p>
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+</ion-button> 
+
+</ion-content>

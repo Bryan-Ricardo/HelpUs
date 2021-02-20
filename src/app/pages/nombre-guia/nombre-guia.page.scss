@@ -1,0 +1,56 @@
+//fondo de la View Home
+ion-content.background{
+    --background: url("../../../images/backgraoun_crear-guia.png") 0 0/100% 100% no-repeat;
+  }
+
+//color del appbar
+.ion-color-pink {
+    --ion-color-base: var(--ion-color-pink);
+    --ion-color-base-rgb: var(--ion-color-pink-rgb);
+    --ion-color-contrast: var(--ion-color-pink-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+    --ion-color-shade: var(--ion-color-pink-shade);
+    --ion-color-tint: var(--ion-color-pink-tint);
+  }
+
+//Color del tema del boton
+
+.ion-color-estilo2{
+  --ion-color-base: var(--ion-color-estilo2);
+  --ion-color-base-rgb: var(--ion-color-estilo2-rgb);
+  --ion-color-contrast: var(--ion-color-estilo2-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-estilo2-contrast-rgb);
+  --ion-color-shade: var(--ion-color-estilo2-shade);
+  --ion-color-tint: var(--ion-color-estilo2-tint);
+}
+
+//estilo del iput
+ion-list.input1{
+  margin-top: 15px;
+  background-color:#F18C8E;
+  border-radius: 40px;
+  margin-top: 10px;
+  }
+  ion-list.input2{
+    margin-top: 15px;
+    background-color:#F18C8E;
+    border-radius: 40px;
+    margin-top: 40px;
+}  
+
+.btn{
+  margin-top:300px;
+  margin-left: 5px;
+  width: 400px;
+  font-size: 20px;
+}
+
+
+.buttoncss {
+  color: #e74c3c ;
+  // Cualquier otro estilo que desee aplicar /
+  }
+.alertcss {
+  color: #e74c3c ;
+  // Cualquier otro estilo que desee aplicar /
+}

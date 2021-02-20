@@ -41,37 +41,30 @@ ion-content.background{
   }
 
 
+  //Toolbar
   .container_form {
-      margin-top: 30px;
+    
+      margin-top: 170px;
       margin-left: 100px;
       margin-right: 100px;
+  }
+  
+  ion-toolbar.btn_toolbar{
+    border-radius: 100px;
   }
 
   //Estilo del input del nombre de la guia
     ion-list.input1{
     background-color: #F18C8E;
     border-radius: 40px;
+    margin-bottom: 15px;
     }
-
-    ion-list.input2{
-    margin-top: 15px;
-    background-color:#F18C8E;
-    border-radius: 40px;
-    }
-    ion-list.input3{
-    margin-top: 80px;
-    background-color: #FFF5E5;
-    border-radius: 10px; 
-    } 
-    ion-list.input4{
-        margin-top: 20px;
+    ion-list.input{
+        margin-top:15px;
         background-color: #FFF5E5;
         border-radius: 10px; 
         }
-    
-    #titulo{
-        margin-top: 80px;
-        color: black;
-        font-size:20px;
-        text-align: center;
-    }
+
+.pregunta{
+  margin-top:20px;
+}
