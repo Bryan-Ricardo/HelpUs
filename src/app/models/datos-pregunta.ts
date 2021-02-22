@@ -29,6 +29,9 @@ export class DatosPregunta{
         localStorage.setItem("cantidadPreguntas:",cantidadPreguntas);
     }
     public getCantidadPreguntas(){
+        return this.cantidadPreguntas;
+    }
+    public getCantidadPreguntasLocalHost(){
         return JSON.parse(localStorage.getItem("cantidadPreguntas:"));
     }
     public setId(id : number){

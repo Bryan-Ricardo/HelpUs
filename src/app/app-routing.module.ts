@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'nombre-guia',
     loadChildren: () => import('./pages/nombre-guia/nombre-guia.module').then( m => m.NombreGuiaPageModule)
   },
+  {
+    path: 'guia-completada',
+    loadChildren: () => import('./pages/guia-completada/guia-completada.module').then( m => m.GuiaCompletadaPageModule)
+  },
 ];
 
 @NgModule({

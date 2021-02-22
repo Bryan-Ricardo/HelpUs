@@ -150,11 +150,10 @@ export class NombreGuiaPage implements OnInit {
     dataEnviar.setNombre(this.nombreGuiaI);
     dataEnviar.setCantidadPreguntas(this.cantidadPreguntasI);
     this.cantidadPreguntasI = dataEnviar.getCantidadPreguntas();
-    
+    console.log(dataEnviar.getNombre());
     //Validasion
     if (
-      dataEnviar.getNombre() === undefined &&
-      dataEnviar.getCantidadPreguntas() === undefined
+      dataEnviar.getNombre() === undefined && dataEnviar.getNombre() === undefined
     ) {
       //Alerta por haber dejado solo los dos espacios
       {
