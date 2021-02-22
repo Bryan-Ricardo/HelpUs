@@ -5,7 +5,9 @@
       <ion-back-button defaultHref="nombre-guia"> </ion-back-button>
     </ion-buttons>
 
-    <ion-title> TITULO DE LA GUIA </ion-title>
+    <ion-title> 
+      {{nombre}}
+    </ion-title>
 
     <ion-button
       color="pink"
@@ -22,7 +24,7 @@
       slot="end"
       class="btn_toolbar"
       shape="round"
-      (click)="getData()"
+      (click)="save()"
       type="button"
     >
       <ion-icon name="save-outline"> </ion-icon>
@@ -31,8 +33,8 @@
 </ion-header>
 <ion-content [fullscreen]="true"      class="background">
 
-  <div class="container_form" *ngFor="let cantidad of cantidades" >
-    <ion-list class="input1" input1="pregunta" >
+  <div class="container_form" *ngIf="cantidadPreguntasI == 1" >
+    <ion-list class="input1" input1="pregunta">
         <ion-item color="pink">
         <ion-label position="floating" > 
           Pregunta
@@ -71,5 +73,87 @@
         <ion-input type="number"> </ion-input>
       </ion-item>
     </ion-list>
+  </div>
+
+  <!--Eleccion de dos preguntas-->
+    <div class="container_form" *ngIf="cantidadPreguntasI == 2" >
+    <ion-list class="input1" input1="pregunta">
+        <ion-item color="pink">
+        <ion-label position="floating" > 
+          Pregunta1
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta1"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta1"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input id="pregunta2"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input" id="pregunta3">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input" id="pregunta4">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input" id="pregunta4">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+      <ion-label position="floating" > 
+        Pregunta 2 
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="pregunta1"> </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="input">
+    <ion-item color="estilo2">
+      <ion-label position="floating"> Respuesta 1 </ion-label>
+      <ion-input type="text" [(ngModel)]="respuesta1"> </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list class="input">
+    <ion-item color="estilo2">
+      <ion-label position="floating"> Respuesta 2 </ion-label>
+      <ion-input id="pregunta2"> </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list class="input" id="pregunta3">
+    <ion-item color="estilo2">
+      <ion-label position="floating"> Respuesta 3 </ion-label>
+      <ion-input> </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list class="input" id="pregunta4">
+    <ion-item color="estilo2">
+      <ion-label position="floating"> Respuesta 4 </ion-label>
+      <ion-input> </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list class="input" id="pregunta4">
+    <ion-item color="estilo2">
+      <ion-label position="floating"> Correcta </ion-label>
+      <ion-input type="number"> </ion-input>
+    </ion-item>
+  </ion-list>
   </div>
 </ion-content>

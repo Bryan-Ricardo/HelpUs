@@ -1,12 +1,16 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { CantidadPreguntasService } from '../../services/cantidad-preguntas.service';
 import {Router} from "@angular/router";
 import {AlertController} from "@ionic/angular";
 
-import { CantidadPreguntas } from '../../models/cantidad-preguntas';
+//Mis Modulos
+import {DatosPregunta} from '../../models/datos-pregunta'
+import {EstiloPreguntas} from '../../models/estilo-preguntas'
 
 //Mis componentes
-import {NombreGuiaPage} from "../nombre-guia/nombre-guia.page";
+import { NombreGuiaPage } from '../nombre-guia/nombre-guia.page';
+
+//Creador de JSON 
+import * as fs from '../../../../node_modules/fs-extra';
 
 @Component({
   selector: 'app-crear-guias',
@@ -18,37 +22,52 @@ import {NombreGuiaPage} from "../nombre-guia/nombre-guia.page";
 
 export class CrearGuiasPage{
 
-  
+
     pregunta1 : string;
-    cantidades : string[];
-    cantidadExtraida : number;
-    
+    preguntas : string[];
+    cantidadPreguntasI: number;
+    nombre : string;    
 
-  constructor(public cantidadPreguntasService: CantidadPreguntasService, private router: Router, private alerta: AlertController) {
+  constructor( private router: Router, private alerta: AlertController) {
 
-    /*var cantidadExtraida = */
-
-    console.log(this.cantidadExtraida);
-    this.cantidades = Array(10);
-    
-   }
-
+        /*Extrallendo los datos */
+    var data =  new DatosPregunta();
+    console.log(data.getCantidadPreguntas())
+    //Extraccion de la cantidad de preguntas
+    this.cantidadPreguntasI = data.getCantidadPreguntas();
+    console.log("Cantidad de preguntas: "+ this.cantidadPreguntasI);
+    this.preguntas = Array(this.cantidadPreguntasI);
+    //Extraccion del nombre
+    this.nombre = data.getNombreLocalHost();
+    console.log("Nombre: "+ this.nombre);
+ }
    
-   getData(cantidad){
-    console.log(this.pregunta1);
-    
+  
 
-
-    if(cantidad != null){
-      this.router.navigateByUrl("mis-guias");
-    }else if(cantidad == null){
-
-      //Crear una alerta
-      let alertaCompletado = this.alerta.create({
-        
-      });
-
+  save(){
+    /*Extrallendo los datos */
+    var data =  new DatosPregunta();
+    console.log(data.getCantidadPreguntas())
+    //Extraccion de la cantidad de preguntas
+    this.cantidadPreguntasI = data.getCantidadPreguntas();
+    console.log("Cantidad de preguntas: "+ this.cantidadPreguntasI);
+    if(this.cantidadPreguntasI == 1){
+      this.save1()
+    }else if(this.cantidadPreguntasI == 2){
+      this.save2()
     }
+  }
+
+  /*extraccionDataPreguntas(){
+    var data = new EstiloPreguntas;
+    data.setPregunta(this.pregunta1)
+  }*/
+
+  save1(){
+    console.log("Guardado 1")
+  }
+  save2(){
+    console.log("Guardado 2")
   }
 
 

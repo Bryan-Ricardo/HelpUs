@@ -13,7 +13,9 @@ import { NombreGuiaPage } from './nombre-guia.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    NombreGuiaPageRoutingModule
+    NombreGuiaPageRoutingModule,
+  ],
+  exports: [
   ],
   declarations: [NombreGuiaPage]
 })

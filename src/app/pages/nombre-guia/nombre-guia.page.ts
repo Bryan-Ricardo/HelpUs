@@ -1,4 +1,3 @@
-import { CssSelector } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 //Importaciones extras
@@ -6,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 //Importacion para crear una alerta
 import { AlertController } from '@ionic/angular';
+//Importacion de la plantilla de los datos
+import {DatosPregunta} from '../../models/datos-pregunta'
 
 @Component({
   selector: 'app-nombre-guia',
@@ -16,11 +17,17 @@ import { AlertController } from '@ionic/angular';
 
 
 export class NombreGuiaPage implements OnInit {
+  static getCantidadPreguntasI(): number {
+    throw new Error('Method not implemented.');
+  }
+  static continuarCreacionNombre(cantidades: string[]) {
+    throw new Error('Method not implemented.');
+  }
   //Extracion de los datos de los Inputs
-  nombreGuiaI: String;
+  public nombreGuiaI: String;
   cantidadPreguntasI: number;
   //Creacion de Id aleatorios
-  ID = Math.floor(Math.random() * 999999);
+  ID = Math.random() * 12;
   //variable que se llenara con los datos de otra pagina
   preguntas: String[];
 
@@ -31,11 +38,15 @@ export class NombreGuiaPage implements OnInit {
     preguntas: String[];
   };
 
-  constructor(private router: Router, public alerta: AlertController) {}
 
-  public async continuarCreacion(preguntas: String[]) {
+  constructor(private router: Router, private alerta: AlertController) {
+
+
+  }
+
+  public async continuarCreacion(preguntas: String[],) {
     this.preguntas = preguntas;
-
+    
     //llenado de los datos
     var guiaConData = (this.guiaContenedor = {
       id: this.ID,
@@ -66,7 +77,6 @@ export class NombreGuiaPage implements OnInit {
           ],
           backdropDismiss: true,
         });
-
         await alert.present();
       }
 
@@ -127,11 +137,106 @@ export class NombreGuiaPage implements OnInit {
         'Id:' + guiaConData.id + '\nNombre:' + guiaConData.Nombre + ''
       );
     }
-
-    return guiaConData.cantidadPreguntas;
-
+    
   }
+/********************************************************************** */
 
+  public async continuarCreacionNombre(preguntas: string[]) {
+    //Definiendo el constructor
+    var dataEnviar =new DatosPregunta();
 
-  ngOnInit() {}
+    //llenado de los datos
+    this.preguntas = preguntas;
+    dataEnviar.setNombre(this.nombreGuiaI);
+    dataEnviar.setCantidadPreguntas(this.cantidadPreguntasI);
+    this.cantidadPreguntasI = dataEnviar.getCantidadPreguntas();
+    
+    //Validasion
+    if (
+      dataEnviar.getNombre() === undefined &&
+      dataEnviar.getCantidadPreguntas() === undefined
+    ) {
+      //Alerta por haber dejado solo los dos espacios
+      {
+        const alert = await this.alerta.create({
+          header: 'Info',
+          message: 'Debes llenar los campos antes de seguir adelante',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+
+      console.log('Te falto llenar los campos');
+    } else if (dataEnviar.getNombre() === undefined) {
+      //Alerta por haber dejado el primer espacio sin informacion
+      {
+        const alert = await this.alerta.create({
+          header: 'Info',
+          message: 'Te falto llenar el primer campo',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+      console.log('Te falto llenar el primer campo');
+    } else if (dataEnviar.getCantidadPreguntas() === undefined) {
+      //Alerta por haber dejado el segundo espacio sin informacion
+      {
+        const alert = await this.alerta.create({
+          header: 'Info',
+          message: 'Te falto llenar segundo campo',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+
+      console.log('Te falto llenar segundo campo');
+    } else if (
+      dataEnviar.getNombre() !== undefined &&
+      dataEnviar.getCantidadPreguntas() !== undefined
+    ) {
+      //llevar a  la siguiente pagina
+      this.router.navigateByUrl('crear-guias');
+      console.log(dataEnviar);
+      console.log('COMPLETADO');
+      dataEnviar.setId(this.ID);
+    }
+  }
+  
+  ngOnInit() {
+    
+  }
 }
+
