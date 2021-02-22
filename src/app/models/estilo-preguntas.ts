@@ -375,7 +375,7 @@ export class EstiloPreguntas {
     return this.correcta4;
   }
 
-  //4
+  //5
   public setPregunta5(pregunta5: string) {
     this.pregunta5 = pregunta5;
   }
@@ -411,5 +411,157 @@ export class EstiloPreguntas {
   }
   public getCorrecta5() {
     return this.correcta5;
+  }
+
+  //6
+  public setPregunta6(pregunta6: string) {
+    this.pregunta6 = pregunta6;
+  }
+  public getPregunta6() {
+    return this.pregunta6;
+  }
+  public setRespuesta21(respuesta21: string) {
+    this.respuesta21 = respuesta21;
+  }
+  public getRespuesta21() {
+    return this.respuesta21;
+  }
+  public setRespuesta22(respuesta22: string) {
+    this.respuesta22 = respuesta22;
+  }
+  public getRespuesta22() {
+    return this.respuesta22;
+  }
+  public setRespuesta23(respuesta23: string) {
+    this.respuesta23 = respuesta23;
+  }
+  public getRespuesta23() {
+    return this.respuesta23;
+  }
+  public setRespuesta24(respuesta24: string) {
+    this.respuesta24 = respuesta24;
+  }
+  public getRespuesta24() {
+    return this.respuesta24;
+  }
+  public setCorrecta6(correcta6: string) {
+    this.correcta6 = correcta6;
+  }
+  public getCorrecta6() {
+    return this.correcta6;
+  }
+
+  //7
+  public setPregunta7(pregunta7: string) {
+    this.pregunta7 = pregunta7;
+  }
+  public getPregunta7() {
+    return this.pregunta7;
+  }
+  public setRespuesta25(respuesta25: string) {
+    this.respuesta25 = respuesta25;
+  }
+  public getRespuesta25() {
+    return this.respuesta25;
+  }
+  public setRespuesta26(respuesta26: string) {
+    this.respuesta26 = respuesta26;
+  }
+  public getRespuesta26() {
+    return this.respuesta26;
+  }
+  public setRespuesta27(respuesta27: string) {
+    this.respuesta27 = respuesta27;
+  }
+  public getRespuesta27() {
+    return this.respuesta27;
+  }
+  public setRespuesta28(respuesta28: string) {
+    this.respuesta28 = respuesta28;
+  }
+  public getRespuesta28() {
+    return this.respuesta28;
+  }
+  public setCorrecta7(correcta7: string) {
+    this.correcta7 = correcta7;
+  }
+  public getCorrecta7() {
+    return this.correcta7;
+  }
+
+  //8
+  public setPregunta8(pregunta8: string) {
+    this.pregunta8 = pregunta8;
+  }
+  public getPregunta8() {
+    return this.pregunta8;
+  }
+  public setRespuesta29(respuesta29: string) {
+    this.respuesta29 = respuesta29;
+  }
+  public getRespuesta29() {
+    return this.respuesta29;
+  }
+  public setRespuesta30(respuesta30: string) {
+    this.respuesta30 = respuesta30;
+  }
+  public getRespuesta30() {
+    return this.respuesta30;
+  }
+  public setRespuesta31(respuesta31: string) {
+    this.respuesta31 = respuesta31;
+  }
+  public getRespuesta31() {
+    return this.respuesta31;
+  }
+  public setRespuesta32(respuesta32: string) {
+    this.respuesta32 = respuesta32;
+  }
+  public getRespuesta32() {
+    return this.respuesta32;
+  }
+  public setCorrecta8(correcta8: string) {
+    this.correcta8 = correcta8;
+  }
+  public getCorrecta8() {
+    return this.correcta8;
+  }
+
+  //9
+  public setPregunta9(pregunta9: string) {
+    this.pregunta9 = pregunta9;
+  }
+  public getPregunta9() {
+    return this.pregunta9;
+  }
+  public setRespuesta33(respuesta33: string) {
+    this.respuesta33 = respuesta33;
+  }
+  public getRespuesta33() {
+    return this.respuesta33;
+  }
+  public setRespuesta34(respuesta34: string) {
+    this.respuesta34 = respuesta34;
+  }
+  public getRespuesta34() {
+    return this.respuesta34;
+  }
+  public setRespuesta35(respuesta35: string) {
+    this.respuesta35 = respuesta35;
+  }
+  public getRespuesta35() {
+    return this.respuesta35;
+  }
+  public setRespuesta36(respuesta36: string) {
+    this.respuesta36 = respuesta36;
+  }
+  public getRespuesta36() {
+    return this.respuesta36;
+  }
+  public setCorrecta9(correcta9: string) {
+    this.correcta9 = correcta9;
+  }
+  public getCorrecta9() {
+    return this.correcta9;
   }
 }
