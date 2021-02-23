@@ -1,0 +1,173 @@
+<ion-header>
+  <script src="Crear-guias.js"></script>
+  <ion-toolbar color="pink">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="nombre-guia"> </ion-back-button>
+    </ion-buttons>
+
+    <ion-title> {{nombre}} </ion-title>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      (click)="cancelar()"
+    >
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 1"
+      (click)="save1()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 2"
+      (click)="save2()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 3"
+      (click)="save3()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 4"
+      (click)="save4()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 5"
+      (click)="save5()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 6"
+      (click)="save6()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 7"
+      (click)="save7()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 8"
+      (click)="save8()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 9"
+      (click)="save9()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 10"
+      (click)="save10()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="background">
+  <!--Inicio de eleccion de una preguntas-->
+  <!--Pregunta 1-->
+  <div class="container_form" *ngIf="cantidadPreguntasI == 1">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+  </div>
+  <!--Fin de Pregunta 1-->
+  <!--Fin de eleccion de una preguntas-->
+</ion-content>

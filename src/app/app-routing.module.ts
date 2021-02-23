@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'guia-completada',
     loadChildren: () => import('./pages/guia-completada/guia-completada.module').then( m => m.GuiaCompletadaPageModule)
   },
+  {
+    path: 'simulador',
+    loadChildren: () => import('./pages/simulador/simulador.module').then( m => m.SimuladorPageModule)
+  },
 ];
 
 @NgModule({

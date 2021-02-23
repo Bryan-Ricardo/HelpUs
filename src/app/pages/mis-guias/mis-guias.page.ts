@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 //Componente de rutas
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular/providers/alert-controller';
 import { DatosPregunta } from 'src/app/models/datos-pregunta';
 
 @Component({
@@ -38,8 +37,8 @@ export class MisGuiasPage implements OnInit {
     this.router.navigateByUrl('inicio');
   }
 
-  public sinGuias(){
-
+  public simulador(){
+    this.router.navigateByUrl('simulador');
   }
 
   ngOnInit() {

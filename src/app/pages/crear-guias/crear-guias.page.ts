@@ -100,6 +100,7 @@ export class CrearGuiasPage {
   correcta39: string;
   correcta40: string;
 
+ 
   respuesta1: string;
   respuesta2: string;
   respuesta3: string;
@@ -257,64 +258,11 @@ export class CrearGuiasPage {
     this.nombre = data.getNombreLocalHost();
     console.log('Nombre: ' + this.nombre);
   }
-  /*
-  save() {
-    //Extrallendo los datos 
-    var data = new DatosPregunta();
-    console.log(data.getCantidadPreguntasLocalHost());
-    //Extraccion de la cantidad de preguntas
-    this.cantidadPreguntasI = data.getCantidadPreguntasLocalHost();
-    console.log('Cantidad de preguntas: ' + this.cantidadPreguntasI);
-    if (this.cantidadPreguntasI == 1) {
-      this.save1(); 
-    } else if (this.cantidadPreguntasI == 2) {
-      this.save2(); 
-      console.log("save2")
-    }*/
+  
+  inicio(){
+    this.router.navigateByUrl('inicio')
+  }
 
-  /*else if (this.cantidadPreguntasI == 3) {
-      this.save3(
-
-      );
-    } else if (this.cantidadPreguntasI == 4) {
-      this.save4(
-
-      );
-    } else if (this.cantidadPreguntasI == 5) {
-      this.save5(
-
-      );
-    } else if (this.cantidadPreguntasI == 2) {
-      this.save6(
- 
-      );
-    } else if (this.cantidadPreguntasI == 3) {
-      this.save7(
-
-      );
-    } else if (this.cantidadPreguntasI == 4) {
-      this.save8(
-
-      );
-    } else if (this.cantidadPreguntasI == 5) {
-      this.save9(
-
-      )
-    }else if (this.cantidadPreguntasI == 4) {
-      this.save10(
-
-      );*/
-
-  /*extraccionDataPreguntas(){
-    var data = new EstiloPreguntas;
-    data.setPregunta(this.pregunta1)
-  }*/
-
-  /*Validaciones
-   *Que no se repitan las respuestas
-   *Que no ponga como correcta un numero que no sea 1,2,3,4
-   *No mandar espacios bacios
-   */
   public async save1() {
     console.log('Guardado 1');
     /*Extrallendo los datos */

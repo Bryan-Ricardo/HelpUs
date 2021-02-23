@@ -222,44 +222,98 @@ export class EstiloPreguntas {
   respuesta139: string;
   respuesta140: string;
 
+  eleccion1: string;
+  eleccion2: string;
+  eleccion3: string;
+  eleccion4: string;
+  eleccion5: string;
+  eleccion6: string;
+  eleccion7: string;
+  eleccion8: string;
+  eleccion9: string;
+  eleccion10: string;
+  eleccion11: string;
+  eleccion12: string;
+  eleccion13: string;
+  eleccion14: string;
+  eleccion15: string;
+  eleccion16: string;
+  eleccion17: string;
+  eleccion18: string;
+  eleccion19: string;
+  eleccion20: string;
+  eleccion21: string;
+  eleccion22: string;
+  eleccion23: string;
+  eleccion24: string;
+  eleccion25: string;
+  eleccion26: string;
+  eleccion27: string;
+  eleccion28: string;
+  eleccion29: string;
+  eleccion30: string;
+  eleccion31: string;
+  eleccion32: string;
+  eleccion33: string;
+  eleccion34: string;
+  eleccion35: string;
+  eleccion36: string;
+  eleccion37: string;
+  eleccion38: string;
+  eleccion39: string;
+  eleccion40: string;
+
   constructor() {}
 
   //1
-  public setPregunta1(pregunta: string) {
-    this.pregunta1 = pregunta;
+  public setPregunta1(pregunta1: string) {
+    this.pregunta1 = pregunta1;
+    localStorage.setItem("pregunta1",pregunta1);
   }
   public getPregunta1() {
-    return this.pregunta1;
+    return localStorage.getItem("pregunta1");
   }
   public setRespuesta1(respuesta1: string) {
     this.respuesta1 = respuesta1;
+    localStorage.setItem("respuesta1",respuesta1)
   }
   public getRespuesta1() {
-    return this.respuesta1;
+    return localStorage.getItem("respuesta1");
   }
   public setRespuesta2(respuesta2: string) {
     this.respuesta2 = respuesta2;
+    localStorage.setItem("respuesta2",respuesta2)
   }
   public getRespuesta2() {
-    return this.respuesta2;
+    return localStorage.getItem("respuesta2");
   }
   public setRespuesta3(respuesta3: string) {
     this.respuesta3 = respuesta3;
+    localStorage.setItem("respuesta3",respuesta3)
   }
   public getRespuesta3() {
-    return this.respuesta3;
+    return localStorage.getItem("respuesta3");
   }
   public setRespuesta4(respuesta4: string) {
     this.respuesta4 = respuesta4;
+    localStorage.setItem("respuesta4",respuesta4)
   }
   public getRespuesta4() {
-    return this.respuesta4;
+    return localStorage.getItem("respuesta4");
   }
   public setCorrecta1(correcta1: string) {
     this.correcta1 = correcta1;
+    localStorage.setItem("correcta1",correcta1)
   }
   public getCorrecta1() {
     return this.correcta1;
+  }
+  public setEleccion1(eleccion1: string) {
+    this.eleccion1 = eleccion1;
+    localStorage.setItem("eleccion1",eleccion1)
+  }
+  public getEleccion1() {
+    return localStorage.getItem("eleccion1");
   }
   //2
   public setPregunta2(pregunta2: string) {
