@@ -564,4 +564,42 @@ export class EstiloPreguntas {
   public getCorrecta9() {
     return this.correcta9;
   }
+
+  //10
+  public setPregunta10(pregunta10: string) {
+    this.pregunta10 = pregunta10;
+  }
+  public getPregunta10() {
+    return this.pregunta10;
+  }
+  public setRespuesta37(respuesta37: string) {
+    this.respuesta37 = respuesta37;
+  }
+  public getRespuesta37() {
+    return this.respuesta37;
+  }
+  public setRespuesta38(respuesta38: string) {
+    this.respuesta38 = respuesta38;
+  }
+  public getRespuesta38() {
+    return this.respuesta38;
+  }
+  public setRespuesta39(respuesta39: string) {
+    this.respuesta39 = respuesta39;
+  }
+  public getRespuesta39() {
+    return this.respuesta39;
+  }
+  public setRespuesta40(respuesta40: string) {
+    this.respuesta40 = respuesta40;
+  }
+  public getRespuesta40() {
+    return this.respuesta40;
+  }
+  public setCorrecta10(correcta10: string) {
+    this.correcta10 = correcta10;
+  }
+  public getCorrecta10() {
+    return this.correcta10;
+  }
 }

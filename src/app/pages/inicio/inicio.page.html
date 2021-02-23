@@ -2,7 +2,7 @@
   <p id="subtitulo">
     Opciones
   </p>
-    <ion-button shape="round" class="btn" color="estilo1" href="/mis-guias">
+    <ion-button shape="round" class="btn" color="estilo1" (click)="misGuias()">
 
       <ion-icon name="archive" slot="start" class="icon_btn">
       </ion-icon>
@@ -12,14 +12,14 @@
       </p>
       
     </ion-button>
-    <ion-button shape="round" class="btn" color="estilo2" href="/nombre-guia">
+    <ion-button shape="round" class="btn" color="estilo2" (click)="nombreGuia()">
       <ion-icon name="add" class="icon_btn"></ion-icon>
 
       <p class="texto_btn">
       CREAR GUIA
       </p>
     </ion-button>    
-    <ion-button shape="round" class="btn" color="estilo3" href="/informacion">
+    <ion-button shape="round" class="btn" color="estilo3" (click)="informacion()">
       <ion-icon name="information-circle" class="icon_btn"></ion-icon>
       <p class="texto_btn">
       INFORMACION

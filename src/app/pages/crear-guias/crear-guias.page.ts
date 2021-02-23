@@ -7732,6 +7732,1794 @@ export class CrearGuiasPage {
       console.log('Pregunta 1:\nCompletastes todos los campos');
     }
   }
+
+
+  public async save10() {
+    console.log('Guardado 10');
+    /*Extrallendo los datos */
+    var dataEnviar = new EstiloPreguntas();
+    //asignacion de la pregunta
+    dataEnviar.setPregunta1(this.pregunta1);
+    console.log(dataEnviar.getPregunta1());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta1(this.respuesta1);
+    dataEnviar.setRespuesta2(this.respuesta2);
+    dataEnviar.setRespuesta3(this.respuesta3);
+    dataEnviar.setRespuesta4(this.respuesta4);
+    console.log(dataEnviar.getRespuesta1());
+    console.log(dataEnviar.getRespuesta2());
+    console.log(dataEnviar.getRespuesta3());
+    console.log(dataEnviar.getRespuesta4());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta1(this.correcta1);
+    console.log(dataEnviar.getCorrecta1());
+    //2
+    //asignacion de la pregunta
+    dataEnviar.setPregunta2(this.pregunta2);
+    console.log(dataEnviar.getPregunta2());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta5(this.respuesta5);
+    dataEnviar.setRespuesta6(this.respuesta6);
+    dataEnviar.setRespuesta7(this.respuesta7);
+    dataEnviar.setRespuesta8(this.respuesta8);
+    console.log(dataEnviar.getRespuesta5());
+    console.log(dataEnviar.getRespuesta6());
+    console.log(dataEnviar.getRespuesta7());
+    console.log(dataEnviar.getRespuesta8());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta2(this.correcta2);
+    console.log(dataEnviar.getCorrecta2());
+    //3
+    //asignacion de la pregunta
+    dataEnviar.setPregunta3(this.pregunta3);
+    console.log(dataEnviar.getPregunta3());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta9(this.respuesta9);
+    dataEnviar.setRespuesta10(this.respuesta10);
+    dataEnviar.setRespuesta11(this.respuesta11);
+    dataEnviar.setRespuesta12(this.respuesta12);
+    console.log(dataEnviar.getRespuesta9());
+    console.log(dataEnviar.getRespuesta10());
+    console.log(dataEnviar.getRespuesta11());
+    console.log(dataEnviar.getRespuesta12());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta3(this.correcta3);
+    console.log(dataEnviar.getCorrecta3());
+    //4
+    //asignacion de la pregunta
+    dataEnviar.setPregunta4(this.pregunta4);
+    console.log(dataEnviar.getPregunta4());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta13(this.respuesta13);
+    dataEnviar.setRespuesta14(this.respuesta14);
+    dataEnviar.setRespuesta15(this.respuesta15);
+    dataEnviar.setRespuesta16(this.respuesta16);
+    console.log(dataEnviar.getRespuesta13());
+    console.log(dataEnviar.getRespuesta14());
+    console.log(dataEnviar.getRespuesta15());
+    console.log(dataEnviar.getRespuesta16());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta4(this.correcta4);
+    console.log(dataEnviar.getCorrecta4());
+    //5
+    //asignacion de la pregunta
+    dataEnviar.setPregunta5(this.pregunta5);
+    console.log(dataEnviar.getPregunta5());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta17(this.respuesta17);
+    dataEnviar.setRespuesta18(this.respuesta18);
+    dataEnviar.setRespuesta19(this.respuesta19);
+    dataEnviar.setRespuesta20(this.respuesta20);
+    console.log(dataEnviar.getRespuesta17());
+    console.log(dataEnviar.getRespuesta18());
+    console.log(dataEnviar.getRespuesta19());
+    console.log(dataEnviar.getRespuesta20());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta5(this.correcta5);
+    console.log(dataEnviar.getCorrecta5());
+    //6
+    //asignacion de la pregunta
+    dataEnviar.setPregunta6(this.pregunta6);
+    console.log(dataEnviar.getPregunta6());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta21(this.respuesta21);
+    dataEnviar.setRespuesta22(this.respuesta22);
+    dataEnviar.setRespuesta23(this.respuesta23);
+    dataEnviar.setRespuesta24(this.respuesta24);
+    console.log(dataEnviar.getRespuesta21());
+    console.log(dataEnviar.getRespuesta22());
+    console.log(dataEnviar.getRespuesta23());
+    console.log(dataEnviar.getRespuesta24());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta6(this.correcta6);
+    console.log(dataEnviar.getCorrecta6());
+    //7
+    //asignacion de la pregunta
+    dataEnviar.setPregunta7(this.pregunta7);
+    console.log(dataEnviar.getPregunta7());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta25(this.respuesta25);
+    dataEnviar.setRespuesta26(this.respuesta26);
+    dataEnviar.setRespuesta27(this.respuesta27);
+    dataEnviar.setRespuesta28(this.respuesta28);
+    console.log(dataEnviar.getRespuesta25());
+    console.log(dataEnviar.getRespuesta26());
+    console.log(dataEnviar.getRespuesta27());
+    console.log(dataEnviar.getRespuesta28());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta7(this.correcta7);
+    console.log(dataEnviar.getCorrecta7());
+    //8
+    //asignacion de la pregunta
+    dataEnviar.setPregunta8(this.pregunta8);
+    console.log(dataEnviar.getPregunta8());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta29(this.respuesta29);
+    dataEnviar.setRespuesta30(this.respuesta30);
+    dataEnviar.setRespuesta31(this.respuesta31);
+    dataEnviar.setRespuesta32(this.respuesta32);
+    console.log(dataEnviar.getRespuesta29());
+    console.log(dataEnviar.getRespuesta30());
+    console.log(dataEnviar.getRespuesta31());
+    console.log(dataEnviar.getRespuesta32());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta8(this.correcta8);
+    console.log(dataEnviar.getCorrecta8());
+    //9
+    //asignacion de la pregunta
+    dataEnviar.setPregunta9(this.pregunta9);
+    console.log(dataEnviar.getPregunta9());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta33(this.respuesta33);
+    dataEnviar.setRespuesta34(this.respuesta34);
+    dataEnviar.setRespuesta35(this.respuesta35);
+    dataEnviar.setRespuesta36(this.respuesta36);
+    console.log(dataEnviar.getRespuesta33());
+    console.log(dataEnviar.getRespuesta34());
+    console.log(dataEnviar.getRespuesta35());
+    console.log(dataEnviar.getRespuesta36());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta9(this.correcta9);
+    console.log(dataEnviar.getCorrecta9());
+    //10
+    //asignacion de la pregunta
+    dataEnviar.setPregunta10(this.pregunta10);
+    console.log(dataEnviar.getPregunta10());
+    //asignacion de las 4respuestas
+    dataEnviar.setRespuesta37(this.respuesta37);
+    dataEnviar.setRespuesta38(this.respuesta38);
+    dataEnviar.setRespuesta39(this.respuesta39);
+    dataEnviar.setRespuesta40(this.respuesta40);
+    console.log(dataEnviar.getRespuesta37());
+    console.log(dataEnviar.getRespuesta38());
+    console.log(dataEnviar.getRespuesta39());
+    console.log(dataEnviar.getRespuesta40());
+    //asignacion de la respuesta correcta
+    dataEnviar.setCorrecta10(this.correcta10);
+    console.log(dataEnviar.getCorrecta10());
+    //°°°°°°°°°°°°°°°°°°°°°°°°°°|Validacion|°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°||||
+    //PRIMERA PREGUNTA
+    //Validacion que indica que no se completo la primer pregunta
+    if (
+      dataEnviar.getPregunta1() === undefined ||
+      dataEnviar.getRespuesta1() === undefined ||
+      dataEnviar.getRespuesta2() === undefined ||
+      dataEnviar.getRespuesta3() === undefined ||
+      dataEnviar.getRespuesta4() === undefined ||
+      dataEnviar.getCorrecta1() === undefined
+    ) {
+      {
+        const alert = await this.alerta.create({
+          header: 'Info',
+          message: 'Pregunta 1:\nOlvidastes llenar algunos datos',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+
+      console.log(
+        'Pregunta 1:\nOlvidastes llenar algunos datos' +
+          dataEnviar.getPregunta1() +
+          dataEnviar.getRespuesta1() +
+          dataEnviar.getRespuesta2() +
+          dataEnviar.getRespuesta3() +
+          dataEnviar.getRespuesta4() +
+          dataEnviar.getCorrecta1()
+      );
+    }
+    //Validacion que indica que se completo la primer pregunta
+    if (
+      dataEnviar.getPregunta1() !== undefined &&
+      dataEnviar.getRespuesta1() !== undefined &&
+      dataEnviar.getRespuesta2() !== undefined &&
+      dataEnviar.getRespuesta3() !== undefined &&
+      dataEnviar.getRespuesta4() !== undefined &&
+      dataEnviar.getCorrecta1() !== undefined
+    ) {
+      if (
+        dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
+        dataEnviar.getRespuesta1() === dataEnviar.getRespuesta3() ||
+        dataEnviar.getRespuesta1() === dataEnviar.getRespuesta4() ||
+        dataEnviar.getRespuesta2() === dataEnviar.getRespuesta3() ||
+        dataEnviar.getRespuesta2() === dataEnviar.getRespuesta4() ||
+        dataEnviar.getRespuesta3() === dataEnviar.getRespuesta5()
+      ) {
+        {
+          const alert = await this.alerta.create({
+            header: 'Info',
+            message: 'Pregunta 1:\nHay varias respuestas iguales',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+
+        console.log('Pregunta 1:\nHay varias respuestas iguales');
+      } else if (
+        dataEnviar.getRespuesta1() !== dataEnviar.getRespuesta2() &&
+        dataEnviar.getRespuesta1() !== dataEnviar.getRespuesta3() &&
+        dataEnviar.getRespuesta1() !== dataEnviar.getRespuesta4() &&
+        dataEnviar.getRespuesta2() !== dataEnviar.getRespuesta3() &&
+        dataEnviar.getRespuesta2() !== dataEnviar.getRespuesta4() &&
+        dataEnviar.getRespuesta3() !== dataEnviar.getRespuesta5()
+      ) {
+        if (
+          parseInt(dataEnviar.getCorrecta1()) <= 0 ||
+          parseInt(dataEnviar.getCorrecta1()) >= 5
+        ) {
+          {
+            const alert = await this.alerta.create({
+              header: 'Info',
+              message:
+                'Pregunta 1:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+
+          console.log(
+            'Pregunta 1:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+          );
+        }
+        if (
+          parseInt(dataEnviar.getCorrecta1()) >= 1 &&
+          parseInt(dataEnviar.getCorrecta1()) <= 4
+        ) {
+          //SEGUNDA PREGUNTA
+          //Validacion que indica que no se completo la segunda pregunta
+          if (
+            dataEnviar.getPregunta2() === undefined ||
+            dataEnviar.getRespuesta5() === undefined ||
+            dataEnviar.getRespuesta6() === undefined ||
+            dataEnviar.getRespuesta7() === undefined ||
+            dataEnviar.getRespuesta8() === undefined ||
+            dataEnviar.getCorrecta2() === undefined
+          ) {
+            {
+              const alert = await this.alerta.create({
+                header: 'Info',
+                message: 'Pregunta 2:\nOlvidastes llenar algunos datos',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            console.log(
+              'Pregunta 2:\nOlvidastes llenar algunos datos' +
+                dataEnviar.getPregunta2() +
+                dataEnviar.getRespuesta5() +
+                dataEnviar.getRespuesta6() +
+                dataEnviar.getRespuesta7() +
+                dataEnviar.getRespuesta8() +
+                dataEnviar.getCorrecta2()
+            );
+          }
+          //Validacion que indica que se completo la segunda pregunta
+          if (
+            dataEnviar.getPregunta2() !== undefined &&
+            dataEnviar.getRespuesta5() !== undefined &&
+            dataEnviar.getRespuesta6() !== undefined &&
+            dataEnviar.getRespuesta7() !== undefined &&
+            dataEnviar.getRespuesta8() !== undefined &&
+            dataEnviar.getCorrecta2() !== undefined
+          ) {
+            if (
+              dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
+              dataEnviar.getRespuesta5() === dataEnviar.getRespuesta7() ||
+              dataEnviar.getRespuesta5() === dataEnviar.getRespuesta8() ||
+              dataEnviar.getRespuesta6() === dataEnviar.getRespuesta7() ||
+              dataEnviar.getRespuesta6() === dataEnviar.getRespuesta8() ||
+              dataEnviar.getRespuesta7() === dataEnviar.getRespuesta8()
+            ) {
+              {
+                const alert = await this.alerta.create({
+                  header: 'Info',
+                  message: 'Pregunta 2:\nHay varias respuestas iguales',
+                  cssClass: 'alertcss',
+                  buttons: [
+                    {
+                      text: 'Okay',
+                      handler: () => {
+                        console.log('OK');
+                      },
+                      cssClass: 'buttoncss',
+                    },
+                  ],
+                  backdropDismiss: true,
+                });
+
+                await alert.present();
+              }
+
+              console.log('Pregunta 2:\nHay varias respuestas iguales');
+            } else if (
+              dataEnviar.getRespuesta5() !== dataEnviar.getRespuesta6() &&
+              dataEnviar.getRespuesta5() !== dataEnviar.getRespuesta7() &&
+              dataEnviar.getRespuesta5() !== dataEnviar.getRespuesta8() &&
+              dataEnviar.getRespuesta6() !== dataEnviar.getRespuesta7() &&
+              dataEnviar.getRespuesta6() !== dataEnviar.getRespuesta8() &&
+              dataEnviar.getRespuesta7() !== dataEnviar.getRespuesta8()
+            ) {
+              if (
+                parseInt(dataEnviar.getCorrecta2()) < 1 ||
+                parseInt(dataEnviar.getCorrecta2()) > 4
+              ) {
+                {
+                  const alert = await this.alerta.create({
+                    header: 'Info',
+                    message:
+                      'Pregunta 2:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                    cssClass: 'alertcss',
+                    buttons: [
+                      {
+                        text: 'Okay',
+                        handler: () => {
+                          console.log('OK');
+                        },
+                        cssClass: 'buttoncss',
+                      },
+                    ],
+                    backdropDismiss: true,
+                  });
+
+                  await alert.present();
+                }
+
+                console.log(
+                  'Pregunta 2:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                );
+              } else if (
+                parseInt(dataEnviar.getCorrecta2()) > 0 &&
+                parseInt(dataEnviar.getCorrecta2()) < 5
+              ) {
+                //TERCER PREGUNTA
+                //Validacion que indica que no se completo la tercer pregunta
+                if (
+                  dataEnviar.getPregunta3() === undefined ||
+                  dataEnviar.getRespuesta9() === undefined ||
+                  dataEnviar.getRespuesta10() === undefined ||
+                  dataEnviar.getRespuesta11() === undefined ||
+                  dataEnviar.getRespuesta12() === undefined ||
+                  dataEnviar.getCorrecta3() === undefined
+                ) {
+                  {
+                    const alert = await this.alerta.create({
+                      header: 'Info',
+                      message: 'Pregunta 3:\nOlvidastes llenar algunos datos',
+                      cssClass: 'alertcss',
+                      buttons: [
+                        {
+                          text: 'Okay',
+                          handler: () => {
+                            console.log('OK');
+                          },
+                          cssClass: 'buttoncss',
+                        },
+                      ],
+                      backdropDismiss: true,
+                    });
+
+                    await alert.present();
+                  }
+
+                  console.log(
+                    'Pregunta 3:\nOlvidastes llenar algunos datos' +
+                      dataEnviar.getPregunta3() +
+                      dataEnviar.getRespuesta9() +
+                      dataEnviar.getRespuesta10() +
+                      dataEnviar.getRespuesta11() +
+                      dataEnviar.getRespuesta12() +
+                      dataEnviar.getCorrecta3()
+                  );
+                }
+                //Validacion que indica que se completo la tercer pregunta
+                if (
+                  dataEnviar.getPregunta3() !== undefined &&
+                  dataEnviar.getRespuesta9() !== undefined &&
+                  dataEnviar.getRespuesta10() !== undefined &&
+                  dataEnviar.getRespuesta11() !== undefined &&
+                  dataEnviar.getRespuesta12() !== undefined &&
+                  dataEnviar.getCorrecta3() !== undefined
+                ) {
+                  if (
+                    dataEnviar.getRespuesta9() ===
+                      dataEnviar.getRespuesta10() ||
+                    dataEnviar.getRespuesta9() ===
+                      dataEnviar.getRespuesta11() ||
+                    dataEnviar.getRespuesta9() ===
+                      dataEnviar.getRespuesta12() ||
+                    dataEnviar.getRespuesta10() ===
+                      dataEnviar.getRespuesta11() ||
+                    dataEnviar.getRespuesta10() ===
+                      dataEnviar.getRespuesta12() ||
+                    dataEnviar.getRespuesta11() === dataEnviar.getRespuesta12()
+                  ) {
+                    {
+                      const alert = await this.alerta.create({
+                        header: 'Info',
+                        message: 'Pregunta 3:\nHay varias respuestas iguales',
+                        cssClass: 'alertcss',
+                        buttons: [
+                          {
+                            text: 'Okay',
+                            handler: () => {
+                              console.log('OK');
+                            },
+                            cssClass: 'buttoncss',
+                          },
+                        ],
+                        backdropDismiss: true,
+                      });
+
+                      await alert.present();
+                    }
+
+                    console.log('Pregunta 3:\nHay varias respuestas iguales');
+                  } else if (
+                    dataEnviar.getRespuesta9() !==
+                      dataEnviar.getRespuesta10() &&
+                    dataEnviar.getRespuesta9() !==
+                      dataEnviar.getRespuesta11() &&
+                    dataEnviar.getRespuesta9() !==
+                      dataEnviar.getRespuesta12() &&
+                    dataEnviar.getRespuesta10() !==
+                      dataEnviar.getRespuesta11() &&
+                    dataEnviar.getRespuesta10() !==
+                      dataEnviar.getRespuesta12() &&
+                    dataEnviar.getRespuesta11() !== dataEnviar.getRespuesta12()
+                  ) {
+                    if (
+                      parseInt(dataEnviar.getCorrecta3()) < 1 ||
+                      parseInt(dataEnviar.getCorrecta3()) > 4
+                    ) {
+                      {
+                        const alert = await this.alerta.create({
+                          header: 'Info',
+                          message:
+                            'Pregunta 3:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                          cssClass: 'alertcss',
+                          buttons: [
+                            {
+                              text: 'Okay',
+                              handler: () => {
+                                console.log('OK');
+                              },
+                              cssClass: 'buttoncss',
+                            },
+                          ],
+                          backdropDismiss: true,
+                        });
+
+                        await alert.present();
+                      }
+
+                      console.log(
+                        'Pregunta 3:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                      );
+                    } else if (
+                      parseInt(dataEnviar.getCorrecta3()) > 0 &&
+                      parseInt(dataEnviar.getCorrecta3()) < 5
+                    ) {
+                      //CUARTA PREGUNTA
+                      //Validacion que indica que no se completo la tercer pregunta
+                      if (
+                        dataEnviar.getPregunta4() === undefined ||
+                        dataEnviar.getRespuesta13() === undefined ||
+                        dataEnviar.getRespuesta14() === undefined ||
+                        dataEnviar.getRespuesta15() === undefined ||
+                        dataEnviar.getRespuesta16() === undefined ||
+                        dataEnviar.getCorrecta4() === undefined
+                      ) {
+                        {
+                          const alert = await this.alerta.create({
+                            header: 'Info',
+                            message:
+                              'Pregunta 4:\nOlvidastes llenar algunos datos',
+                            cssClass: 'alertcss',
+                            buttons: [
+                              {
+                                text: 'Okay',
+                                handler: () => {
+                                  console.log('OK');
+                                },
+                                cssClass: 'buttoncss',
+                              },
+                            ],
+                            backdropDismiss: true,
+                          });
+
+                          await alert.present();
+                        }
+
+                        console.log(
+                          'Pregunta 4:\nOlvidastes llenar algunos datos' +
+                            dataEnviar.getPregunta4() +
+                            dataEnviar.getRespuesta13() +
+                            dataEnviar.getRespuesta14() +
+                            dataEnviar.getRespuesta15() +
+                            dataEnviar.getRespuesta16() +
+                            dataEnviar.getCorrecta4()
+                        );
+                      }
+                      //Validacion que indica que se completo la tercer pregunta
+                      if (
+                        dataEnviar.getPregunta4() !== undefined &&
+                        dataEnviar.getRespuesta13() !== undefined &&
+                        dataEnviar.getRespuesta14() !== undefined &&
+                        dataEnviar.getRespuesta15() !== undefined &&
+                        dataEnviar.getRespuesta16() !== undefined &&
+                        dataEnviar.getCorrecta4() !== undefined
+                      ) {
+                        if (
+                          dataEnviar.getRespuesta13() ===
+                            dataEnviar.getRespuesta14() ||
+                          dataEnviar.getRespuesta13() ===
+                            dataEnviar.getRespuesta15() ||
+                          dataEnviar.getRespuesta13() ===
+                            dataEnviar.getRespuesta16() ||
+                          dataEnviar.getRespuesta14() ===
+                            dataEnviar.getRespuesta15() ||
+                          dataEnviar.getRespuesta14() ===
+                            dataEnviar.getRespuesta16() ||
+                          dataEnviar.getRespuesta15() ===
+                            dataEnviar.getRespuesta16()
+                        ) {
+                          {
+                            const alert = await this.alerta.create({
+                              header: 'Info',
+                              message:
+                                'Pregunta 4:\nHay varias respuestas iguales',
+                              cssClass: 'alertcss',
+                              buttons: [
+                                {
+                                  text: 'Okay',
+                                  handler: () => {
+                                    console.log('OK');
+                                  },
+                                  cssClass: 'buttoncss',
+                                },
+                              ],
+                              backdropDismiss: true,
+                            });
+
+                            await alert.present();
+                          }
+
+                          console.log(
+                            'Pregunta 4:\nHay varias respuestas iguales'
+                          );
+                        } else if (
+                          dataEnviar.getRespuesta13() !==
+                            dataEnviar.getRespuesta14() &&
+                          dataEnviar.getRespuesta13() !==
+                            dataEnviar.getRespuesta15() &&
+                          dataEnviar.getRespuesta13() !==
+                            dataEnviar.getRespuesta16() &&
+                          dataEnviar.getRespuesta14() !==
+                            dataEnviar.getRespuesta15() &&
+                          dataEnviar.getRespuesta14() !==
+                            dataEnviar.getRespuesta16() &&
+                          dataEnviar.getRespuesta15() !==
+                            dataEnviar.getRespuesta16()
+                        ) {
+                          if (
+                            parseInt(dataEnviar.getCorrecta4()) < 1 ||
+                            parseInt(dataEnviar.getCorrecta4()) > 4
+                          ) {
+                            {
+                              const alert = await this.alerta.create({
+                                header: 'Info',
+                                message:
+                                  'Pregunta 4:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                cssClass: 'alertcss',
+                                buttons: [
+                                  {
+                                    text: 'Okay',
+                                    handler: () => {
+                                      console.log('OK');
+                                    },
+                                    cssClass: 'buttoncss',
+                                  },
+                                ],
+                                backdropDismiss: true,
+                              });
+
+                              await alert.present();
+                            }
+
+                            console.log(
+                              'Pregunta 4:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                            );
+                          } else if (
+                            parseInt(dataEnviar.getCorrecta4()) > 0 &&
+                            parseInt(dataEnviar.getCorrecta4()) < 5
+                          ) {
+                            //QUINTA PREGUNTA
+                            //Validacion que indica que no se completo la tercer pregunta
+                            if (
+                              dataEnviar.getPregunta5() === undefined ||
+                              dataEnviar.getRespuesta17() === undefined ||
+                              dataEnviar.getRespuesta18() === undefined ||
+                              dataEnviar.getRespuesta19() === undefined ||
+                              dataEnviar.getRespuesta20() === undefined ||
+                              dataEnviar.getCorrecta5() === undefined
+                            ) {
+                              {
+                                const alert = await this.alerta.create({
+                                  header: 'Info',
+                                  message:
+                                    'Pregunta 5:\nOlvidastes llenar algunos datos',
+                                  cssClass: 'alertcss',
+                                  buttons: [
+                                    {
+                                      text: 'Okay',
+                                      handler: () => {
+                                        console.log('OK');
+                                      },
+                                      cssClass: 'buttoncss',
+                                    },
+                                  ],
+                                  backdropDismiss: true,
+                                });
+
+                                await alert.present();
+                              }
+
+                              console.log(
+                                'Pregunta 5:\nOlvidastes llenar algunos datos' +
+                                  dataEnviar.getPregunta5() +
+                                  dataEnviar.getRespuesta17() +
+                                  dataEnviar.getRespuesta18() +
+                                  dataEnviar.getRespuesta19() +
+                                  dataEnviar.getRespuesta20() +
+                                  dataEnviar.getCorrecta5()
+                              );
+                            }
+                            //Validacion que indica que se completo la tercer pregunta
+                            if (
+                              dataEnviar.getPregunta5() !== undefined &&
+                              dataEnviar.getRespuesta17() !== undefined &&
+                              dataEnviar.getRespuesta18() !== undefined &&
+                              dataEnviar.getRespuesta19() !== undefined &&
+                              dataEnviar.getRespuesta20() !== undefined &&
+                              dataEnviar.getCorrecta5() !== undefined
+                            ) {
+                              if (
+                                dataEnviar.getRespuesta17() ===
+                                  dataEnviar.getRespuesta18() ||
+                                dataEnviar.getRespuesta17() ===
+                                  dataEnviar.getRespuesta19() ||
+                                dataEnviar.getRespuesta17() ===
+                                  dataEnviar.getRespuesta20() ||
+                                dataEnviar.getRespuesta18() ===
+                                  dataEnviar.getRespuesta19() ||
+                                dataEnviar.getRespuesta18() ===
+                                  dataEnviar.getRespuesta20() ||
+                                dataEnviar.getRespuesta19() ===
+                                  dataEnviar.getRespuesta20()
+                              ) {
+                                {
+                                  const alert = await this.alerta.create({
+                                    header: 'Info',
+                                    message:
+                                      'Pregunta 5:\nHay varias respuestas iguales',
+                                    cssClass: 'alertcss',
+                                    buttons: [
+                                      {
+                                        text: 'Okay',
+                                        handler: () => {
+                                          console.log('OK');
+                                        },
+                                        cssClass: 'buttoncss',
+                                      },
+                                    ],
+                                    backdropDismiss: true,
+                                  });
+
+                                  await alert.present();
+                                }
+
+                                console.log(
+                                  'Pregunta 5:\nHay varias respuestas iguales'
+                                );
+                              } else if (
+                                dataEnviar.getRespuesta17() !==
+                                  dataEnviar.getRespuesta18() &&
+                                dataEnviar.getRespuesta17() !==
+                                  dataEnviar.getRespuesta19() &&
+                                dataEnviar.getRespuesta17() !==
+                                  dataEnviar.getRespuesta20() &&
+                                dataEnviar.getRespuesta18() !==
+                                  dataEnviar.getRespuesta19() &&
+                                dataEnviar.getRespuesta18() !==
+                                  dataEnviar.getRespuesta20() &&
+                                dataEnviar.getRespuesta19() !==
+                                  dataEnviar.getRespuesta20()
+                              ) {
+                                if (
+                                  parseInt(dataEnviar.getCorrecta5()) < 1 ||
+                                  parseInt(dataEnviar.getCorrecta5()) > 4
+                                ) {
+                                  {
+                                    const alert = await this.alerta.create({
+                                      header: 'Info',
+                                      message:
+                                        'Pregunta 5:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                      cssClass: 'alertcss',
+                                      buttons: [
+                                        {
+                                          text: 'Okay',
+                                          handler: () => {
+                                            console.log('OK');
+                                          },
+                                          cssClass: 'buttoncss',
+                                        },
+                                      ],
+                                      backdropDismiss: true,
+                                    });
+
+                                    await alert.present();
+                                  }
+
+                                  console.log(
+                                    'Pregunta 5:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                  );
+                                } else if (
+                                  parseInt(dataEnviar.getCorrecta5()) > 0 &&
+                                  parseInt(dataEnviar.getCorrecta5()) < 5
+                                ) {
+                                  //SEXTA PREGUNTA
+                                  //Validacion que indica que no se completo la tercer pregunta
+                                  if (
+                                    dataEnviar.getPregunta6() === undefined ||
+                                    dataEnviar.getRespuesta21() === undefined ||
+                                    dataEnviar.getRespuesta22() === undefined ||
+                                    dataEnviar.getRespuesta23() === undefined ||
+                                    dataEnviar.getRespuesta24() === undefined ||
+                                    dataEnviar.getCorrecta6() === undefined
+                                  ) {
+                                    {
+                                      const alert = await this.alerta.create({
+                                        header: 'Info',
+                                        message:
+                                          'Pregunta 6:\nOlvidastes llenar algunos datos',
+                                        cssClass: 'alertcss',
+                                        buttons: [
+                                          {
+                                            text: 'Okay',
+                                            handler: () => {
+                                              console.log('OK');
+                                            },
+                                            cssClass: 'buttoncss',
+                                          },
+                                        ],
+                                        backdropDismiss: true,
+                                      });
+
+                                      await alert.present();
+                                    }
+
+                                    console.log(
+                                      'Pregunta 6:\nOlvidastes llenar algunos datos' +
+                                        dataEnviar.getPregunta6() +
+                                        dataEnviar.getRespuesta21() +
+                                        dataEnviar.getRespuesta22() +
+                                        dataEnviar.getRespuesta23() +
+                                        dataEnviar.getRespuesta24() +
+                                        dataEnviar.getCorrecta6()
+                                    );
+                                  }
+                                  //Validacion que indica que se completo la tercer pregunta
+                                  if (
+                                    dataEnviar.getPregunta6() !== undefined &&
+                                    dataEnviar.getRespuesta21() !== undefined &&
+                                    dataEnviar.getRespuesta22() !== undefined &&
+                                    dataEnviar.getRespuesta23() !== undefined &&
+                                    dataEnviar.getRespuesta24() !== undefined &&
+                                    dataEnviar.getCorrecta6() !== undefined
+                                  ) {
+                                    if (
+                                      dataEnviar.getRespuesta21() ===
+                                        dataEnviar.getRespuesta22() ||
+                                      dataEnviar.getRespuesta21() ===
+                                        dataEnviar.getRespuesta23() ||
+                                      dataEnviar.getRespuesta21() ===
+                                        dataEnviar.getRespuesta24() ||
+                                      dataEnviar.getRespuesta22() ===
+                                        dataEnviar.getRespuesta23() ||
+                                      dataEnviar.getRespuesta22() ===
+                                        dataEnviar.getRespuesta24() ||
+                                      dataEnviar.getRespuesta23() ===
+                                        dataEnviar.getRespuesta24()
+                                    ) {
+                                      {
+                                        const alert = await this.alerta.create({
+                                          header: 'Info',
+                                          message:
+                                            'Pregunta 6:\nHay varias respuestas iguales',
+                                          cssClass: 'alertcss',
+                                          buttons: [
+                                            {
+                                              text: 'Okay',
+                                              handler: () => {
+                                                console.log('OK');
+                                              },
+                                              cssClass: 'buttoncss',
+                                            },
+                                          ],
+                                          backdropDismiss: true,
+                                        });
+
+                                        await alert.present();
+                                      }
+
+                                      console.log(
+                                        'Pregunta 6:\nHay varias respuestas iguales'
+                                      );
+                                    } else if (
+                                      dataEnviar.getRespuesta21() !==
+                                        dataEnviar.getRespuesta22() &&
+                                      dataEnviar.getRespuesta21() !==
+                                        dataEnviar.getRespuesta23() &&
+                                      dataEnviar.getRespuesta21() !==
+                                        dataEnviar.getRespuesta24() &&
+                                      dataEnviar.getRespuesta22() !==
+                                        dataEnviar.getRespuesta23() &&
+                                      dataEnviar.getRespuesta22() !==
+                                        dataEnviar.getRespuesta24() &&
+                                      dataEnviar.getRespuesta23() !==
+                                        dataEnviar.getRespuesta24()
+                                    ) {
+                                      if (
+                                        parseInt(dataEnviar.getCorrecta6()) <
+                                          1 ||
+                                        parseInt(dataEnviar.getCorrecta6()) > 4
+                                      ) {
+                                        {
+                                          const alert = await this.alerta.create(
+                                            {
+                                              header: 'Info',
+                                              message:
+                                                'Pregunta 6:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                              cssClass: 'alertcss',
+                                              buttons: [
+                                                {
+                                                  text: 'Okay',
+                                                  handler: () => {
+                                                    console.log('OK');
+                                                  },
+                                                  cssClass: 'buttoncss',
+                                                },
+                                              ],
+                                              backdropDismiss: true,
+                                            }
+                                          );
+
+                                          await alert.present();
+                                        }
+
+                                        console.log(
+                                          'Pregunta 6:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                        );
+                                      } else if (
+                                        parseInt(dataEnviar.getCorrecta6()) >
+                                          0 &&
+                                        parseInt(dataEnviar.getCorrecta6()) < 5
+                                      ) {
+                                        //SEPTIMA PREGUNTA
+                                        //Validacion que indica que no se completo la tercer pregunta
+                                        if (
+                                          dataEnviar.getPregunta7() ===
+                                            undefined ||
+                                          dataEnviar.getRespuesta25() ===
+                                            undefined ||
+                                          dataEnviar.getRespuesta26() ===
+                                            undefined ||
+                                          dataEnviar.getRespuesta27() ===
+                                            undefined ||
+                                          dataEnviar.getRespuesta28() ===
+                                            undefined ||
+                                          dataEnviar.getCorrecta7() ===
+                                            undefined
+                                        ) {
+                                          {
+                                            const alert = await this.alerta.create(
+                                              {
+                                                header: 'Info',
+                                                message:
+                                                  'Pregunta 7:\nOlvidastes llenar algunos datos',
+                                                cssClass: 'alertcss',
+                                                buttons: [
+                                                  {
+                                                    text: 'Okay',
+                                                    handler: () => {
+                                                      console.log('OK');
+                                                    },
+                                                    cssClass: 'buttoncss',
+                                                  },
+                                                ],
+                                                backdropDismiss: true,
+                                              }
+                                            );
+
+                                            await alert.present();
+                                          }
+
+                                          console.log(
+                                            'Pregunta 7:\nOlvidastes llenar algunos datos' +
+                                              dataEnviar.getPregunta7() +
+                                              dataEnviar.getRespuesta25() +
+                                              dataEnviar.getRespuesta26() +
+                                              dataEnviar.getRespuesta27() +
+                                              dataEnviar.getRespuesta28() +
+                                              dataEnviar.getCorrecta7()
+                                          );
+                                        }
+                                        //Validacion que indica que se completo la tercer pregunta
+                                        if (
+                                          dataEnviar.getPregunta7() !==
+                                            undefined &&
+                                          dataEnviar.getRespuesta25() !==
+                                            undefined &&
+                                          dataEnviar.getRespuesta26() !==
+                                            undefined &&
+                                          dataEnviar.getRespuesta27() !==
+                                            undefined &&
+                                          dataEnviar.getRespuesta28() !==
+                                            undefined &&
+                                          dataEnviar.getCorrecta7() !==
+                                            undefined
+                                        ) {
+                                          if (
+                                            dataEnviar.getRespuesta25() ===
+                                              dataEnviar.getRespuesta26() ||
+                                            dataEnviar.getRespuesta25() ===
+                                              dataEnviar.getRespuesta27() ||
+                                            dataEnviar.getRespuesta25() ===
+                                              dataEnviar.getRespuesta28() ||
+                                            dataEnviar.getRespuesta26() ===
+                                              dataEnviar.getRespuesta27() ||
+                                            dataEnviar.getRespuesta26() ===
+                                              dataEnviar.getRespuesta28() ||
+                                            dataEnviar.getRespuesta27() ===
+                                              dataEnviar.getRespuesta28()
+                                          ) {
+                                            {
+                                              const alert = await this.alerta.create(
+                                                {
+                                                  header: 'Info',
+                                                  message:
+                                                    'Pregunta 7:\nHay varias respuestas iguales',
+                                                  cssClass: 'alertcss',
+                                                  buttons: [
+                                                    {
+                                                      text: 'Okay',
+                                                      handler: () => {
+                                                        console.log('OK');
+                                                      },
+                                                      cssClass: 'buttoncss',
+                                                    },
+                                                  ],
+                                                  backdropDismiss: true,
+                                                }
+                                              );
+
+                                              await alert.present();
+                                            }
+
+                                            console.log(
+                                              'Pregunta 7:\nHay varias respuestas iguales'
+                                            );
+                                          } else if (
+                                            dataEnviar.getRespuesta25() !==
+                                              dataEnviar.getRespuesta26() &&
+                                            dataEnviar.getRespuesta25() !==
+                                              dataEnviar.getRespuesta27() &&
+                                            dataEnviar.getRespuesta25() !==
+                                              dataEnviar.getRespuesta28() &&
+                                            dataEnviar.getRespuesta26() !==
+                                              dataEnviar.getRespuesta27() &&
+                                            dataEnviar.getRespuesta26() !==
+                                              dataEnviar.getRespuesta28() &&
+                                            dataEnviar.getRespuesta27() !==
+                                              dataEnviar.getRespuesta28()
+                                          ) {
+                                            if (
+                                              parseInt(
+                                                dataEnviar.getCorrecta7()
+                                              ) < 1 ||
+                                              parseInt(
+                                                dataEnviar.getCorrecta7()
+                                              ) > 4
+                                            ) {
+                                              {
+                                                const alert = await this.alerta.create(
+                                                  {
+                                                    header: 'Info',
+                                                    message:
+                                                      'Pregunta 7:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                                    cssClass: 'alertcss',
+                                                    buttons: [
+                                                      {
+                                                        text: 'Okay',
+                                                        handler: () => {
+                                                          console.log('OK');
+                                                        },
+                                                        cssClass: 'buttoncss',
+                                                      },
+                                                    ],
+                                                    backdropDismiss: true,
+                                                  }
+                                                );
+
+                                                await alert.present();
+                                              }
+
+                                              console.log(
+                                                'Pregunta 7:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                              );
+                                            } else if (
+                                              parseInt(
+                                                dataEnviar.getCorrecta7()
+                                              ) > 0 &&
+                                              parseInt(
+                                                dataEnviar.getCorrecta7()
+                                              ) < 5
+                                            ) {
+                                              //OCTABA PREGUNTA
+                                              //Validacion que indica que no se completo la tercer pregunta
+                                              if (
+                                                dataEnviar.getPregunta8() ===
+                                                  undefined ||
+                                                dataEnviar.getRespuesta29() ===
+                                                  undefined ||
+                                                dataEnviar.getRespuesta30() ===
+                                                  undefined ||
+                                                dataEnviar.getRespuesta31() ===
+                                                  undefined ||
+                                                dataEnviar.getRespuesta32() ===
+                                                  undefined ||
+                                                dataEnviar.getCorrecta8() ===
+                                                  undefined
+                                              ) {
+                                                {
+                                                  const alert = await this.alerta.create(
+                                                    {
+                                                      header: 'Info',
+                                                      message:
+                                                        'Pregunta 8:\nOlvidastes llenar algunos datos',
+                                                      cssClass: 'alertcss',
+                                                      buttons: [
+                                                        {
+                                                          text: 'Okay',
+                                                          handler: () => {
+                                                            console.log('OK');
+                                                          },
+                                                          cssClass: 'buttoncss',
+                                                        },
+                                                      ],
+                                                      backdropDismiss: true,
+                                                    }
+                                                  );
+
+                                                  await alert.present();
+                                                }
+
+                                                console.log(
+                                                  'Pregunta 8:\nOlvidastes llenar algunos datos' +
+                                                    dataEnviar.getPregunta8() +
+                                                    dataEnviar.getRespuesta29() +
+                                                    dataEnviar.getRespuesta30() +
+                                                    dataEnviar.getRespuesta31() +
+                                                    dataEnviar.getRespuesta32() +
+                                                    dataEnviar.getCorrecta8()
+                                                );
+                                              }
+                                              //Validacion que indica que se completo la tercer pregunta
+                                              if (
+                                                dataEnviar.getPregunta8() !==
+                                                  undefined &&
+                                                dataEnviar.getRespuesta29() !==
+                                                  undefined &&
+                                                dataEnviar.getRespuesta30() !==
+                                                  undefined &&
+                                                dataEnviar.getRespuesta31() !==
+                                                  undefined &&
+                                                dataEnviar.getRespuesta32() !==
+                                                  undefined &&
+                                                dataEnviar.getCorrecta8() !==
+                                                  undefined
+                                              ) {
+                                                if (
+                                                  dataEnviar.getRespuesta29() ===
+                                                    dataEnviar.getRespuesta30() ||
+                                                  dataEnviar.getRespuesta29() ===
+                                                    dataEnviar.getRespuesta31() ||
+                                                  dataEnviar.getRespuesta29() ===
+                                                    dataEnviar.getRespuesta32() ||
+                                                  dataEnviar.getRespuesta30() ===
+                                                    dataEnviar.getRespuesta31() ||
+                                                  dataEnviar.getRespuesta30() ===
+                                                    dataEnviar.getRespuesta32() ||
+                                                  dataEnviar.getRespuesta31() ===
+                                                    dataEnviar.getRespuesta32()
+                                                ) {
+                                                  {
+                                                    const alert = await this.alerta.create(
+                                                      {
+                                                        header: 'Info',
+                                                        message:
+                                                          'Pregunta 8:\nHay varias respuestas iguales',
+                                                        cssClass: 'alertcss',
+                                                        buttons: [
+                                                          {
+                                                            text: 'Okay',
+                                                            handler: () => {
+                                                              console.log('OK');
+                                                            },
+                                                            cssClass:
+                                                              'buttoncss',
+                                                          },
+                                                        ],
+                                                        backdropDismiss: true,
+                                                      }
+                                                    );
+
+                                                    await alert.present();
+                                                  }
+
+                                                  console.log(
+                                                    'Pregunta 8:\nHay varias respuestas iguales'
+                                                  );
+                                                } else if (
+                                                  dataEnviar.getRespuesta29() !==
+                                                    dataEnviar.getRespuesta30() &&
+                                                  dataEnviar.getRespuesta29() !==
+                                                    dataEnviar.getRespuesta31() &&
+                                                  dataEnviar.getRespuesta29() !==
+                                                    dataEnviar.getRespuesta32() &&
+                                                  dataEnviar.getRespuesta30() !==
+                                                    dataEnviar.getRespuesta31() &&
+                                                  dataEnviar.getRespuesta30() !==
+                                                    dataEnviar.getRespuesta32() &&
+                                                  dataEnviar.getRespuesta31() !==
+                                                    dataEnviar.getRespuesta32()
+                                                ) {
+                                                  if (
+                                                    parseInt(
+                                                      dataEnviar.getCorrecta8()
+                                                    ) < 1 ||
+                                                    parseInt(
+                                                      dataEnviar.getCorrecta8()
+                                                    ) > 4
+                                                  ) {
+                                                    {
+                                                      const alert = await this.alerta.create(
+                                                        {
+                                                          header: 'Info',
+                                                          message:
+                                                            'Pregunta 8:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                                          cssClass: 'alertcss',
+                                                          buttons: [
+                                                            {
+                                                              text: 'Okay',
+                                                              handler: () => {
+                                                                console.log(
+                                                                  'OK'
+                                                                );
+                                                              },
+                                                              cssClass:
+                                                                'buttoncss',
+                                                            },
+                                                          ],
+                                                          backdropDismiss: true,
+                                                        }
+                                                      );
+
+                                                      await alert.present();
+                                                    }
+
+                                                    console.log(
+                                                      'Pregunta 8:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                    );
+                                                  } else if (
+                                                    parseInt(
+                                                      dataEnviar.getCorrecta8()
+                                                    ) > 0 &&
+                                                    parseInt(
+                                                      dataEnviar.getCorrecta8()
+                                                    ) < 5
+                                                  ) {
+                                                    //NOVENA PREGUNTA
+                                                    //Validacion que indica que no se completo la tercer pregunta
+                                                    if (
+                                                      dataEnviar.getPregunta9() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta33() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta34() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta35() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta36() ===
+                                                        undefined ||
+                                                      dataEnviar.getCorrecta9() ===
+                                                        undefined
+                                                    ) {
+                                                      {
+                                                        const alert = await this.alerta.create(
+                                                          {
+                                                            header: 'Info',
+                                                            message:
+                                                              'Pregunta 9:\nOlvidastes llenar algunos datos',
+                                                            cssClass:
+                                                              'alertcss',
+                                                            buttons: [
+                                                              {
+                                                                text: 'Okay',
+                                                                handler: () => {
+                                                                  console.log(
+                                                                    'OK'
+                                                                  );
+                                                                },
+                                                                cssClass:
+                                                                  'buttoncss',
+                                                              },
+                                                            ],
+                                                            backdropDismiss: true,
+                                                          }
+                                                        );
+
+                                                        await alert.present();
+                                                      }
+
+                                                      console.log(
+                                                        'Pregunta 9:\nOlvidastes llenar algunos datos' +
+                                                          dataEnviar.getPregunta9() +
+                                                          dataEnviar.getRespuesta33() +
+                                                          dataEnviar.getRespuesta34() +
+                                                          dataEnviar.getRespuesta35() +
+                                                          dataEnviar.getRespuesta36() +
+                                                          dataEnviar.getCorrecta9()
+                                                      );
+                                                    }
+                                                    //Validacion que indica que se completo la tercer pregunta
+                                                    if (
+                                                      dataEnviar.getPregunta9() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta33() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta34() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta35() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta36() !==
+                                                        undefined &&
+                                                      dataEnviar.getCorrecta9() !==
+                                                        undefined
+                                                    ) {
+                                                      if (
+                                                        dataEnviar.getRespuesta33() ===
+                                                          dataEnviar.getRespuesta34() ||
+                                                        dataEnviar.getRespuesta33() ===
+                                                          dataEnviar.getRespuesta35() ||
+                                                        dataEnviar.getRespuesta33() ===
+                                                          dataEnviar.getRespuesta36() ||
+                                                        dataEnviar.getRespuesta34() ===
+                                                          dataEnviar.getRespuesta35() ||
+                                                        dataEnviar.getRespuesta34() ===
+                                                          dataEnviar.getRespuesta36() ||
+                                                        dataEnviar.getRespuesta35() ===
+                                                          dataEnviar.getRespuesta36()
+                                                      ) {
+                                                        {
+                                                          const alert = await this.alerta.create(
+                                                            {
+                                                              header: 'Info',
+                                                              message:
+                                                                'Pregunta 9:\nHay varias respuestas iguales',
+                                                              cssClass:
+                                                                'alertcss',
+                                                              buttons: [
+                                                                {
+                                                                  text: 'Okay',
+                                                                  handler: () => {
+                                                                    console.log(
+                                                                      'OK'
+                                                                    );
+                                                                  },
+                                                                  cssClass:
+                                                                    'buttoncss',
+                                                                },
+                                                              ],
+                                                              backdropDismiss: true,
+                                                            }
+                                                          );
+
+                                                          await alert.present();
+                                                        }
+
+                                                        console.log(
+                                                          'Pregunta 9:\nHay varias respuestas iguales'
+                                                        );
+                                                      } else if (
+                                                        dataEnviar.getRespuesta33() !==
+                                                          dataEnviar.getRespuesta34() &&
+                                                        dataEnviar.getRespuesta33() !==
+                                                          dataEnviar.getRespuesta35() &&
+                                                        dataEnviar.getRespuesta33() !==
+                                                          dataEnviar.getRespuesta36() &&
+                                                        dataEnviar.getRespuesta34() !==
+                                                          dataEnviar.getRespuesta35() &&
+                                                        dataEnviar.getRespuesta34() !==
+                                                          dataEnviar.getRespuesta36() &&
+                                                        dataEnviar.getRespuesta35() !==
+                                                          dataEnviar.getRespuesta36()
+                                                      ) {
+                                                        if (
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta9()
+                                                          ) < 1 ||
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta9()
+                                                          ) > 4
+                                                        ) {
+                                                          {
+                                                            const alert = await this.alerta.create(
+                                                              {
+                                                                header: 'Info',
+                                                                message:
+                                                                  'Pregunta 9:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                                                cssClass:
+                                                                  'alertcss',
+                                                                buttons: [
+                                                                  {
+                                                                    text:
+                                                                      'Okay',
+                                                                    handler: () => {
+                                                                      console.log(
+                                                                        'OK'
+                                                                      );
+                                                                    },
+                                                                    cssClass:
+                                                                      'buttoncss',
+                                                                  },
+                                                                ],
+                                                                backdropDismiss: true,
+                                                              }
+                                                            );
+
+                                                            await alert.present();
+                                                          }
+
+                                                          console.log(
+                                                            'Pregunta 9:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                          );
+                                                        } else if (
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta9()
+                                                          ) > 0 &&
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta9()
+                                                          ) < 5
+                                                        ) {
+                                                          //DECIMA PREGUNTA
+                                                    //Validacion que indica que no se completo la tercer pregunta
+                                                    if (
+                                                      dataEnviar.getPregunta10() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta37() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta38() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta39() ===
+                                                        undefined ||
+                                                      dataEnviar.getRespuesta40() ===
+                                                        undefined ||
+                                                      dataEnviar.getCorrecta10() ===
+                                                        undefined
+                                                    ) {
+                                                      {
+                                                        const alert = await this.alerta.create(
+                                                          {
+                                                            header: 'Info',
+                                                            message:
+                                                              'Pregunta 10:\nOlvidastes llenar algunos datos',
+                                                            cssClass:
+                                                              'alertcss',
+                                                            buttons: [
+                                                              {
+                                                                text: 'Okay',
+                                                                handler: () => {
+                                                                  console.log(
+                                                                    'OK'
+                                                                  );
+                                                                },
+                                                                cssClass:
+                                                                  'buttoncss',
+                                                              },
+                                                            ],
+                                                            backdropDismiss: true,
+                                                          }
+                                                        );
+
+                                                        await alert.present();
+                                                      }
+
+                                                      console.log(
+                                                        'Pregunta 10:\nOlvidastes llenar algunos datos' +
+                                                          dataEnviar.getPregunta10() +
+                                                          dataEnviar.getRespuesta37() +
+                                                          dataEnviar.getRespuesta38() +
+                                                          dataEnviar.getRespuesta39() +
+                                                          dataEnviar.getRespuesta40() +
+                                                          dataEnviar.getCorrecta10()
+                                                      );
+                                                    }
+                                                    //Validacion que indica que se completo la tercer pregunta
+                                                    if (
+                                                      dataEnviar.getPregunta10() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta37() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta38() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta39() !==
+                                                        undefined &&
+                                                      dataEnviar.getRespuesta40() !==
+                                                        undefined &&
+                                                      dataEnviar.getCorrecta10() !==
+                                                        undefined
+                                                    ) {
+                                                      if (
+                                                        dataEnviar.getRespuesta37() ===
+                                                          dataEnviar.getRespuesta38() ||
+                                                        dataEnviar.getRespuesta37() ===
+                                                          dataEnviar.getRespuesta39() ||
+                                                        dataEnviar.getRespuesta37() ===
+                                                          dataEnviar.getRespuesta40() ||
+                                                        dataEnviar.getRespuesta38() ===
+                                                          dataEnviar.getRespuesta39() ||
+                                                        dataEnviar.getRespuesta38() ===
+                                                          dataEnviar.getRespuesta40() ||
+                                                        dataEnviar.getRespuesta39() ===
+                                                          dataEnviar.getRespuesta40()
+                                                      ) {
+                                                        {
+                                                          const alert = await this.alerta.create(
+                                                            {
+                                                              header: 'Info',
+                                                              message:
+                                                                'Pregunta 10:\nHay varias respuestas iguales',
+                                                              cssClass:
+                                                                'alertcss',
+                                                              buttons: [
+                                                                {
+                                                                  text: 'Okay',
+                                                                  handler: () => {
+                                                                    console.log(
+                                                                      'OK'
+                                                                    );
+                                                                  },
+                                                                  cssClass:
+                                                                    'buttoncss',
+                                                                },
+                                                              ],
+                                                              backdropDismiss: true,
+                                                            }
+                                                          );
+
+                                                          await alert.present();
+                                                        }
+
+                                                        console.log(
+                                                          'Pregunta 10:\nHay varias respuestas iguales'
+                                                        );
+                                                      } else if (
+                                                        dataEnviar.getRespuesta37() !==
+                                                          dataEnviar.getRespuesta38() &&
+                                                        dataEnviar.getRespuesta37() !==
+                                                          dataEnviar.getRespuesta39() &&
+                                                        dataEnviar.getRespuesta37() !==
+                                                          dataEnviar.getRespuesta40() &&
+                                                        dataEnviar.getRespuesta38() !==
+                                                          dataEnviar.getRespuesta39() &&
+                                                        dataEnviar.getRespuesta38() !==
+                                                          dataEnviar.getRespuesta40() &&
+                                                        dataEnviar.getRespuesta39() !==
+                                                          dataEnviar.getRespuesta40()
+                                                      ) {
+                                                        if (
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta10()
+                                                          ) < 1 ||
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta10()
+                                                          ) > 4
+                                                        ) {
+                                                          {
+                                                            const alert = await this.alerta.create(
+                                                              {
+                                                                header: 'Info',
+                                                                message:
+                                                                  'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                                                cssClass:
+                                                                  'alertcss',
+                                                                buttons: [
+                                                                  {
+                                                                    text:
+                                                                      'Okay',
+                                                                    handler: () => {
+                                                                      console.log(
+                                                                        'OK'
+                                                                      );
+                                                                    },
+                                                                    cssClass:
+                                                                      'buttoncss',
+                                                                  },
+                                                                ],
+                                                                backdropDismiss: true,
+                                                              }
+                                                            );
+
+                                                            await alert.present();
+                                                          }
+
+                                                          console.log(
+                                                            'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                          );
+                                                        } else if (
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta10()
+                                                          ) > 0 &&
+                                                          parseInt(
+                                                            dataEnviar.getCorrecta10()
+                                                          ) < 5
+                                                        ) {
+                                                          this.router.navigateByUrl(
+                                                            'guia-completada'
+                                                          );
+
+                                                          console.log(
+                                                            'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                          );
+                                                          console.log(
+                                                            dataEnviar
+                                                          );
+                                                          console.log(
+                                                            'Pregunta 10: Verificada'
+                                                          );
+                                                        }
+
+                                                        console.log(
+                                                          'Pregunta 10:\nNo hay campos repetidos'
+                                                        );
+                                                      }
+
+                                                      console.log(
+                                                        'Pregunta 10:\nCompletastes todos los campos'
+                                                      );
+                                                      //Fin de la pregunta 10
+                                                    }
+
+                                                          console.log(
+                                                            'Pregunta 9:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                          );
+                                                          console.log(
+                                                            dataEnviar
+                                                          );
+                                                          console.log(
+                                                            'Pregunta 9: Verificada'
+                                                          );
+                                                        }
+
+                                                        console.log(
+                                                          'Pregunta 9:\nNo hay campos repetidos'
+                                                        );
+                                                      }
+
+                                                      console.log(
+                                                        'Pregunta 9:\nCompletastes todos los campos'
+                                                      );
+                                                      //Fin de la pregunta 9
+                                                    }
+
+                                                    console.log(
+                                                      'Pregunta 8:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                    );
+                                                    console.log(dataEnviar);
+                                                    console.log(
+                                                      'Pregunta 8: Verificada'
+                                                    );
+                                                  }
+
+                                                  console.log(
+                                                    'Pregunta 8:\nNo hay campos repetidos'
+                                                  );
+                                                }
+
+                                                console.log(
+                                                  'Pregunta 8:\nCompletastes todos los campos'
+                                                );
+                                                //Fin de la pregunta 8
+                                              }
+
+                                              console.log(
+                                                'Pregunta 7:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                              );
+                                              console.log(dataEnviar);
+                                              console.log(
+                                                'Pregunta 7: Verificada'
+                                              );
+                                            }
+
+                                            console.log(
+                                              'Pregunta 7:\nNo hay campos repetidos'
+                                            );
+                                          }
+
+                                          console.log(
+                                            'Pregunta 7:\nCompletastes todos los campos'
+                                          );
+                                          //Fin de la pregunta 7
+                                        }
+
+                                        console.log(
+                                          'Pregunta 6:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                        );
+                                        console.log(dataEnviar);
+                                        console.log('Pregunta 6: Verificada');
+                                      }
+
+                                      console.log(
+                                        'Pregunta 6:\nNo hay campos repetidos'
+                                      );
+                                    }
+
+                                    console.log(
+                                      'Pregunta 6:\nCompletastes todos los campos'
+                                    );
+                                    //Fin de la pregunta 6
+                                  }
+
+                                  console.log(
+                                    'Pregunta 5:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                  );
+                                  console.log(dataEnviar);
+                                  console.log('Pregunta 5: Verificada');
+                                }
+
+                                console.log(
+                                  'Pregunta 5:\nNo hay campos repetidos'
+                                );
+                              }
+
+                              console.log(
+                                'Pregunta 5:\nCompletastes todos los campos'
+                              );
+                              //Fin de la pregunta 5
+                            }
+
+                            console.log(
+                              'Pregunta 4:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                            );
+                            console.log(dataEnviar);
+                            console.log('Pregunta 4: Verificada');
+                          }
+
+                          console.log('Pregunta 4:\nNo hay campos repetidos');
+                        }
+
+                        console.log(
+                          'Pregunta 4:\nCompletastes todos los campos'
+                        );
+                        //Fin de la pregunta 4
+                      }
+
+                      console.log(
+                        'Pregunta 3:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                      );
+                      console.log(dataEnviar);
+                      console.log('Pregunta 2: Verificada');
+                    }
+
+                    console.log('Pregunta 3:\nNo hay campos repetidos');
+                  }
+
+                  console.log('Pregunta 3:\nCompletastes todos los campos');
+                  //Fin de la pregunta 3
+                }
+
+                console.log(
+                  'Pregunta 2:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                );
+                console.log(dataEnviar);
+                console.log('Pregunta 2: Verificada');
+              }
+
+              console.log('Pregunta 2:\nNo hay campos repetidos');
+            }
+
+            console.log('Pregunta 2:\nCompletastes todos los campos');
+            //Fin de la pregunta 2
+          }
+
+          console.log(
+            'Pregunta 1:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+          );
+          console.log(dataEnviar);
+          console.log('Pregunta 1: Verificada');
+        }
+
+        console.log('Pregunta 1:\nNo hay campos repetidos');
+      }
+
+      console.log('Pregunta 1:\nCompletastes todos los campos');
+    }
+  }
 }
 
 /*

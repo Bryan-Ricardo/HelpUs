@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Guia-Completada</ion-title>
+  <script src="Crear-guias.js"></script>
+  <ion-toolbar color="pink">
+
+    <ion-title class="toolbar_title">¡TERMINASTE LA GUIA!</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true" class="background">
+    <div class="container">
+      <ion-text>
+        <h1 class="texto">FELICIDADES 
+          TERMINASTE  
+          LA GUIA</h1>
+      </ion-text>
+      <ion-text color="pink" class="subtitulos">
+        <p>NOMBRE DE LA GUIA: </p>
+      </ion-text>
+      <ion-text color="estilo5" class="info">
+        <p>{{nombre}}</p>
+      </ion-text>
+      <ion-text color="pink" class="subtitulos">
+        <p>CANTIDAD DE PREGUNTAS: </p>
+      </ion-text>
+      <ion-text color="estilo5" class="info">
+        <p>{{cantidadPreguntasI}}</p>
+      </ion-text>
 
-<ion-content>
-
+      <ion-button color="pink" class="icon_btn_container" shape="round" (click)="finalizado()">
+        <ion-icon name="trophy-outline" class="icon_btn"></ion-icon>
+      </ion-button>
+    </div>
 </ion-content>

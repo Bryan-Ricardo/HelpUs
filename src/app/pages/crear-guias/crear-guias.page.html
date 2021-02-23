@@ -37,7 +37,9 @@
       (click)="save2()"
       type="button"
     >
+      <ion-icon name="save-outline"> </ion-icon>
     </ion-button>
+
     <ion-button
       color="pink"
       slot="end"
@@ -117,6 +119,18 @@
       shape="round"
       *ngIf="cantidadPreguntasI == 9"
       (click)="save9()"
+      type="button"
+    >
+      <ion-icon name="save-outline"> </ion-icon>
+    </ion-button>
+
+    <ion-button
+      color="pink"
+      slot="end"
+      class="btn_toolbar"
+      shape="round"
+      *ngIf="cantidadPreguntasI == 10"
+      (click)="save10()"
       type="button"
     >
       <ion-icon name="save-outline"> </ion-icon>
@@ -1999,4 +2013,418 @@
     <!--Fin Pregunta 9-->
   </div>
   <!--Fin de eleccion de nueve preguntas-->
+
+  <!--Eleccion de diez preguntas-->
+  <div class="container_form" *ngIf="cantidadPreguntasI == 10">
+    <!--Pregunta 1-->
+
+    <ion-list class="input1">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 1</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta1"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta1"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta2"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta3"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta4"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta1"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <!--Pregunta 2-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta2"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta5"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta6"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta7"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta8"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta2"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <!--Fin Pregunta 2-->
+
+    <!--Pregunta 3-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta3"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta9"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta10"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta11"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta12"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta3"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 3-->
+    <!--Fin Eleccion de tres preguntas-->
+
+    <!--Pregunta 4-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta4"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta13"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta14"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta15"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta16"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta4"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 4-->
+
+    <!--Pregunta 5-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 5</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta5"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta17"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta18"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta19"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta20"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta5"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 5-->
+
+    <!--Pregunta 6-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 6</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta6"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta21"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta22"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta23"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta24"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta6"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 6-->
+
+    <!--Pregunta 7-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 7</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta7"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta25"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta26"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta27"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta28"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta7"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 7-->
+
+    <!--Pregunta 8-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 8</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta8"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta29"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta30"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta31"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta32"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta8"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 8-->
+
+    <!--Pregunta 9-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 9</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta9"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta33"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta34"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta35"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta36"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta9"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 9-->
+    <!--Pregunta 10-->
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-label position="floating"> Pregunta 10</ion-label>
+        <ion-input type="text" [(ngModel)]="pregunta10"> </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 1 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta37"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 2 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta38"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 3 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta39"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="input">
+      <ion-item color="estilo2">
+        <ion-label position="floating"> Respuesta 4 </ion-label>
+        <ion-input type="text" [(ngModel)]="respuesta40"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list class="inputCorrecta">
+      <ion-item color="estilo5">
+        <ion-label position="floating"> Correcta </ion-label>
+        <ion-input type="number" [(ngModel)]="correcta10"> </ion-input>
+      </ion-item>
+    </ion-list>
+    <!--Fin Pregunta 9-->
+  </div>
+  <!--Fin de eleccion de diez preguntas-->
 </ion-content>
