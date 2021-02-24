@@ -2,9 +2,8 @@
   <script src="Crear-guias.js"></script>
   <ion-toolbar color="pink">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="nombre-guia"> </ion-back-button>
+      <ion-back-button defaultHref="inicio" > </ion-back-button>
     </ion-buttons>
-
     <div class="titulo">
     <ion-title> MIS GUIAS </ion-title>
   </div>
@@ -14,7 +13,7 @@
 
 <ion-content [fullscreen]="true" class="background" >
 
-    <ion-button shape="round" class="btn" color="estilo2" (click)="simulador()">
+    <ion-button shape="round" class="btn" color="estilo2" (click)="simulador()" >
       <p class="preguntas_btn" color="pink">
         {{cantidadPreguntasI}}
       </p>

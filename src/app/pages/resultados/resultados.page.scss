@@ -1,0 +1,105 @@
+//fondo de la View Home
+ion-content.background {
+    --background: url("../../../images/backgraound-Crear-Guias.png") 0 0/100% 100%
+      no-repeat;
+  }
+  
+  //color del boton
+  .ion-color-pink {
+    --ion-color-base: var(--ion-color-pink);
+    --ion-color-base-rgb: var(--ion-color-pink-rgb);
+    --ion-color-contrast: var(--ion-color-pink-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+    --ion-color-shade: var(--ion-color-pink-shade);
+    --ion-color-tint: var(--ion-color-pink-tint);
+  }
+  //color del input1
+  .ion-color-pink {
+    --ion-color-base: var(--ion-color-pink);
+    --ion-color-base-rgb: var(--ion-color-pink-rgb);
+    --ion-color-contrast: var(--ion-color-pink-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+    --ion-color-shade: var(--ion-color-pink-shade);
+    --ion-color-tint: var(--ion-color-pink-tint);
+  }
+  //color del resto de inputs
+  .ion-color-estilo2 {
+    --ion-color-base: var(--ion-color-estilo2);
+    --ion-color-base-rgb: var(--ion-color-estilo2-rgb);
+    --ion-color-contrast: var(--ion-color-estilo2-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-estilo2-contrast-rgb);
+    --ion-color-shade: var(--ion-color-estilo2-shade);
+    --ion-color-tint: var(--ion-color-estilo2-tint);
+  }
+  
+  .ion-color-estilo4 {
+    --ion-color-base: var(--ion-color-estilo4);
+    --ion-color-base-rgb: var(--ion-color-estilo4-rgb);
+    --ion-color-contrast: var(--ion-color-estilo4-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-estilo4-contrast-rgb);
+    --ion-color-shade: var(--ion-color-estilo4-shade);
+    --ion-color-tint: var(--ion-color-estilo4-tint);
+  }
+  
+  //Estilo del input correcto
+  .ion-color-estilo5 {
+    --ion-color-base: var(--ion-color-estilo5);
+    --ion-color-base-rgb: var(--ion-color-estilo5-rgb);
+    --ion-color-contrast: var(--ion-color-estilo5-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-estilo5-contrast-rgb);
+    --ion-color-shade: var(--ion-color-estilo5-shade);
+    --ion-color-tint: var(--ion-color-estilo5-tint);
+  }
+  
+  //Toolbar
+  .container_form {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  ion-toolbar.btn_toolbar {
+    border-radius: 100px;
+  }
+  
+  //Estilo del input del nombre de la guia
+
+  ion-list.input1 {
+    background-color: #f18c8e;
+    border-radius: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    max-width: 9000px;
+  }
+
+
+  //Estilo de todas las posibles respuestas
+  ion-list#input_1 {
+    margin-top: 25px;
+    background-color: #fff5e5;
+    border-radius: 10px;
+  }
+
+  ion-list#input_c {
+    margin-top: 25px;
+    background-color: #2fcf57;
+    border-radius: 10px;
+  }
+
+  ion-list#input_i {
+    margin-top: 25px;
+    background-color: #ee323b;
+    border-radius: 10px;
+  }
+  
+  //correcion
+  ion-list#input_i_c {
+    margin-top: 25px;
+    background-color: #e7a437;
+    border-radius: 10px;
+  }
+  
+  .pregunta {
+    margin-top: 20px;
+  }
+  

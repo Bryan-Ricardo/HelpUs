@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'simulador',
     loadChildren: () => import('./pages/simulador/simulador.module').then( m => m.SimuladorPageModule)
   },
+  {
+    path: 'resultados',
+    loadChildren: () => import('./pages/resultados/resultados.module').then( m => m.ResultadosPageModule)
+  },
 ];
 
 @NgModule({

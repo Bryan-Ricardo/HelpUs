@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
 import { DatosPregunta } from 'src/app/models/datos-pregunta';
 import { EstiloPreguntas } from 'src/app/models/estilo-preguntas';
 
 @Component({
-  selector: 'app-simulador',
-  templateUrl: './simulador.page.html',
-  styleUrls: ['./simulador.page.scss'],
+  selector: 'app-resultados',
+  templateUrl: './resultados.page.html',
+  styleUrls: ['./resultados.page.scss'],
 })
-export class SimuladorPage implements OnInit {
+export class ResultadosPage implements OnInit {
   pregunta1: string;
   pregunta2: string;
   pregunta3: string;
@@ -91,6 +90,47 @@ export class SimuladorPage implements OnInit {
   correcta38: string;
   correcta39: string;
   correcta40: string;
+
+  correctaTexto1: string;
+  correctaTexto2: string;
+  correctaTexto3: string;
+  correctaTexto4: string;
+  correctaTexto5: string;
+  correctaTexto6: string;
+  correctaTexto7: string;
+  correctaTexto8: string;
+  correctaTexto9: string;
+  correctaTexto10: string;
+  correctaTexto11: string;
+  correctaTexto12: string;
+  correctaTexto13: string;
+  correctaTexto14: string;
+  correctaTexto15: string;
+  correctaTexto16: string;
+  correctaTexto17: string;
+  correctaTexto18: string;
+  correctaTexto19: string;
+  correctaTexto20: string;
+  correctaTexto21: string;
+  correctaTexto22: string;
+  correctaTexto23: string;
+  correctaTexto24: string;
+  correctaTexto25: string;
+  correctaTexto26: string;
+  correctaTexto27: string;
+  correctaTexto28: string;
+  correctaTexto29: string;
+  correctaTexto30: string;
+  correctaTexto31: string;
+  correctaTexto32: string;
+  correctaTexto33: string;
+  correctaTexto34: string;
+  correctaTexto35: string;
+  correctaTexto36: string;
+  correctaTexto37: string;
+  correctaTexto38: string;
+  correctaTexto39: string;
+  correctaTexto40: string;
 
   respuesta1: string;
   respuesta2: string;
@@ -315,9 +355,56 @@ export class SimuladorPage implements OnInit {
   eleccionTexto39: string;
   eleccionTexto40: string;
 
+  check1: number;
+  check2: number;
+  check3: number;
+  check4: number;
+  check5: number;
+  check6: number;
+  check7: number;
+  check8: number;
+  check9: number;
+  check10: number;
+  check11: number;
+  check12: number;
+  check13: number;
+  check14: number;
+  check15: number;
+  check16: number;
+  check17: number;
+  check18: number;
+  check19: number;
+  check20: number;
+  check21: number;
+  check22: number;
+  check23: number;
+  check24: number;
+  check25: number;
+  check26: number;
+  check27: number;
+  check28: number;
+  check29: number;
+  check30: number;
+  check31: number;
+  check32: number;
+  check33: number;
+  check34: number;
+  check35: number;
+  check36: number;
+  check37: number;
+  check38: number;
+  check39: number;
+  check40: number;
+
+  restuladosCorrectos: number;
+  resultadosIncorrectos: number;
+
   cantidadPreguntasI: number;
   nombre: string;
-  constructor(private router: Router, private alerta: AlertController) {
+
+  constructor(private router: Router) {
+    this.restuladosCorrectos = 0;
+    this.resultadosIncorrectos = 0;
     /*Extrallendo los datos */
     var data = new DatosPregunta();
     console.log(data);
@@ -327,144 +414,82 @@ export class SimuladorPage implements OnInit {
     //Extraccion del nombre
     this.nombre = data.getNombreLocalHost();
     console.log('Nombre: ' + this.nombre);
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+    //Eleccion1
     if (this.cantidadPreguntasI == 1) {
-      this.preguntaElegida1();
+      this.pregunta1 = dataExtraer.getPregunta1();
+      this.correcta1 = dataExtraer.getCorrecta1();
+      this.eleccion1 = dataExtraer.getEleccion1();
+      this.eleccionTexto1 = dataExtraer.getEleccionTexto1();
+      this.correctaTexto1 = dataExtraer.getCorrectaTexto1();
+      if(this.correcta1 == "1"){
+        this.correctaTexto1 = dataExtraer.getRespuesta1();
+      }if(this.correcta1 == "2"){
+        this.correctaTexto1 = dataExtraer.getRespuesta2();
+      }if(this.correcta1 == "3"){
+        this.correctaTexto1 = dataExtraer.getRespuesta3();
+      }if(this.correcta1 == "4"){
+        this.correctaTexto1 = dataExtraer.getRespuesta4();
+      }
+      this.eleccionResultados1()
     }
   }
 
-  public async cancelar() {
-    const alert = await this.alerta.create({
-      cssClass: 'my-custom-class',
-      header: '¿QUIERES CANCELAR LA SIMULACION?',
-      message: 'Si sales, no se guardaran las respuestas',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Cancelado');
-          },
-        },
-        {
-          text: 'Okay',
-          handler: () => {
-            this.router.navigateByUrl('mis-guias');
-          },
-        },
-      ],
-    });
-
-    await alert.present();
-  }
-  //TODA LA LOGICA DE UNA PREGUNTA
-  public preguntaElegida1() {
-    var dataEnviar = new EstiloPreguntas();
-    console.log(dataEnviar);
-    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+  public eleccionResultados1(){
+    //Extraer las respuestas
     var dataExtraer = new EstiloPreguntas();
-    /*************Extrallendo Datos de la pregunta 1*************/
-    //Pregunta
+    //Asignacion de valores
+    //this.asignacionValores();
+    //Eleccion1
     this.pregunta1 = dataExtraer.getPregunta1();
-    console.log('Pregunta1:' + this.pregunta1);
-    //Respuestas
-    this.respuesta1 = dataExtraer.getRespuesta1();
-    console.log('Respuesta1:' + this.respuesta1);
-    this.respuesta2 = dataExtraer.getRespuesta2();
-    console.log('Respuesta2:' + this.respuesta2);
-    this.respuesta3 = dataExtraer.getRespuesta3();
-    console.log('Respuesta3:' + this.respuesta3);
-    this.respuesta4 = dataExtraer.getRespuesta4();
-    console.log('Respuesta4:' + this.respuesta4);
+      this.correcta1 = dataExtraer.getCorrecta1();
+      this.eleccion1 = dataExtraer.getEleccion1();
+      this.eleccionTexto1 = dataExtraer.getEleccionTexto1();
+      this.correctaTexto1 = dataExtraer.getCorrectaTexto1();
+      if(this.correcta1 == "1"){
+        this.correctaTexto1 = dataExtraer.getRespuesta1();
+      }if(this.correcta1 == "2"){
+        this.correctaTexto1 = dataExtraer.getRespuesta2();
+      }if(this.correcta1 == "3"){
+        this.correctaTexto1 = dataExtraer.getRespuesta3();
+      }if(this.correcta1 == "4"){
+        this.correctaTexto1 = dataExtraer.getRespuesta4();
+      }
+
+      //Correcto
+      console.log("Eleccion 1:"+dataExtraer.getEleccion1())
+      console.log("Correcta 1:"+dataExtraer.getCorrecta1())
+      if (this.eleccion1 == this.correcta1) {
+        this.calculadoraCorrectas();
+        this.check1 = 1;
+        console.log("Check 1:"+ this.check1)
+      }       //Incorrecto
+      if (this.eleccion1 != this.correcta1) {
+        this.calculadoraIncorrectas();
+        this.check1 = 0;
+        console.log("Check 1"+ this.check1)
+      }
   }
 
-  //eleccion1
-  public eleccionPregunta1_Opc1() {
-    this.eleccion1 = "1";
-    var dataEnviar = new EstiloPreguntas();
-    var dataExtraer = new EstiloPreguntas();
-    dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta1());
-    dataEnviar.setEleccion1(this.eleccion1);
-    document.getElementById('input_1').style.backgroundColor = 'green';
-    document.getElementById('input_2').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_3').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_4').style.backgroundColor = '#fff5e5';
-  }
-  //eleccion2
-  public eleccionPregunta1_Opc2() {
-    this.eleccion1 = "2";
-    var dataEnviar = new EstiloPreguntas();
-    var dataExtraer = new EstiloPreguntas();
-    dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta2());
-    dataEnviar.setEleccion1(this.eleccion1);
-    document.getElementById('input_1').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_2').style.backgroundColor = 'green';
-    document.getElementById('input_3').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_4').style.backgroundColor = '#fff5e5';
-  }
-  //eleccion3
-  public eleccionPregunta1_Opc3() {
-    this.eleccion1 = "3";
-    var dataEnviar = new EstiloPreguntas();
-    var dataExtraer = new EstiloPreguntas();
-    dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta3());
-    dataEnviar.setEleccion1(this.eleccion1);
-    document.getElementById('input_1').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_2').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_3').style.backgroundColor = 'green';
-    document.getElementById('input_4').style.backgroundColor = '#fff5e5';
-  }
-  //eleccion4
-  public eleccionPregunta1_Opc4() {
-    this.eleccion1 = "4";
-    var dataEnviar = new EstiloPreguntas();
-    var dataExtraer = new EstiloPreguntas();
-    dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta4());
-    dataEnviar.setEleccion1(this.eleccion1);
-    document.getElementById('input_1').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_2').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_3').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_4').style.backgroundColor = 'green';
+  public asignacionValores() {}
+
+  //Calculadoras de resulados de una pregunta
+  public calculadoraCorrectas() {
+    this.restuladosCorrectos++;
   }
 
-  //Guardado
-  public async save1() {
-
-    var dataEnviar = new EstiloPreguntas();
-    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
-    var dataExtraer = new EstiloPreguntas();
-    
-    /*************Validacion*************/
-    if(parseInt(this.eleccion1)>=1 && parseInt(this.eleccion1) <=4){
-      console.log('Guardado de 1 pregunta')
-      console.log('Seleccionastes la respuesta: '+this.eleccion1 )
-      dataEnviar.setEleccion1(this.eleccion1);
-      this.router.navigateByUrl("resultados");
-    }else if(this.eleccion1==undefined){
-      console.log("No has selleccionado respuesta en la pregunta 1")
-
-      const alert = await this.alerta.create({
-        header: 'ALERTA',
-        message: 'PREGUNTA1: No seleccionaste respuesta',
-        cssClass: 'alertcss',
-        buttons: [
-          {
-            text: 'Okay',
-            handler: () => {
-              console.log('OK');
-            },
-            cssClass: 'buttoncss',
-          },
-        ],
-        backdropDismiss: true,
-      });
-
-      await alert.present();
-      
-    }
-
+  public calculadoraIncorrectas() {
+    this.resultadosIncorrectos++;
   }
+  //Fin Calculadoras de resulados de una pregunta
 
+  public listo() {
+    this.router.navigateByUrl('inicio');
 
+    //Colocar un boton que reeinicie los valores de los resultados
+  }
   ngOnInit() {}
 }

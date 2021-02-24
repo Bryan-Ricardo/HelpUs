@@ -28,12 +28,10 @@ export class MisGuiasPage implements OnInit {
      //Extraccion del nombre
      this.nombre = data.getNombreLocalHost();
      console.log('Nombre: ' + this.nombre);
-
-
    }
 
 
-  public inicio(){
+  public atras(){
     this.router.navigateByUrl('inicio');
   }
 
