@@ -100,7 +100,6 @@ export class CrearGuiasPage {
   correcta39: string;
   correcta40: string;
 
- 
   respuesta1: string;
   respuesta2: string;
   respuesta3: string;
@@ -252,15 +251,16 @@ export class CrearGuiasPage {
     console.log(data.getCantidadPreguntasLocalHost());
     //Extraccion de la cantidad de preguntas
     this.cantidadPreguntasI = data.getCantidadPreguntasLocalHost();
-    console.log('Cantidad de preguntas: ' + this.cantidadPreguntasI);
+
     this.preguntas = Array(this.cantidadPreguntasI);
     //Extraccion del nombre
     this.nombre = data.getNombreLocalHost();
     console.log('Nombre: ' + this.nombre);
+    console.log('Cantidad de preguntas: ' + this.cantidadPreguntasI);
   }
-  
-  inicio(){
-    this.router.navigateByUrl('inicio')
+
+  inicio() {
+    this.router.navigateByUrl('inicio');
   }
 
   public async save1() {
@@ -282,22 +282,31 @@ export class CrearGuiasPage {
     //asignacion de la respuesta correcta
     dataEnviar.setCorrecta1(this.correcta1);
     console.log(dataEnviar.getCorrecta1());
-
+    console.log('Pregunta 1: ' + dataEnviar.getPregunta1());
     //°°°°°°°°°°°°°°°°°°°°°°°°°°|Validacion|°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°||||
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
+    console.log(
+      'ERRORES: ' +
+        dataEnviar.getPregunta1() +
+        dataEnviar.getRespuesta1() +
+        dataEnviar.getRespuesta2() +
+        dataEnviar.getRespuesta3() +
+        dataEnviar.getRespuesta4() +
+        dataEnviar.getCorrecta1()
+    );
     if (
-      dataEnviar.getPregunta1() === undefined &&
-      dataEnviar.getRespuesta1() === undefined &&
-      dataEnviar.getRespuesta2() === undefined &&
-      dataEnviar.getRespuesta3() === undefined &&
-      dataEnviar.getRespuesta4() === undefined &&
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
           header: 'Info',
-          message: 'Pregunta 1:\nOlvidastes llenar algunos datos save2',
+          message: 'Pregunta 1:\nOlvidastes llenar algunos datos',
           cssClass: 'alertcss',
           buttons: [
             {
@@ -326,12 +335,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined'  &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -341,25 +350,23 @@ export class CrearGuiasPage {
         dataEnviar.getRespuesta2() === dataEnviar.getRespuesta4() ||
         dataEnviar.getRespuesta3() === dataEnviar.getRespuesta4()
       ) {
-        {
-          const alert = await this.alerta.create({
-            header: 'Info',
-            message: 'Pregunta 1:\nHay varias respuestas iguales',
-            cssClass: 'alertcss',
-            buttons: [
-              {
-                text: 'Okay',
-                handler: () => {
-                  console.log('OK');
-                },
-                cssClass: 'buttoncss',
+        const alert = await this.alerta.create({
+          header: 'Info',
+          message: 'Pregunta 1:\nHay varias respuestas iguales',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
               },
-            ],
-            backdropDismiss: true,
-          });
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
 
-          await alert.present();
-        }
+        await alert.present();
 
         console.log('Pregunta 1:\nHay varias respuestas iguales');
       } else if (
@@ -459,12 +466,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -497,13 +504,13 @@ export class CrearGuiasPage {
       );
     }
     //Validacion que indica que se completo la primer pregunta
-    if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+    else if (
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -578,12 +585,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la primer pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -617,12 +624,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -778,12 +785,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -817,12 +824,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -897,12 +904,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -936,12 +943,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -1015,12 +1022,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -1054,12 +1061,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -1255,12 +1262,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -1294,12 +1301,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -1374,12 +1381,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -1413,12 +1420,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -1492,12 +1499,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -1531,12 +1538,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -1620,12 +1627,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -1660,12 +1667,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -1898,12 +1905,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -1937,12 +1944,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -2017,12 +2024,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -2056,12 +2063,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -2135,12 +2142,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -2174,12 +2181,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -2263,12 +2270,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -2303,12 +2310,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -2397,12 +2404,12 @@ export class CrearGuiasPage {
                             //QUINTATA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -2437,12 +2444,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -2709,12 +2716,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -2748,12 +2755,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -2828,12 +2835,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -2867,12 +2874,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -2946,12 +2953,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -2985,12 +2992,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -3074,12 +3081,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -3114,12 +3121,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -3208,12 +3215,12 @@ export class CrearGuiasPage {
                             //QUINTATA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -3248,12 +3255,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -3342,12 +3349,16 @@ export class CrearGuiasPage {
                                   //SEXTA PREGUNTA
                                   //Validacion que indica que no se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() === undefined ||
-                                    dataEnviar.getRespuesta21() === undefined ||
-                                    dataEnviar.getRespuesta22() === undefined ||
-                                    dataEnviar.getRespuesta23() === undefined ||
-                                    dataEnviar.getRespuesta24() === undefined ||
-                                    dataEnviar.getCorrecta6() === undefined
+                                    dataEnviar.getPregunta6() === 'undefined' ||
+                                    dataEnviar.getRespuesta21() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta22() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta23() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta24() ===
+                                      'undefined' ||
+                                    dataEnviar.getCorrecta6() === 'undefined'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -3382,12 +3393,16 @@ export class CrearGuiasPage {
                                   }
                                   //Validacion que indica que se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() !== undefined &&
-                                    dataEnviar.getRespuesta21() !== undefined &&
-                                    dataEnviar.getRespuesta22() !== undefined &&
-                                    dataEnviar.getRespuesta23() !== undefined &&
-                                    dataEnviar.getRespuesta24() !== undefined &&
-                                    dataEnviar.getCorrecta6() !== undefined
+                                    dataEnviar.getPregunta6() !== 'undefined' &&
+                                    dataEnviar.getRespuesta21() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta22() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta23() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta24() !==
+                                      'undefined' &&
+                                    dataEnviar.getCorrecta6() !== 'undefined'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -3694,12 +3709,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -3733,12 +3748,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -3813,12 +3828,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -3852,12 +3867,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -3931,12 +3946,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -3970,12 +3985,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -4059,12 +4074,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -4099,12 +4114,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -4193,12 +4208,12 @@ export class CrearGuiasPage {
                             //QUINTATA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -4233,12 +4248,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -4327,12 +4342,16 @@ export class CrearGuiasPage {
                                   //SEXTA PREGUNTA
                                   //Validacion que indica que no se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() === undefined ||
-                                    dataEnviar.getRespuesta21() === undefined ||
-                                    dataEnviar.getRespuesta22() === undefined ||
-                                    dataEnviar.getRespuesta23() === undefined ||
-                                    dataEnviar.getRespuesta24() === undefined ||
-                                    dataEnviar.getCorrecta6() === undefined
+                                    dataEnviar.getPregunta6() === 'undefined' ||
+                                    dataEnviar.getRespuesta21() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta22() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta23() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta24() ===
+                                      'undefined' ||
+                                    dataEnviar.getCorrecta6() === 'undefined'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -4367,12 +4386,16 @@ export class CrearGuiasPage {
                                   }
                                   //Validacion que indica que se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() !== undefined &&
-                                    dataEnviar.getRespuesta21() !== undefined &&
-                                    dataEnviar.getRespuesta22() !== undefined &&
-                                    dataEnviar.getRespuesta23() !== undefined &&
-                                    dataEnviar.getRespuesta24() !== undefined &&
-                                    dataEnviar.getCorrecta6() !== undefined
+                                    dataEnviar.getPregunta6() !== 'undefined' &&
+                                    dataEnviar.getRespuesta21() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta22() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta23() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta24() !==
+                                      'undefined' &&
+                                    dataEnviar.getCorrecta6() !== 'undefined'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -4466,17 +4489,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que no se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta25() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta26() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta27() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta28() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            undefined
+                                            'undefined'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -4514,17 +4537,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta25() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta26() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta27() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta28() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            undefined
+                                            'undefined'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -4875,12 +4898,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -4914,12 +4937,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -4994,12 +5017,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -5033,12 +5056,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -5112,12 +5135,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -5151,12 +5174,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -5240,12 +5263,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -5280,12 +5303,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -5374,12 +5397,12 @@ export class CrearGuiasPage {
                             //QUINTATA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -5414,12 +5437,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -5508,12 +5531,16 @@ export class CrearGuiasPage {
                                   //SEXTA PREGUNTA
                                   //Validacion que indica que no se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() === undefined ||
-                                    dataEnviar.getRespuesta21() === undefined ||
-                                    dataEnviar.getRespuesta22() === undefined ||
-                                    dataEnviar.getRespuesta23() === undefined ||
-                                    dataEnviar.getRespuesta24() === undefined ||
-                                    dataEnviar.getCorrecta6() === undefined
+                                    dataEnviar.getPregunta6() === 'undefined' ||
+                                    dataEnviar.getRespuesta21() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta22() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta23() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta24() ===
+                                      'undefined' ||
+                                    dataEnviar.getCorrecta6() === 'undefined'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -5548,12 +5575,16 @@ export class CrearGuiasPage {
                                   }
                                   //Validacion que indica que se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() !== undefined &&
-                                    dataEnviar.getRespuesta21() !== undefined &&
-                                    dataEnviar.getRespuesta22() !== undefined &&
-                                    dataEnviar.getRespuesta23() !== undefined &&
-                                    dataEnviar.getRespuesta24() !== undefined &&
-                                    dataEnviar.getCorrecta6() !== undefined
+                                    dataEnviar.getPregunta6() !== 'undefined' &&
+                                    dataEnviar.getRespuesta21() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta22() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta23() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta24() !==
+                                      'undefined' &&
+                                    dataEnviar.getCorrecta6() !== 'undefined'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -5647,17 +5678,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que no se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta25() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta26() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta27() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta28() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            undefined
+                                            'undefined'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -5695,17 +5726,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta25() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta26() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta27() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta28() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            undefined
+                                            'undefined'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -5807,17 +5838,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que no se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta29() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta30() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta31() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta32() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -5855,17 +5886,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta29() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta30() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta31() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta32() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -6256,12 +6287,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -6295,12 +6326,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -6375,12 +6406,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -6414,12 +6445,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -6493,12 +6524,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -6532,12 +6563,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -6621,12 +6652,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -6661,12 +6692,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -6755,12 +6786,12 @@ export class CrearGuiasPage {
                             //QUINTA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -6795,12 +6826,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -6889,12 +6920,16 @@ export class CrearGuiasPage {
                                   //SEXTA PREGUNTA
                                   //Validacion que indica que no se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() === undefined ||
-                                    dataEnviar.getRespuesta21() === undefined ||
-                                    dataEnviar.getRespuesta22() === undefined ||
-                                    dataEnviar.getRespuesta23() === undefined ||
-                                    dataEnviar.getRespuesta24() === undefined ||
-                                    dataEnviar.getCorrecta6() === undefined
+                                    dataEnviar.getPregunta6() === 'undefined' ||
+                                    dataEnviar.getRespuesta21() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta22() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta23() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta24() ===
+                                      'undefined' ||
+                                    dataEnviar.getCorrecta6() === 'undefined'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -6929,12 +6964,16 @@ export class CrearGuiasPage {
                                   }
                                   //Validacion que indica que se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() !== undefined &&
-                                    dataEnviar.getRespuesta21() !== undefined &&
-                                    dataEnviar.getRespuesta22() !== undefined &&
-                                    dataEnviar.getRespuesta23() !== undefined &&
-                                    dataEnviar.getRespuesta24() !== undefined &&
-                                    dataEnviar.getCorrecta6() !== undefined
+                                    dataEnviar.getPregunta6() !== 'undefined' &&
+                                    dataEnviar.getRespuesta21() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta22() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta23() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta24() !==
+                                      'undefined' &&
+                                    dataEnviar.getCorrecta6() !== 'undefined'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -7028,17 +7067,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que no se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta25() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta26() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta27() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta28() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            undefined
+                                            'undefined'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -7076,17 +7115,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta25() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta26() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta27() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta28() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            undefined
+                                            'undefined'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -7188,17 +7227,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que no se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta29() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta30() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta31() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta32() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -7236,17 +7275,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta29() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta30() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta31() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta32() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -7352,17 +7391,17 @@ export class CrearGuiasPage {
                                                     //Validacion que indica que no se completo la tercer pregunta
                                                     if (
                                                       dataEnviar.getPregunta9() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta33() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta34() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta35() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta36() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getCorrecta9() ===
-                                                        undefined
+                                                        'undefined'
                                                     ) {
                                                       {
                                                         const alert = await this.alerta.create(
@@ -7404,17 +7443,17 @@ export class CrearGuiasPage {
                                                     //Validacion que indica que se completo la tercer pregunta
                                                     if (
                                                       dataEnviar.getPregunta9() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta33() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta34() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta35() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta36() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getCorrecta9() !==
-                                                        undefined
+                                                        'undefined'
                                                     ) {
                                                       if (
                                                         dataEnviar.getRespuesta33() ===
@@ -7681,7 +7720,6 @@ export class CrearGuiasPage {
     }
   }
 
-
   public async save10() {
     console.log('Guardado 10');
     /*Extrallendo los datos */
@@ -7849,12 +7887,12 @@ export class CrearGuiasPage {
     //PRIMERA PREGUNTA
     //Validacion que indica que no se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() === undefined ||
-      dataEnviar.getRespuesta1() === undefined ||
-      dataEnviar.getRespuesta2() === undefined ||
-      dataEnviar.getRespuesta3() === undefined ||
-      dataEnviar.getRespuesta4() === undefined ||
-      dataEnviar.getCorrecta1() === undefined
+      dataEnviar.getPregunta1() === 'undefined' ||
+      dataEnviar.getRespuesta1() === 'undefined' ||
+      dataEnviar.getRespuesta2() === 'undefined' ||
+      dataEnviar.getRespuesta3() === 'undefined' ||
+      dataEnviar.getRespuesta4() === 'undefined' ||
+      dataEnviar.getCorrecta1() === 'undefined'
     ) {
       {
         const alert = await this.alerta.create({
@@ -7888,12 +7926,12 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== undefined &&
-      dataEnviar.getRespuesta1() !== undefined &&
-      dataEnviar.getRespuesta2() !== undefined &&
-      dataEnviar.getRespuesta3() !== undefined &&
-      dataEnviar.getRespuesta4() !== undefined &&
-      dataEnviar.getCorrecta1() !== undefined
+      dataEnviar.getPregunta1() !== 'undefined' &&
+      dataEnviar.getRespuesta1() !== 'undefined' &&
+      dataEnviar.getRespuesta2() !== 'undefined' &&
+      dataEnviar.getRespuesta3() !== 'undefined' &&
+      dataEnviar.getRespuesta4() !== 'undefined' &&
+      dataEnviar.getCorrecta1() !== 'undefined'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -7968,12 +8006,12 @@ export class CrearGuiasPage {
           //SEGUNDA PREGUNTA
           //Validacion que indica que no se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() === undefined ||
-            dataEnviar.getRespuesta5() === undefined ||
-            dataEnviar.getRespuesta6() === undefined ||
-            dataEnviar.getRespuesta7() === undefined ||
-            dataEnviar.getRespuesta8() === undefined ||
-            dataEnviar.getCorrecta2() === undefined
+            dataEnviar.getPregunta2() === 'undefined' ||
+            dataEnviar.getRespuesta5() === 'undefined' ||
+            dataEnviar.getRespuesta6() === 'undefined' ||
+            dataEnviar.getRespuesta7() === 'undefined' ||
+            dataEnviar.getRespuesta8() === 'undefined' ||
+            dataEnviar.getCorrecta2() === 'undefined'
           ) {
             {
               const alert = await this.alerta.create({
@@ -8007,12 +8045,12 @@ export class CrearGuiasPage {
           }
           //Validacion que indica que se completo la segunda pregunta
           if (
-            dataEnviar.getPregunta2() !== undefined &&
-            dataEnviar.getRespuesta5() !== undefined &&
-            dataEnviar.getRespuesta6() !== undefined &&
-            dataEnviar.getRespuesta7() !== undefined &&
-            dataEnviar.getRespuesta8() !== undefined &&
-            dataEnviar.getCorrecta2() !== undefined
+            dataEnviar.getPregunta2() !== 'undefined' &&
+            dataEnviar.getRespuesta5() !== 'undefined' &&
+            dataEnviar.getRespuesta6() !== 'undefined' &&
+            dataEnviar.getRespuesta7() !== 'undefined' &&
+            dataEnviar.getRespuesta8() !== 'undefined' &&
+            dataEnviar.getCorrecta2() !== 'undefined'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -8086,12 +8124,12 @@ export class CrearGuiasPage {
                 //TERCER PREGUNTA
                 //Validacion que indica que no se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() === undefined ||
-                  dataEnviar.getRespuesta9() === undefined ||
-                  dataEnviar.getRespuesta10() === undefined ||
-                  dataEnviar.getRespuesta11() === undefined ||
-                  dataEnviar.getRespuesta12() === undefined ||
-                  dataEnviar.getCorrecta3() === undefined
+                  dataEnviar.getPregunta3() === 'undefined' ||
+                  dataEnviar.getRespuesta9() === 'undefined' ||
+                  dataEnviar.getRespuesta10() === 'undefined' ||
+                  dataEnviar.getRespuesta11() === 'undefined' ||
+                  dataEnviar.getRespuesta12() === 'undefined' ||
+                  dataEnviar.getCorrecta3() === 'undefined'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -8125,12 +8163,12 @@ export class CrearGuiasPage {
                 }
                 //Validacion que indica que se completo la tercer pregunta
                 if (
-                  dataEnviar.getPregunta3() !== undefined &&
-                  dataEnviar.getRespuesta9() !== undefined &&
-                  dataEnviar.getRespuesta10() !== undefined &&
-                  dataEnviar.getRespuesta11() !== undefined &&
-                  dataEnviar.getRespuesta12() !== undefined &&
-                  dataEnviar.getCorrecta3() !== undefined
+                  dataEnviar.getPregunta3() !== 'undefined' &&
+                  dataEnviar.getRespuesta9() !== 'undefined' &&
+                  dataEnviar.getRespuesta10() !== 'undefined' &&
+                  dataEnviar.getRespuesta11() !== 'undefined' &&
+                  dataEnviar.getRespuesta12() !== 'undefined' &&
+                  dataEnviar.getCorrecta3() !== 'undefined'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -8214,12 +8252,12 @@ export class CrearGuiasPage {
                       //CUARTA PREGUNTA
                       //Validacion que indica que no se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() === undefined ||
-                        dataEnviar.getRespuesta13() === undefined ||
-                        dataEnviar.getRespuesta14() === undefined ||
-                        dataEnviar.getRespuesta15() === undefined ||
-                        dataEnviar.getRespuesta16() === undefined ||
-                        dataEnviar.getCorrecta4() === undefined
+                        dataEnviar.getPregunta4() === 'undefined' ||
+                        dataEnviar.getRespuesta13() === 'undefined' ||
+                        dataEnviar.getRespuesta14() === 'undefined' ||
+                        dataEnviar.getRespuesta15() === 'undefined' ||
+                        dataEnviar.getRespuesta16() === 'undefined' ||
+                        dataEnviar.getCorrecta4() === 'undefined'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -8254,12 +8292,12 @@ export class CrearGuiasPage {
                       }
                       //Validacion que indica que se completo la tercer pregunta
                       if (
-                        dataEnviar.getPregunta4() !== undefined &&
-                        dataEnviar.getRespuesta13() !== undefined &&
-                        dataEnviar.getRespuesta14() !== undefined &&
-                        dataEnviar.getRespuesta15() !== undefined &&
-                        dataEnviar.getRespuesta16() !== undefined &&
-                        dataEnviar.getCorrecta4() !== undefined
+                        dataEnviar.getPregunta4() !== 'undefined' &&
+                        dataEnviar.getRespuesta13() !== 'undefined' &&
+                        dataEnviar.getRespuesta14() !== 'undefined' &&
+                        dataEnviar.getRespuesta15() !== 'undefined' &&
+                        dataEnviar.getRespuesta16() !== 'undefined' &&
+                        dataEnviar.getCorrecta4() !== 'undefined'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -8348,12 +8386,12 @@ export class CrearGuiasPage {
                             //QUINTA PREGUNTA
                             //Validacion que indica que no se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() === undefined ||
-                              dataEnviar.getRespuesta17() === undefined ||
-                              dataEnviar.getRespuesta18() === undefined ||
-                              dataEnviar.getRespuesta19() === undefined ||
-                              dataEnviar.getRespuesta20() === undefined ||
-                              dataEnviar.getCorrecta5() === undefined
+                              dataEnviar.getPregunta5() === 'undefined' ||
+                              dataEnviar.getRespuesta17() === 'undefined' ||
+                              dataEnviar.getRespuesta18() === 'undefined' ||
+                              dataEnviar.getRespuesta19() === 'undefined' ||
+                              dataEnviar.getRespuesta20() === 'undefined' ||
+                              dataEnviar.getCorrecta5() === 'undefined'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -8388,12 +8426,12 @@ export class CrearGuiasPage {
                             }
                             //Validacion que indica que se completo la tercer pregunta
                             if (
-                              dataEnviar.getPregunta5() !== undefined &&
-                              dataEnviar.getRespuesta17() !== undefined &&
-                              dataEnviar.getRespuesta18() !== undefined &&
-                              dataEnviar.getRespuesta19() !== undefined &&
-                              dataEnviar.getRespuesta20() !== undefined &&
-                              dataEnviar.getCorrecta5() !== undefined
+                              dataEnviar.getPregunta5() !== 'undefined' &&
+                              dataEnviar.getRespuesta17() !== 'undefined' &&
+                              dataEnviar.getRespuesta18() !== 'undefined' &&
+                              dataEnviar.getRespuesta19() !== 'undefined' &&
+                              dataEnviar.getRespuesta20() !== 'undefined' &&
+                              dataEnviar.getCorrecta5() !== 'undefined'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -8482,12 +8520,16 @@ export class CrearGuiasPage {
                                   //SEXTA PREGUNTA
                                   //Validacion que indica que no se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() === undefined ||
-                                    dataEnviar.getRespuesta21() === undefined ||
-                                    dataEnviar.getRespuesta22() === undefined ||
-                                    dataEnviar.getRespuesta23() === undefined ||
-                                    dataEnviar.getRespuesta24() === undefined ||
-                                    dataEnviar.getCorrecta6() === undefined
+                                    dataEnviar.getPregunta6() === 'undefined' ||
+                                    dataEnviar.getRespuesta21() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta22() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta23() ===
+                                      'undefined' ||
+                                    dataEnviar.getRespuesta24() ===
+                                      'undefined' ||
+                                    dataEnviar.getCorrecta6() === 'undefined'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -8522,12 +8564,16 @@ export class CrearGuiasPage {
                                   }
                                   //Validacion que indica que se completo la tercer pregunta
                                   if (
-                                    dataEnviar.getPregunta6() !== undefined &&
-                                    dataEnviar.getRespuesta21() !== undefined &&
-                                    dataEnviar.getRespuesta22() !== undefined &&
-                                    dataEnviar.getRespuesta23() !== undefined &&
-                                    dataEnviar.getRespuesta24() !== undefined &&
-                                    dataEnviar.getCorrecta6() !== undefined
+                                    dataEnviar.getPregunta6() !== 'undefined' &&
+                                    dataEnviar.getRespuesta21() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta22() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta23() !==
+                                      'undefined' &&
+                                    dataEnviar.getRespuesta24() !==
+                                      'undefined' &&
+                                    dataEnviar.getCorrecta6() !== 'undefined'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -8621,17 +8667,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que no se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta25() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta26() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta27() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getRespuesta28() ===
-                                            undefined ||
+                                            'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            undefined
+                                            'undefined'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -8669,17 +8715,17 @@ export class CrearGuiasPage {
                                         //Validacion que indica que se completo la tercer pregunta
                                         if (
                                           dataEnviar.getPregunta7() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta25() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta26() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta27() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getRespuesta28() !==
-                                            undefined &&
+                                            'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            undefined
+                                            'undefined'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -8781,17 +8827,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que no se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta29() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta30() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta31() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getRespuesta32() ===
-                                                  undefined ||
+                                                  'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -8829,17 +8875,17 @@ export class CrearGuiasPage {
                                               //Validacion que indica que se completo la tercer pregunta
                                               if (
                                                 dataEnviar.getPregunta8() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta29() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta30() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta31() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getRespuesta32() !==
-                                                  undefined &&
+                                                  'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  undefined
+                                                  'undefined'
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -8945,17 +8991,17 @@ export class CrearGuiasPage {
                                                     //Validacion que indica que no se completo la tercer pregunta
                                                     if (
                                                       dataEnviar.getPregunta9() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta33() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta34() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta35() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getRespuesta36() ===
-                                                        undefined ||
+                                                        'undefined' ||
                                                       dataEnviar.getCorrecta9() ===
-                                                        undefined
+                                                        'undefined'
                                                     ) {
                                                       {
                                                         const alert = await this.alerta.create(
@@ -8997,17 +9043,17 @@ export class CrearGuiasPage {
                                                     //Validacion que indica que se completo la tercer pregunta
                                                     if (
                                                       dataEnviar.getPregunta9() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta33() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta34() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta35() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getRespuesta36() !==
-                                                        undefined &&
+                                                        'undefined' &&
                                                       dataEnviar.getCorrecta9() !==
-                                                        undefined
+                                                        'undefined'
                                                     ) {
                                                       if (
                                                         dataEnviar.getRespuesta33() ===
@@ -9115,203 +9161,208 @@ export class CrearGuiasPage {
                                                           ) < 5
                                                         ) {
                                                           //DECIMA PREGUNTA
-                                                    //Validacion que indica que no se completo la tercer pregunta
-                                                    if (
-                                                      dataEnviar.getPregunta10() ===
-                                                        undefined ||
-                                                      dataEnviar.getRespuesta37() ===
-                                                        undefined ||
-                                                      dataEnviar.getRespuesta38() ===
-                                                        undefined ||
-                                                      dataEnviar.getRespuesta39() ===
-                                                        undefined ||
-                                                      dataEnviar.getRespuesta40() ===
-                                                        undefined ||
-                                                      dataEnviar.getCorrecta10() ===
-                                                        undefined
-                                                    ) {
-                                                      {
-                                                        const alert = await this.alerta.create(
-                                                          {
-                                                            header: 'Info',
-                                                            message:
-                                                              'Pregunta 10:\nOlvidastes llenar algunos datos',
-                                                            cssClass:
-                                                              'alertcss',
-                                                            buttons: [
-                                                              {
-                                                                text: 'Okay',
-                                                                handler: () => {
-                                                                  console.log(
-                                                                    'OK'
-                                                                  );
-                                                                },
-                                                                cssClass:
-                                                                  'buttoncss',
-                                                              },
-                                                            ],
-                                                            backdropDismiss: true,
-                                                          }
-                                                        );
-
-                                                        await alert.present();
-                                                      }
-
-                                                      console.log(
-                                                        'Pregunta 10:\nOlvidastes llenar algunos datos' +
-                                                          dataEnviar.getPregunta10() +
-                                                          dataEnviar.getRespuesta37() +
-                                                          dataEnviar.getRespuesta38() +
-                                                          dataEnviar.getRespuesta39() +
-                                                          dataEnviar.getRespuesta40() +
-                                                          dataEnviar.getCorrecta10()
-                                                      );
-                                                    }
-                                                    //Validacion que indica que se completo la tercer pregunta
-                                                    if (
-                                                      dataEnviar.getPregunta10() !==
-                                                        undefined &&
-                                                      dataEnviar.getRespuesta37() !==
-                                                        undefined &&
-                                                      dataEnviar.getRespuesta38() !==
-                                                        undefined &&
-                                                      dataEnviar.getRespuesta39() !==
-                                                        undefined &&
-                                                      dataEnviar.getRespuesta40() !==
-                                                        undefined &&
-                                                      dataEnviar.getCorrecta10() !==
-                                                        undefined
-                                                    ) {
-                                                      if (
-                                                        dataEnviar.getRespuesta37() ===
-                                                          dataEnviar.getRespuesta38() ||
-                                                        dataEnviar.getRespuesta37() ===
-                                                          dataEnviar.getRespuesta39() ||
-                                                        dataEnviar.getRespuesta37() ===
-                                                          dataEnviar.getRespuesta40() ||
-                                                        dataEnviar.getRespuesta38() ===
-                                                          dataEnviar.getRespuesta39() ||
-                                                        dataEnviar.getRespuesta38() ===
-                                                          dataEnviar.getRespuesta40() ||
-                                                        dataEnviar.getRespuesta39() ===
-                                                          dataEnviar.getRespuesta40()
-                                                      ) {
-                                                        {
-                                                          const alert = await this.alerta.create(
+                                                          //Validacion que indica que no se completo la tercer pregunta
+                                                          if (
+                                                            dataEnviar.getPregunta10() ===
+                                                              'undefined' ||
+                                                            dataEnviar.getRespuesta37() ===
+                                                              'undefined' ||
+                                                            dataEnviar.getRespuesta38() ===
+                                                              'undefined' ||
+                                                            dataEnviar.getRespuesta39() ===
+                                                              'undefined' ||
+                                                            dataEnviar.getRespuesta40() ===
+                                                              'undefined' ||
+                                                            dataEnviar.getCorrecta10() ===
+                                                              'undefined'
+                                                          ) {
                                                             {
-                                                              header: 'Info',
-                                                              message:
-                                                                'Pregunta 10:\nHay varias respuestas iguales',
-                                                              cssClass:
-                                                                'alertcss',
-                                                              buttons: [
+                                                              const alert = await this.alerta.create(
                                                                 {
-                                                                  text: 'Okay',
-                                                                  handler: () => {
-                                                                    console.log(
-                                                                      'OK'
-                                                                    );
-                                                                  },
+                                                                  header:
+                                                                    'Info',
+                                                                  message:
+                                                                    'Pregunta 10:\nOlvidastes llenar algunos datos',
                                                                   cssClass:
-                                                                    'buttoncss',
-                                                                },
-                                                              ],
-                                                              backdropDismiss: true,
-                                                            }
-                                                          );
-
-                                                          await alert.present();
-                                                        }
-
-                                                        console.log(
-                                                          'Pregunta 10:\nHay varias respuestas iguales'
-                                                        );
-                                                      } else if (
-                                                        dataEnviar.getRespuesta37() !==
-                                                          dataEnviar.getRespuesta38() &&
-                                                        dataEnviar.getRespuesta37() !==
-                                                          dataEnviar.getRespuesta39() &&
-                                                        dataEnviar.getRespuesta37() !==
-                                                          dataEnviar.getRespuesta40() &&
-                                                        dataEnviar.getRespuesta38() !==
-                                                          dataEnviar.getRespuesta39() &&
-                                                        dataEnviar.getRespuesta38() !==
-                                                          dataEnviar.getRespuesta40() &&
-                                                        dataEnviar.getRespuesta39() !==
-                                                          dataEnviar.getRespuesta40()
-                                                      ) {
-                                                        if (
-                                                          parseInt(
-                                                            dataEnviar.getCorrecta10()
-                                                          ) < 1 ||
-                                                          parseInt(
-                                                            dataEnviar.getCorrecta10()
-                                                          ) > 4
-                                                        ) {
-                                                          {
-                                                            const alert = await this.alerta.create(
-                                                              {
-                                                                header: 'Info',
-                                                                message:
-                                                                  'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
-                                                                cssClass:
-                                                                  'alertcss',
-                                                                buttons: [
-                                                                  {
-                                                                    text:
-                                                                      'Okay',
-                                                                    handler: () => {
-                                                                      console.log(
-                                                                        'OK'
-                                                                      );
+                                                                    'alertcss',
+                                                                  buttons: [
+                                                                    {
+                                                                      text:
+                                                                        'Okay',
+                                                                      handler: () => {
+                                                                        console.log(
+                                                                          'OK'
+                                                                        );
+                                                                      },
+                                                                      cssClass:
+                                                                        'buttoncss',
                                                                     },
-                                                                    cssClass:
-                                                                      'buttoncss',
-                                                                  },
-                                                                ],
-                                                                backdropDismiss: true,
-                                                              }
+                                                                  ],
+                                                                  backdropDismiss: true,
+                                                                }
+                                                              );
+
+                                                              await alert.present();
+                                                            }
+
+                                                            console.log(
+                                                              'Pregunta 10:\nOlvidastes llenar algunos datos' +
+                                                                dataEnviar.getPregunta10() +
+                                                                dataEnviar.getRespuesta37() +
+                                                                dataEnviar.getRespuesta38() +
+                                                                dataEnviar.getRespuesta39() +
+                                                                dataEnviar.getRespuesta40() +
+                                                                dataEnviar.getCorrecta10()
                                                             );
-
-                                                            await alert.present();
                                                           }
+                                                          //Validacion que indica que se completo la tercer pregunta
+                                                          if (
+                                                            dataEnviar.getPregunta10() !==
+                                                              'undefined' &&
+                                                            dataEnviar.getRespuesta37() !==
+                                                              'undefined' &&
+                                                            dataEnviar.getRespuesta38() !==
+                                                              'undefined' &&
+                                                            dataEnviar.getRespuesta39() !==
+                                                              'undefined' &&
+                                                            dataEnviar.getRespuesta40() !==
+                                                              'undefined' &&
+                                                            dataEnviar.getCorrecta10() !==
+                                                              'undefined'
+                                                          ) {
+                                                            if (
+                                                              dataEnviar.getRespuesta37() ===
+                                                                dataEnviar.getRespuesta38() ||
+                                                              dataEnviar.getRespuesta37() ===
+                                                                dataEnviar.getRespuesta39() ||
+                                                              dataEnviar.getRespuesta37() ===
+                                                                dataEnviar.getRespuesta40() ||
+                                                              dataEnviar.getRespuesta38() ===
+                                                                dataEnviar.getRespuesta39() ||
+                                                              dataEnviar.getRespuesta38() ===
+                                                                dataEnviar.getRespuesta40() ||
+                                                              dataEnviar.getRespuesta39() ===
+                                                                dataEnviar.getRespuesta40()
+                                                            ) {
+                                                              {
+                                                                const alert = await this.alerta.create(
+                                                                  {
+                                                                    header:
+                                                                      'Info',
+                                                                    message:
+                                                                      'Pregunta 10:\nHay varias respuestas iguales',
+                                                                    cssClass:
+                                                                      'alertcss',
+                                                                    buttons: [
+                                                                      {
+                                                                        text:
+                                                                          'Okay',
+                                                                        handler: () => {
+                                                                          console.log(
+                                                                            'OK'
+                                                                          );
+                                                                        },
+                                                                        cssClass:
+                                                                          'buttoncss',
+                                                                      },
+                                                                    ],
+                                                                    backdropDismiss: true,
+                                                                  }
+                                                                );
 
-                                                          console.log(
-                                                            'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
-                                                          );
-                                                        } else if (
-                                                          parseInt(
-                                                            dataEnviar.getCorrecta10()
-                                                          ) > 0 &&
-                                                          parseInt(
-                                                            dataEnviar.getCorrecta10()
-                                                          ) < 5
-                                                        ) {
-                                                          this.router.navigateByUrl(
-                                                            'guia-completada'
-                                                          );
+                                                                await alert.present();
+                                                              }
 
-                                                          console.log(
-                                                            'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
-                                                          );
-                                                          console.log(
-                                                            dataEnviar
-                                                          );
-                                                          console.log(
-                                                            'Pregunta 10: Verificada'
-                                                          );
-                                                        }
+                                                              console.log(
+                                                                'Pregunta 10:\nHay varias respuestas iguales'
+                                                              );
+                                                            } else if (
+                                                              dataEnviar.getRespuesta37() !==
+                                                                dataEnviar.getRespuesta38() &&
+                                                              dataEnviar.getRespuesta37() !==
+                                                                dataEnviar.getRespuesta39() &&
+                                                              dataEnviar.getRespuesta37() !==
+                                                                dataEnviar.getRespuesta40() &&
+                                                              dataEnviar.getRespuesta38() !==
+                                                                dataEnviar.getRespuesta39() &&
+                                                              dataEnviar.getRespuesta38() !==
+                                                                dataEnviar.getRespuesta40() &&
+                                                              dataEnviar.getRespuesta39() !==
+                                                                dataEnviar.getRespuesta40()
+                                                            ) {
+                                                              if (
+                                                                parseInt(
+                                                                  dataEnviar.getCorrecta10()
+                                                                ) < 1 ||
+                                                                parseInt(
+                                                                  dataEnviar.getCorrecta10()
+                                                                ) > 4
+                                                              ) {
+                                                                {
+                                                                  const alert = await this.alerta.create(
+                                                                    {
+                                                                      header:
+                                                                        'Info',
+                                                                      message:
+                                                                        'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con un numero',
+                                                                      cssClass:
+                                                                        'alertcss',
+                                                                      buttons: [
+                                                                        {
+                                                                          text:
+                                                                            'Okay',
+                                                                          handler: () => {
+                                                                            console.log(
+                                                                              'OK'
+                                                                            );
+                                                                          },
+                                                                          cssClass:
+                                                                            'buttoncss',
+                                                                        },
+                                                                      ],
+                                                                      backdropDismiss: true,
+                                                                    }
+                                                                  );
 
-                                                        console.log(
-                                                          'Pregunta 10:\nNo hay campos repetidos'
-                                                        );
-                                                      }
+                                                                  await alert.present();
+                                                                }
 
-                                                      console.log(
-                                                        'Pregunta 10:\nCompletastes todos los campos'
-                                                      );
-                                                      //Fin de la pregunta 10
-                                                    }
+                                                                console.log(
+                                                                  'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                                );
+                                                              } else if (
+                                                                parseInt(
+                                                                  dataEnviar.getCorrecta10()
+                                                                ) > 0 &&
+                                                                parseInt(
+                                                                  dataEnviar.getCorrecta10()
+                                                                ) < 5
+                                                              ) {
+                                                                this.router.navigateByUrl(
+                                                                  'guia-completada'
+                                                                );
+
+                                                                console.log(
+                                                                  'Pregunta 10:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
+                                                                );
+                                                                console.log(
+                                                                  dataEnviar
+                                                                );
+                                                                console.log(
+                                                                  'Pregunta 10: Verificada'
+                                                                );
+                                                              }
+
+                                                              console.log(
+                                                                'Pregunta 10:\nNo hay campos repetidos'
+                                                              );
+                                                            }
+
+                                                            console.log(
+                                                              'Pregunta 10:\nCompletastes todos los campos'
+                                                            );
+                                                            //Fin de la pregunta 10
+                                                          }
 
                                                           console.log(
                                                             'Pregunta 9:\nLa respuesta que colocaste como correcta no existe, recuerda colocarla con numero'
