@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { BorradorRespuestas } from 'src/app/models/borrador-respuestas';
 import { DatosPregunta } from 'src/app/models/datos-pregunta';
 import { EstiloPreguntas } from 'src/app/models/estilo-preguntas';
 
@@ -413,6 +414,8 @@ export class SimuladorPage implements OnInit {
           text: 'Okay',
           handler: () => {
             this.router.navigateByUrl('inicio');
+            var borrarRespuestas = new BorradorRespuestas();
+            borrarRespuestas;
           },
         },
       ],

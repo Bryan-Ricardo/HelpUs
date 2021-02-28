@@ -65,4 +65,2067 @@
   </div>
   <!--Fin de Pregunta 1-->
   <!--Fin de eleccion de una preguntas-->
+
+  <!--Inicio de eleccion de dos preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 2">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+  </div>
+  <!--Fin de eleccion de dos preguntas-->
+
+  <!--Inicio de eleccion de tres preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 3">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+  </div>
+  <!--Fin de eleccion de tres preguntas-->
+
+  <!--Inicio de eleccion de cuatro preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 4">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+  </div>
+  <!--Fin de eleccion de cuatro preguntas-->
+  <!--Inicio de eleccion de cinco preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 5">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+  </div>
+  <!--Fin de eleccion de cinco preguntas-->
+
+  <!--Inicio de eleccion de seis preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 6">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+
+    <!--Pregunta 6-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check6 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check6 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 6-->
+  </div>
+  <!--Fin de eleccion de seis preguntas-->
+
+  <!--Inicio de eleccion de ciete preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 7">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+
+    <!--Pregunta 6-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check6 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check6 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 6-->
+    <!--Pregunta 7-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check7 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check7 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 7-->
+  </div>
+  <!--Fin de eleccion de ciete preguntas-->
+
+  <!--Inicio de eleccion de ocho preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 8">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+
+    <!--Pregunta 6-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check6 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check6 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 6-->
+    <!--Pregunta 7-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check7 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check7 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 7-->
+
+    <!--Pregunta 8-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check8 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check8 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 8-->
+  </div>
+  <!--Fin de eleccion de ocho preguntas-->
+
+  <!--Inicio de eleccion de nueve preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 9">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+
+    <!--Pregunta 6-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check6 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check6 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 6-->
+    <!--Pregunta 7-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check7 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check7 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 7-->
+
+    <!--Pregunta 8-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check8 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check8 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 8-->
+    <!--Pregunta 9-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check9 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check9 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 9-->
+  </div>
+  <!--Fin de eleccion de nueve preguntas-->
+
+  <!--Inicio de eleccion de diez preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 10">
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados correctos: {{restuladosCorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>Resultados incorrectos: {{resultadosIncorrectos}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Pregunta 1-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check1 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check1 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto1}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check2 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check2 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto2}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 2-->
+    <!--Pregunta 3-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check3 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check3 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto3}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 3-->
+
+    <!--Pregunta 4-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check4 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check4 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto4}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 4-->
+
+    <!--Pregunta 5-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check5 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check5 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto5}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 5-->
+
+    <!--Pregunta 6-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check6 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check6 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto6}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 6-->
+    <!--Pregunta 7-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check7 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check7 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto7}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 7-->
+
+    <!--Pregunta 8-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check8 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check8 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto8}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 8-->
+    <!--Pregunta 9-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check9 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check9 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto9}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 9-->
+    <!--Pregunta 10-->
+    <!--OPCION SI ES CORRECTA-->
+    <div *ngIf="check10 == 1">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta10}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_c">
+        <ion-item color="estilo2">
+          <ion-text>Correcto: {{eleccionTexto10}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES CORRECTA-->
+    <!--OPCION SI ES INCORRECTA-->
+    <div *ngIf="check10 == 0">
+      <ion-list id="input_1">
+        <ion-item color="estilo2">
+          <ion-text>{{pregunta10}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i">
+        <ion-item color="estilo2">
+          <ion-text>Incorrecto: {{eleccionTexto10}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_i_c">
+        <ion-item color="estilo2">
+          <ion-text>La respuesta correcta es: {{correctaTexto10}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--FIN OPCION SI ES INCORRECTA-->
+    <!--Fin de Pregunta 10-->
+  </div>
+  <!--Fin de eleccion de diez preguntas-->
 </ion-content>

@@ -425,56 +425,621 @@ export class ResultadosPage implements OnInit {
       this.eleccion1 = dataExtraer.getEleccion1();
       this.eleccionTexto1 = dataExtraer.getEleccionTexto1();
       this.correctaTexto1 = dataExtraer.getCorrectaTexto1();
-      if(this.correcta1 == "1"){
+      if (this.correcta1 == '1') {
         this.correctaTexto1 = dataExtraer.getRespuesta1();
-      }if(this.correcta1 == "2"){
+      }
+      if (this.correcta1 == '2') {
         this.correctaTexto1 = dataExtraer.getRespuesta2();
-      }if(this.correcta1 == "3"){
+      }
+      if (this.correcta1 == '3') {
         this.correctaTexto1 = dataExtraer.getRespuesta3();
-      }if(this.correcta1 == "4"){
+      }
+      if (this.correcta1 == '4') {
         this.correctaTexto1 = dataExtraer.getRespuesta4();
       }
+      this.eleccionResultados1();
+    }//Eleccion2
+    else if (this.cantidadPreguntasI == 2) {
+      this.pregunta2 = dataExtraer.getPregunta2();
+      this.correcta2 = dataExtraer.getCorrecta2();
+      this.eleccion2 = dataExtraer.getEleccion2();
+      this.eleccionTexto2 = dataExtraer.getEleccionTexto2();
+      this.correctaTexto2 = dataExtraer.getCorrectaTexto2();
+      if(this.correcta2 == "1"){
+        this.correctaTexto2 = dataExtraer.getRespuesta5();
+      }if(this.correcta2 == "2"){
+        this.correctaTexto2 = dataExtraer.getRespuesta6();
+      }if(this.correcta2 == "3"){
+        this.correctaTexto2 = dataExtraer.getRespuesta7();
+      }if(this.correcta2 == "4"){
+        this.correctaTexto2 = dataExtraer.getRespuesta8();
+      }
       this.eleccionResultados1()
+      this.eleccionResultados2()
+    }//Eleccion3
+    else if (this.cantidadPreguntasI == 3) {
+      this.pregunta3 = dataExtraer.getPregunta3();
+      this.correcta3 = dataExtraer.getCorrecta3();
+      this.eleccion3 = dataExtraer.getEleccion3();
+      this.eleccionTexto3 = dataExtraer.getEleccionTexto3();
+      this.correctaTexto3 = dataExtraer.getCorrectaTexto3();
+      if(this.correcta3 == "1"){
+        this.correctaTexto3 = dataExtraer.getRespuesta9();
+      }if(this.correcta3 == "2"){
+        this.correctaTexto3 = dataExtraer.getRespuesta10();
+      }if(this.correcta3 == "3"){
+        this.correctaTexto3 = dataExtraer.getRespuesta11();
+      }if(this.correcta3 == "4"){
+        this.correctaTexto3 = dataExtraer.getRespuesta12();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+    }//Eleccion4
+    else if (this.cantidadPreguntasI == 4) {
+      this.pregunta4 = dataExtraer.getPregunta4();
+      this.correcta4 = dataExtraer.getCorrecta4();
+      this.eleccion4 = dataExtraer.getEleccion4();
+      this.eleccionTexto4 = dataExtraer.getEleccionTexto4();
+      this.correctaTexto4 = dataExtraer.getCorrectaTexto4();
+      if(this.correcta4 == "1"){
+        this.correctaTexto4 = dataExtraer.getRespuesta13();
+      }if(this.correcta4 == "2"){
+        this.correctaTexto4 = dataExtraer.getRespuesta14();
+      }if(this.correcta4 == "3"){
+        this.correctaTexto4 = dataExtraer.getRespuesta15();
+      }if(this.correcta4 == "4"){
+        this.correctaTexto4 = dataExtraer.getRespuesta16();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+    }//Eleccion5
+    else if (this.cantidadPreguntasI == 5) {
+      this.pregunta5 = dataExtraer.getPregunta5();
+      this.correcta5 = dataExtraer.getCorrecta5();
+      this.eleccion5 = dataExtraer.getEleccion5();
+      this.eleccionTexto5 = dataExtraer.getEleccionTexto5();
+      this.correctaTexto5 = dataExtraer.getCorrectaTexto5();
+      if(this.correcta5 == "1"){
+        this.correctaTexto5 = dataExtraer.getRespuesta17();
+      }if(this.correcta5 == "2"){
+        this.correctaTexto5 = dataExtraer.getRespuesta18();
+      }if(this.correcta5 == "3"){
+        this.correctaTexto5 = dataExtraer.getRespuesta19();
+      }if(this.correcta5 == "4"){
+        this.correctaTexto5 = dataExtraer.getRespuesta20();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+    }//Eleccion6
+    else if (this.cantidadPreguntasI == 6) {
+      this.pregunta6 = dataExtraer.getPregunta6();
+      this.correcta6 = dataExtraer.getCorrecta6();
+      this.eleccion6 = dataExtraer.getEleccion6();
+      this.eleccionTexto6 = dataExtraer.getEleccionTexto6();
+      this.correctaTexto6 = dataExtraer.getCorrectaTexto6();
+      if(this.correcta6 == "1"){
+        this.correctaTexto6 = dataExtraer.getRespuesta21();
+      }if(this.correcta6 == "2"){
+        this.correctaTexto6 = dataExtraer.getRespuesta22();
+      }if(this.correcta6 == "3"){
+        this.correctaTexto6 = dataExtraer.getRespuesta23();
+      }if(this.correcta6 == "4"){
+        this.correctaTexto6 = dataExtraer.getRespuesta24();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+      this.eleccionResultados6()
+    }//Eleccion7
+    else if (this.cantidadPreguntasI == 7) {
+      this.pregunta7 = dataExtraer.getPregunta7();
+      this.correcta7 = dataExtraer.getCorrecta7();
+      this.eleccion7 = dataExtraer.getEleccion7();
+      this.eleccionTexto7 = dataExtraer.getEleccionTexto7();
+      this.correctaTexto7 = dataExtraer.getCorrectaTexto7();
+      if(this.correcta7 == "1"){
+        this.correctaTexto7 = dataExtraer.getRespuesta25();
+      }if(this.correcta7 == "2"){
+        this.correctaTexto7 = dataExtraer.getRespuesta26();
+      }if(this.correcta7 == "3"){
+        this.correctaTexto7 = dataExtraer.getRespuesta27();
+      }if(this.correcta7 == "4"){
+        this.correctaTexto7 = dataExtraer.getRespuesta28();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+      this.eleccionResultados6()
+      this.eleccionResultados7()
+    }//Eleccion8
+    else if (this.cantidadPreguntasI == 8) {
+      this.pregunta8 = dataExtraer.getPregunta8();
+      this.correcta8 = dataExtraer.getCorrecta8();
+      this.eleccion8 = dataExtraer.getEleccion8();
+      this.eleccionTexto8 = dataExtraer.getEleccionTexto8();
+      this.correctaTexto8 = dataExtraer.getCorrectaTexto8();
+      if(this.correcta8 == "1"){
+        this.correctaTexto8 = dataExtraer.getRespuesta29();
+      }if(this.correcta8 == "2"){
+        this.correctaTexto8 = dataExtraer.getRespuesta30();
+      }if(this.correcta8 == "3"){
+        this.correctaTexto8 = dataExtraer.getRespuesta31();
+      }if(this.correcta8 == "4"){
+        this.correctaTexto8 = dataExtraer.getRespuesta32();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+      this.eleccionResultados6()
+      this.eleccionResultados7()
+      this.eleccionResultados8()
+    }//Eleccion9
+    else if (this.cantidadPreguntasI == 9) {
+      this.pregunta9 = dataExtraer.getPregunta9();
+      this.correcta9 = dataExtraer.getCorrecta9();
+      this.eleccion9 = dataExtraer.getEleccion9();
+      this.eleccionTexto9 = dataExtraer.getEleccionTexto9();
+      this.correctaTexto9 = dataExtraer.getCorrectaTexto9();
+      if(this.correcta9 == "1"){
+        this.correctaTexto9 = dataExtraer.getRespuesta33();
+      }if(this.correcta9 == "2"){
+        this.correctaTexto9 = dataExtraer.getRespuesta34();
+      }if(this.correcta9 == "3"){
+        this.correctaTexto9 = dataExtraer.getRespuesta35();
+      }if(this.correcta9 == "4"){
+        this.correctaTexto9 = dataExtraer.getRespuesta36();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+      this.eleccionResultados6()
+      this.eleccionResultados7()
+      this.eleccionResultados8()
+      this.eleccionResultados9()
+    }//Eleccion10
+    else if (this.cantidadPreguntasI == 10) {
+      this.pregunta10 = dataExtraer.getPregunta10();
+      this.correcta10 = dataExtraer.getCorrecta10();
+      this.eleccion10 = dataExtraer.getEleccion10();
+      this.eleccionTexto10 = dataExtraer.getEleccionTexto10();
+      this.correctaTexto10 = dataExtraer.getCorrectaTexto10();
+      if(this.correcta10 == "1"){
+        this.correctaTexto10 = dataExtraer.getRespuesta37();
+      }if(this.correcta10 == "2"){
+        this.correctaTexto10 = dataExtraer.getRespuesta38();
+      }if(this.correcta10 == "3"){
+        this.correctaTexto10 = dataExtraer.getRespuesta39();
+      }if(this.correcta10 == "4"){
+        this.correctaTexto10 = dataExtraer.getRespuesta40();
+      }
+      this.eleccionResultados1()
+      this.eleccionResultados2()
+      this.eleccionResultados3()
+      this.eleccionResultados4()
+      this.eleccionResultados5()
+      this.eleccionResultados6()
+      this.eleccionResultados7()
+      this.eleccionResultados8()
+      this.eleccionResultados9()
+      this.eleccionResultados10()
     }
   }
-
-  public eleccionResultados1(){
+    //Eleccion1
+  public eleccionResultados1() {
     //Extraer las respuestas
     var dataExtraer = new EstiloPreguntas();
     //Asignacion de valores
     //this.asignacionValores();
-    //Eleccion1
-    this.pregunta1 = dataExtraer.getPregunta1();
-      this.correcta1 = dataExtraer.getCorrecta1();
-      this.eleccion1 = dataExtraer.getEleccion1();
-      this.eleccionTexto1 = dataExtraer.getEleccionTexto1();
-      this.correctaTexto1 = dataExtraer.getCorrectaTexto1();
-      if(this.correcta1 == "1"){
-        this.correctaTexto1 = dataExtraer.getRespuesta1();
-      }if(this.correcta1 == "2"){
-        this.correctaTexto1 = dataExtraer.getRespuesta2();
-      }if(this.correcta1 == "3"){
-        this.correctaTexto1 = dataExtraer.getRespuesta3();
-      }if(this.correcta1 == "4"){
-        this.correctaTexto1 = dataExtraer.getRespuesta4();
-      }
 
-      //Correcto
-      console.log("Eleccion 1:"+dataExtraer.getEleccion1())
-      console.log("Correcta 1:"+dataExtraer.getCorrecta1())
-      if (this.eleccion1 == this.correcta1) {
-        this.calculadoraCorrectas();
-        this.check1 = 1;
-        console.log("Check 1:"+ this.check1)
-      }       //Incorrecto
-      if (this.eleccion1 != this.correcta1) {
-        this.calculadoraIncorrectas();
-        this.check1 = 0;
-        console.log("Check 1"+ this.check1)
-      }
+    this.pregunta1 = dataExtraer.getPregunta1();
+    this.correcta1 = dataExtraer.getCorrecta1();
+    this.eleccion1 = dataExtraer.getEleccion1();
+    this.eleccionTexto1 = dataExtraer.getEleccionTexto1();
+    this.correctaTexto1 = dataExtraer.getCorrectaTexto1();
+    if (this.correcta1 == '1') {
+      this.correctaTexto1 = dataExtraer.getRespuesta1();
+    }
+    if (this.correcta1 == '2') {
+      this.correctaTexto1 = dataExtraer.getRespuesta2();
+    }
+    if (this.correcta1 == '3') {
+      this.correctaTexto1 = dataExtraer.getRespuesta3();
+    }
+    if (this.correcta1 == '4') {
+      this.correctaTexto1 = dataExtraer.getRespuesta4();
+    }
+
+    //Correcto
+    console.log('Eleccion 1:' + dataExtraer.getEleccion1());
+    console.log('Correcta 1:' + dataExtraer.getCorrecta1());
+    if (this.eleccion1 == this.correcta1) {
+      this.calculadoraCorrectas();
+      this.check1 = 1;
+      console.log('Check 1:' + this.check1);
+    } //Incorrecto
+    if (this.eleccion1 != this.correcta1) {
+      this.calculadoraIncorrectas();
+      this.check1 = 0;
+      console.log('Check 1' + this.check1);
+    }
   }
 
-  public asignacionValores() {}
+
+  //Eleccion2
+  public eleccionResultados2() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta2 = dataExtraer.getPregunta2();
+    this.correcta2 = dataExtraer.getCorrecta2();
+    this.eleccion2 = dataExtraer.getEleccion2();
+    this.eleccionTexto2 = dataExtraer.getEleccionTexto2();
+    this.correctaTexto2 = dataExtraer.getCorrectaTexto2();
+    if (this.correcta2 == '1') {
+      this.correctaTexto2 = dataExtraer.getRespuesta5();
+    }
+    if (this.correcta2 == '2') {
+      this.correctaTexto2 = dataExtraer.getRespuesta6();
+    }
+    if (this.correcta2 == '3') {
+      this.correctaTexto2 = dataExtraer.getRespuesta7();
+    }
+    if (this.correcta2 == '4') {
+      this.correctaTexto2 = dataExtraer.getRespuesta8();
+    }
+
+    //Correcto
+    console.log('Eleccion 2:' + dataExtraer.getEleccion2());
+    console.log('Correcta 2:' + dataExtraer.getCorrecta2());
+    if (this.eleccion2 == this.correcta2) {
+      this.calculadoraCorrectas();
+      this.check2 = 1;
+      console.log('Check 2:' + this.check2);
+    } //Incorrecto
+    if (this.eleccion2 != this.correcta2) {
+      this.calculadoraIncorrectas();
+      this.check2 = 0;
+      console.log('Check 2' + this.check2);
+    }
+  }
+
+  //Eleccion3
+  public eleccionResultados3() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta3 = dataExtraer.getPregunta3();
+    this.correcta3 = dataExtraer.getCorrecta3();
+    this.eleccion3 = dataExtraer.getEleccion3();
+    this.eleccionTexto3 = dataExtraer.getEleccionTexto3();
+    this.correctaTexto3 = dataExtraer.getCorrectaTexto3();
+    if (this.correcta3 == '1') {
+      this.correctaTexto3 = dataExtraer.getRespuesta9();
+    }
+    if (this.correcta3 == '2') {
+      this.correctaTexto3 = dataExtraer.getRespuesta10();
+    }
+    if (this.correcta3 == '3') {
+      this.correctaTexto3 = dataExtraer.getRespuesta11();
+    }
+    if (this.correcta3 == '4') {
+      this.correctaTexto3 = dataExtraer.getRespuesta12();
+    }
+
+    //Correcto
+    console.log('Eleccion 3:' + dataExtraer.getEleccion3());
+    console.log('Correcta 3:' + dataExtraer.getCorrecta3());
+    if (this.eleccion3 == this.correcta3) {
+      this.calculadoraCorrectas();
+      this.check3 = 1;
+      console.log('Check 3:' + this.check3);
+    } //Incorrecto
+    if (this.eleccion3 != this.correcta3) {
+      this.calculadoraIncorrectas();
+      this.check3 = 0;
+      console.log('Check 3' + this.check3);
+    }
+  }
+
+
+  //Eleccion4
+  public eleccionResultados4() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta4 = dataExtraer.getPregunta4();
+    this.correcta4 = dataExtraer.getCorrecta4();
+    this.eleccion4 = dataExtraer.getEleccion4();
+    this.eleccionTexto4 = dataExtraer.getEleccionTexto4();
+    this.correctaTexto4 = dataExtraer.getCorrectaTexto4();
+    if (this.correcta4 == '1') {
+      this.correctaTexto4 = dataExtraer.getRespuesta13();
+    }
+    if (this.correcta4 == '2') {
+      this.correctaTexto4 = dataExtraer.getRespuesta14();
+    }
+    if (this.correcta4 == '3') {
+      this.correctaTexto4 = dataExtraer.getRespuesta15();
+    }
+    if (this.correcta4 == '4') {
+      this.correctaTexto4 = dataExtraer.getRespuesta16();
+    }
+
+    //Correcto
+    console.log('Eleccion 4:' + dataExtraer.getEleccion4());
+    console.log('Correcta 4:' + dataExtraer.getCorrecta4());
+    if (this.eleccion4 == this.correcta4) {
+      this.calculadoraCorrectas();
+      this.check4 = 1;
+      console.log('Check 4:' + this.check4);
+    } //Incorrecto
+    if (this.eleccion4 != this.correcta4) {
+      this.calculadoraIncorrectas();
+      this.check4 = 0;
+      console.log('Check 4' + this.check4);
+    }
+  }
+
+  //Eleccion5
+  public eleccionResultados5() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta5 = dataExtraer.getPregunta5();
+    this.correcta5 = dataExtraer.getCorrecta5();
+    this.eleccion5 = dataExtraer.getEleccion5();
+    this.eleccionTexto5 = dataExtraer.getEleccionTexto5();
+    this.correctaTexto5 = dataExtraer.getCorrectaTexto5();
+    if (this.correcta5 == '1') {
+      this.correctaTexto5 = dataExtraer.getRespuesta17();
+    }
+    if (this.correcta5 == '2') {
+      this.correctaTexto5 = dataExtraer.getRespuesta18();
+    }
+    if (this.correcta5 == '3') {
+      this.correctaTexto5 = dataExtraer.getRespuesta19();
+    }
+    if (this.correcta5 == '4') {
+      this.correctaTexto5 = dataExtraer.getRespuesta20();
+    }
+
+    //Correcto
+    console.log('Eleccion 5:' + dataExtraer.getEleccion5());
+    console.log('Correcta 5:' + dataExtraer.getCorrecta5());
+    if (this.eleccion5 == this.correcta5) {
+      this.calculadoraCorrectas();
+      this.check5 = 1;
+      console.log('Check 5:' + this.check5);
+    } //Incorrecto
+    if (this.eleccion5 != this.correcta5) {
+      this.calculadoraIncorrectas();
+      this.check5 = 0;
+      console.log('Check 5' + this.check5);
+    }
+  }
+
+  //Eleccion6
+  public eleccionResultados6() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta6 = dataExtraer.getPregunta6();
+    this.correcta6 = dataExtraer.getCorrecta6();
+    this.eleccion6 = dataExtraer.getEleccion6();
+    this.eleccionTexto6 = dataExtraer.getEleccionTexto6();
+    this.correctaTexto6 = dataExtraer.getCorrectaTexto6();
+    if (this.correcta6 == '1') {
+      this.correctaTexto6 = dataExtraer.getRespuesta21();
+    }
+    if (this.correcta6 == '2') {
+      this.correctaTexto6 = dataExtraer.getRespuesta22();
+    }
+    if (this.correcta6 == '3') {
+      this.correctaTexto6 = dataExtraer.getRespuesta23();
+    }
+    if (this.correcta6 == '4') {
+      this.correctaTexto6 = dataExtraer.getRespuesta24();
+    }
+
+    //Correcto
+    console.log('Eleccion 6:' + dataExtraer.getEleccion6());
+    console.log('Correcta 6:' + dataExtraer.getCorrecta6());
+    if (this.eleccion6 == this.correcta6) {
+      this.calculadoraCorrectas();
+      this.check6 = 1;
+      console.log('Check 6:' + this.check6);
+    } //Incorrecto
+    if (this.eleccion6 != this.correcta6) {
+      this.calculadoraIncorrectas();
+      this.check6 = 0;
+      console.log('Check 6' + this.check6);
+    }
+  }
+
+  //Eleccion7
+  public eleccionResultados7() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta7 = dataExtraer.getPregunta7();
+    this.correcta7 = dataExtraer.getCorrecta7();
+    this.eleccion7 = dataExtraer.getEleccion7();
+    this.eleccionTexto7 = dataExtraer.getEleccionTexto7();
+    this.correctaTexto7 = dataExtraer.getCorrectaTexto7();
+    if (this.correcta7 == '1') {
+      this.correctaTexto7 = dataExtraer.getRespuesta25();
+    }
+    if (this.correcta7 == '2') {
+      this.correctaTexto7 = dataExtraer.getRespuesta26();
+    }
+    if (this.correcta7 == '3') {
+      this.correctaTexto7 = dataExtraer.getRespuesta27();
+    }
+    if (this.correcta7 == '4') {
+      this.correctaTexto7 = dataExtraer.getRespuesta28();
+    }
+
+    //Correcto
+    console.log('Eleccion 7:' + dataExtraer.getEleccion7());
+    console.log('Correcta 7:' + dataExtraer.getCorrecta7());
+    if (this.eleccion7 == this.correcta7) {
+      this.calculadoraCorrectas();
+      this.check7 = 1;
+      console.log('Check 7:' + this.check7);
+    } //Incorrecto
+    if (this.eleccion7 != this.correcta7) {
+      this.calculadoraIncorrectas();
+      this.check7 = 0;
+      console.log('Check 7' + this.check7);
+    }
+  }
+
+  //Eleccion8
+  public eleccionResultados8() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta8 = dataExtraer.getPregunta8();
+    this.correcta8 = dataExtraer.getCorrecta8();
+    this.eleccion8 = dataExtraer.getEleccion8();
+    this.eleccionTexto8 = dataExtraer.getEleccionTexto8();
+    this.correctaTexto8 = dataExtraer.getCorrectaTexto8();
+    if (this.correcta8 == '1') {
+      this.correctaTexto8 = dataExtraer.getRespuesta29();
+    }
+    if (this.correcta8 == '2') {
+      this.correctaTexto8 = dataExtraer.getRespuesta30();
+    }
+    if (this.correcta8 == '3') {
+      this.correctaTexto8 = dataExtraer.getRespuesta31();
+    }
+    if (this.correcta8 == '4') {
+      this.correctaTexto8 = dataExtraer.getRespuesta32();
+    }
+
+    //Correcto
+    console.log('Eleccion 8:' + dataExtraer.getEleccion8());
+    console.log('Correcta 8:' + dataExtraer.getCorrecta8());
+    if (this.eleccion8 == this.correcta8) {
+      this.calculadoraCorrectas();
+      this.check8 = 1;
+      console.log('Check 8:' + this.check8);
+    } //Incorrecto
+    if (this.eleccion8 != this.correcta8) {
+      this.calculadoraIncorrectas();
+      this.check8 = 0;
+      console.log('Check 8' + this.check8);
+    }
+  }
+
+   //Eleccion9
+   public eleccionResultados9() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta9 = dataExtraer.getPregunta9();
+    this.correcta9 = dataExtraer.getCorrecta9();
+    this.eleccion9 = dataExtraer.getEleccion9();
+    this.eleccionTexto9 = dataExtraer.getEleccionTexto9();
+    this.correctaTexto9 = dataExtraer.getCorrectaTexto9();
+    if (this.correcta9 == '1') {
+      this.correctaTexto9 = dataExtraer.getRespuesta33();
+    }
+    if (this.correcta9 == '2') {
+      this.correctaTexto9 = dataExtraer.getRespuesta34();
+    }
+    if (this.correcta9 == '3') {
+      this.correctaTexto9 = dataExtraer.getRespuesta35();
+    }
+    if (this.correcta9 == '4') {
+      this.correctaTexto9 = dataExtraer.getRespuesta36();
+    }
+
+    //Correcto
+    console.log('Eleccion 9:' + dataExtraer.getEleccion9());
+    console.log('Correcta 9:' + dataExtraer.getCorrecta9());
+    if (this.eleccion9 == this.correcta9) {
+      this.calculadoraCorrectas();
+      this.check9 = 1;
+      console.log('Check 9:' + this.check9);
+    } //Incorrecto
+    if (this.eleccion9 != this.correcta9) {
+      this.calculadoraIncorrectas();
+      this.check9 = 0;
+      console.log('Check 9' + this.check9);
+    }
+  }
+
+  //Eleccion10
+  public eleccionResultados10() {
+    //Extraer las respuestas
+    var dataExtraer = new EstiloPreguntas();
+    //Asignacion de valores
+    //this.asignacionValores();
+
+    this.pregunta10 = dataExtraer.getPregunta10();
+    this.correcta10 = dataExtraer.getCorrecta10();
+    this.eleccion10 = dataExtraer.getEleccion10();
+    this.eleccionTexto10 = dataExtraer.getEleccionTexto10();
+    this.correctaTexto10 = dataExtraer.getCorrectaTexto10();
+    if (this.correcta10 == '1') {
+      this.correctaTexto10 = dataExtraer.getRespuesta37();
+    }
+    if (this.correcta10 == '2') {
+      this.correctaTexto10 = dataExtraer.getRespuesta38();
+    }
+    if (this.correcta10 == '3') {
+      this.correctaTexto10 = dataExtraer.getRespuesta39();
+    }
+    if (this.correcta10 == '4') {
+      this.correctaTexto10 = dataExtraer.getRespuesta40();
+    }
+
+    //Correcto
+    console.log('Eleccion 10:' + dataExtraer.getEleccion10());
+    console.log('Correcta 10:' + dataExtraer.getCorrecta10());
+    if (this.eleccion10 == this.correcta10) {
+      this.calculadoraCorrectas();
+      this.check10 = 1;
+      console.log('Check 10:' + this.check10);
+    } //Incorrecto
+    if (this.eleccion10 != this.correcta10) {
+      this.calculadoraIncorrectas();
+      this.check10 = 0;
+      console.log('Check 10' + this.check10);
+    }
+  }
+
 
   //Calculadoras de resulados de una pregunta
   public calculadoraCorrectas() {
@@ -488,7 +1053,8 @@ export class ResultadosPage implements OnInit {
 
   public listo() {
     this.router.navigateByUrl('inicio');
-
+    var borrarRespuestas = new borrarRespuestas();
+    borrarRespuestas();
     //Colocar un boton que reeinicie los valores de los resultados
   }
   ngOnInit() {}

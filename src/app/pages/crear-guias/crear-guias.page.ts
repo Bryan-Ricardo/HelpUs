@@ -301,7 +301,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -335,12 +341,18 @@ export class CrearGuiasPage {
     }
     //Validacion que indica que se completo la primer pregunta
     if (
-      dataEnviar.getPregunta1() !== 'undefined'  &&
+      dataEnviar.getPregunta1() !== 'undefined' &&
       dataEnviar.getRespuesta1() !== 'undefined' &&
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null'
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -471,7 +483,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -510,7 +528,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -590,7 +620,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -629,7 +665,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -790,7 +832,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -829,7 +877,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -909,7 +969,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -948,7 +1014,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -1027,7 +1099,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -1066,7 +1144,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -1267,7 +1351,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -1306,7 +1396,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -1386,7 +1488,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -1425,7 +1533,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -1504,7 +1618,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -1543,7 +1663,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -1632,7 +1758,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -1672,7 +1804,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -1910,7 +2048,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -1949,7 +2093,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -2029,7 +2185,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -2068,7 +2230,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -2147,7 +2315,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -2186,7 +2360,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -2275,7 +2455,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -2315,7 +2501,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -2409,7 +2601,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -2449,7 +2647,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -2721,7 +2925,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -2760,7 +2970,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -2840,7 +3062,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -2879,7 +3107,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -2958,7 +3192,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -2997,7 +3237,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -3086,7 +3332,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -3126,7 +3378,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -3220,7 +3478,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -3260,7 +3524,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -3358,7 +3628,13 @@ export class CrearGuiasPage {
                                       'undefined' ||
                                     dataEnviar.getRespuesta24() ===
                                       'undefined' ||
-                                    dataEnviar.getCorrecta6() === 'undefined'
+                                    dataEnviar.getCorrecta6() === 'undefined' ||
+                                    dataEnviar.getPregunta6() === '' ||
+                                    dataEnviar.getRespuesta21() === '' ||
+                                    dataEnviar.getRespuesta22() === '' ||
+                                    dataEnviar.getRespuesta23() === '' ||
+                                    dataEnviar.getRespuesta24() === '' ||
+                                    dataEnviar.getCorrecta6() === 'null'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -3402,7 +3678,13 @@ export class CrearGuiasPage {
                                       'undefined' &&
                                     dataEnviar.getRespuesta24() !==
                                       'undefined' &&
-                                    dataEnviar.getCorrecta6() !== 'undefined'
+                                    dataEnviar.getCorrecta6() !== 'undefined' &&
+                                    dataEnviar.getPregunta6() !== '' &&
+                                    dataEnviar.getRespuesta21() !== '' &&
+                                    dataEnviar.getRespuesta22() !== '' &&
+                                    dataEnviar.getRespuesta23() !== '' &&
+                                    dataEnviar.getRespuesta24() !== '' &&
+                                    dataEnviar.getCorrecta6() !== 'null'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -3440,21 +3722,34 @@ export class CrearGuiasPage {
                                       }
 
                                       console.log(
-                                        'Pregunta 6:\nHay varias respuestas iguales'+
-                                        "21" + dataEnviar.getRespuesta21()+ 
-                                        "22" +dataEnviar.getRespuesta22()+ 
-                                        "21" + dataEnviar.getRespuesta21() +
-                                        "23" + dataEnviar.getRespuesta23()+
-                                        "21" + dataEnviar.getRespuesta21()+ 
-                                        "24" + dataEnviar.getRespuesta24() +
-                                        "22" + dataEnviar.getRespuesta22() +
-                                        "23" + dataEnviar.getRespuesta23()+
-                                        "22" + dataEnviar.getRespuesta22() +
-                                        "24" +  dataEnviar.getRespuesta24()+ 
-                                        "23" + dataEnviar.getRespuesta23() +
-                                        "24" + dataEnviar.getRespuesta24()
+                                        'Pregunta 6:\nHay varias respuestas iguales' +
+                                          '21' +
+                                          dataEnviar.getRespuesta21() +
+                                          '22' +
+                                          dataEnviar.getRespuesta22() +
+                                          '21' +
+                                          dataEnviar.getRespuesta21() +
+                                          '23' +
+                                          dataEnviar.getRespuesta23() +
+                                          '21' +
+                                          dataEnviar.getRespuesta21() +
+                                          '24' +
+                                          dataEnviar.getRespuesta24() +
+                                          '22' +
+                                          dataEnviar.getRespuesta22() +
+                                          '23' +
+                                          dataEnviar.getRespuesta23() +
+                                          '22' +
+                                          dataEnviar.getRespuesta22() +
+                                          '24' +
+                                          dataEnviar.getRespuesta24() +
+                                          '23' +
+                                          dataEnviar.getRespuesta23() +
+                                          '24' +
+                                          dataEnviar.getRespuesta24()
                                       );
-                                    } if (
+                                    }
+                                    if (
                                       dataEnviar.getRespuesta21() !==
                                         dataEnviar.getRespuesta22() &&
                                       dataEnviar.getRespuesta21() !==
@@ -3726,7 +4021,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -3765,7 +4066,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -3845,7 +4158,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -3884,7 +4203,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -3963,7 +4288,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -4002,7 +4333,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -4091,7 +4428,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -4131,7 +4474,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -4225,7 +4574,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -4265,7 +4620,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -4363,7 +4724,13 @@ export class CrearGuiasPage {
                                       'undefined' ||
                                     dataEnviar.getRespuesta24() ===
                                       'undefined' ||
-                                    dataEnviar.getCorrecta6() === 'undefined'
+                                    dataEnviar.getCorrecta6() === 'undefined' ||
+                                    dataEnviar.getPregunta6() === '' ||
+                                    dataEnviar.getRespuesta21() === '' ||
+                                    dataEnviar.getRespuesta22() === '' ||
+                                    dataEnviar.getRespuesta23() === '' ||
+                                    dataEnviar.getRespuesta24() === '' ||
+                                    dataEnviar.getCorrecta6() === 'null'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -4407,7 +4774,13 @@ export class CrearGuiasPage {
                                       'undefined' &&
                                     dataEnviar.getRespuesta24() !==
                                       'undefined' &&
-                                    dataEnviar.getCorrecta6() !== 'undefined'
+                                    dataEnviar.getCorrecta6() !== 'undefined' &&
+                                    dataEnviar.getPregunta6() !== '' &&
+                                    dataEnviar.getRespuesta21() !== '' &&
+                                    dataEnviar.getRespuesta22() !== '' &&
+                                    dataEnviar.getRespuesta23() !== '' &&
+                                    dataEnviar.getRespuesta24() !== '' &&
+                                    dataEnviar.getCorrecta6() !== 'null'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -4511,7 +4884,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() ===
                                             'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            'undefined'
+                                            'undefined' ||
+                                          dataEnviar.getPregunta7() === '' ||
+                                          dataEnviar.getRespuesta25() === '' ||
+                                          dataEnviar.getRespuesta26() === '' ||
+                                          dataEnviar.getRespuesta27() === '' ||
+                                          dataEnviar.getRespuesta28() === '' ||
+                                          dataEnviar.getCorrecta7() === 'null'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -4559,7 +4938,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() !==
                                             'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            'undefined'
+                                            'undefined' &&
+                                          dataEnviar.getPregunta7() !== '' &&
+                                          dataEnviar.getRespuesta25() !== '' &&
+                                          dataEnviar.getRespuesta26() !== '' &&
+                                          dataEnviar.getRespuesta27() !== '' &&
+                                          dataEnviar.getRespuesta28() !== '' &&
+                                          dataEnviar.getCorrecta7() !== 'null'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -4915,7 +5300,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -4954,7 +5345,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -5034,7 +5437,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -5073,7 +5482,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -5152,7 +5567,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -5191,7 +5612,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -5280,7 +5707,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -5320,7 +5753,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -5414,7 +5853,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -5454,7 +5899,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -5552,7 +6003,13 @@ export class CrearGuiasPage {
                                       'undefined' ||
                                     dataEnviar.getRespuesta24() ===
                                       'undefined' ||
-                                    dataEnviar.getCorrecta6() === 'undefined'
+                                    dataEnviar.getCorrecta6() === 'undefined' ||
+                                    dataEnviar.getPregunta6() === '' ||
+                                    dataEnviar.getRespuesta21() === '' ||
+                                    dataEnviar.getRespuesta22() === '' ||
+                                    dataEnviar.getRespuesta23() === '' ||
+                                    dataEnviar.getRespuesta24() === '' ||
+                                    dataEnviar.getCorrecta6() === 'null'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -5596,7 +6053,13 @@ export class CrearGuiasPage {
                                       'undefined' &&
                                     dataEnviar.getRespuesta24() !==
                                       'undefined' &&
-                                    dataEnviar.getCorrecta6() !== 'undefined'
+                                    dataEnviar.getCorrecta6() !== 'undefined' &&
+                                    dataEnviar.getPregunta6() !== '' &&
+                                    dataEnviar.getRespuesta21() !== '' &&
+                                    dataEnviar.getRespuesta22() !== '' &&
+                                    dataEnviar.getRespuesta23() !== '' &&
+                                    dataEnviar.getRespuesta24() !== '' &&
+                                    dataEnviar.getCorrecta6() !== 'null'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -5700,7 +6163,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() ===
                                             'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            'undefined'
+                                            'undefined' ||
+                                          dataEnviar.getPregunta7() === '' ||
+                                          dataEnviar.getRespuesta25() === '' ||
+                                          dataEnviar.getRespuesta26() === '' ||
+                                          dataEnviar.getRespuesta27() === '' ||
+                                          dataEnviar.getRespuesta28() === '' ||
+                                          dataEnviar.getCorrecta7() === 'null'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -5748,7 +6217,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() !==
                                             'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            'undefined'
+                                            'undefined' &&
+                                          dataEnviar.getPregunta7() !== '' &&
+                                          dataEnviar.getRespuesta25() !== '' &&
+                                          dataEnviar.getRespuesta26() !== '' &&
+                                          dataEnviar.getRespuesta27() !== '' &&
+                                          dataEnviar.getRespuesta28() !== '' &&
+                                          dataEnviar.getCorrecta7() !== 'null'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -5860,7 +6335,17 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() ===
                                                   'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  'undefined'
+                                                  'undefined' ||
+                                                dataEnviar.getPregunta8() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta29() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta30() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta31() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta32() ===
+                                                  'null'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -5908,7 +6393,17 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() !==
                                                   'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  'undefined'
+                                                  'undefined' &&
+                                                dataEnviar.getPregunta8() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta29() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta30() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta31() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta32() !==
+                                                  'null'
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -6304,7 +6799,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -6343,7 +6844,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -6423,7 +6936,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -6462,7 +6981,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -6541,7 +7066,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -6580,7 +7111,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -6669,7 +7206,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -6709,7 +7252,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -6803,7 +7352,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -6843,7 +7398,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -6941,7 +7502,13 @@ export class CrearGuiasPage {
                                       'undefined' ||
                                     dataEnviar.getRespuesta24() ===
                                       'undefined' ||
-                                    dataEnviar.getCorrecta6() === 'undefined'
+                                    dataEnviar.getCorrecta6() === 'undefined' ||
+                                    dataEnviar.getPregunta6() === '' ||
+                                    dataEnviar.getRespuesta21() === '' ||
+                                    dataEnviar.getRespuesta22() === '' ||
+                                    dataEnviar.getRespuesta23() === '' ||
+                                    dataEnviar.getRespuesta24() === '' ||
+                                    dataEnviar.getCorrecta6() === 'null'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -6985,7 +7552,13 @@ export class CrearGuiasPage {
                                       'undefined' &&
                                     dataEnviar.getRespuesta24() !==
                                       'undefined' &&
-                                    dataEnviar.getCorrecta6() !== 'undefined'
+                                    dataEnviar.getCorrecta6() !== 'undefined' &&
+                                    dataEnviar.getPregunta6() !== '' &&
+                                    dataEnviar.getRespuesta21() !== '' &&
+                                    dataEnviar.getRespuesta22() !== '' &&
+                                    dataEnviar.getRespuesta23() !== '' &&
+                                    dataEnviar.getRespuesta24() !== '' &&
+                                    dataEnviar.getCorrecta6() !== 'null'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -7089,7 +7662,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() ===
                                             'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            'undefined'
+                                            'undefined' ||
+                                          dataEnviar.getPregunta7() === '' ||
+                                          dataEnviar.getRespuesta25() === '' ||
+                                          dataEnviar.getRespuesta26() === '' ||
+                                          dataEnviar.getRespuesta27() === '' ||
+                                          dataEnviar.getRespuesta28() === '' ||
+                                          dataEnviar.getCorrecta7() === 'null'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -7137,7 +7716,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() !==
                                             'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            'undefined'
+                                            'undefined' &&
+                                          dataEnviar.getPregunta7() !== '' &&
+                                          dataEnviar.getRespuesta25() !== '' &&
+                                          dataEnviar.getRespuesta26() !== '' &&
+                                          dataEnviar.getRespuesta27() !== '' &&
+                                          dataEnviar.getRespuesta28() !== '' &&
+                                          dataEnviar.getCorrecta7() !== 'null'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -7249,7 +7834,18 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() ===
                                                   'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  'undefined'
+                                                  'undefined' ||
+                                                dataEnviar.getPregunta8() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta29() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta30() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta31() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta32() ===
+                                                  '' ||
+                                                dataEnviar.getCorrecta8() === 'null'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -7297,7 +7893,18 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() !==
                                                   'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  'undefined'
+                                                  'undefined' &&
+                                                dataEnviar.getPregunta8() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta29() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta30() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta31() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta32() !==
+                                                  '' &&
+                                                dataEnviar.getCorrecta8() !== ''
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -7402,7 +8009,7 @@ export class CrearGuiasPage {
                                                     //NOVENA PREGUNTA
                                                     //Validacion que indica que no se completo la tercer pregunta
                                                     if (
-                                                      dataEnviar.getPregunta9() ===
+                                                                                                              dataEnviar.getPregunta9() ===
                                                         'undefined' ||
                                                       dataEnviar.getRespuesta33() ===
                                                         'undefined' ||
@@ -7413,7 +8020,19 @@ export class CrearGuiasPage {
                                                       dataEnviar.getRespuesta36() ===
                                                         'undefined' ||
                                                       dataEnviar.getCorrecta9() ===
-                                                        'undefined'
+                                                        'undefined'||
+                                                      dataEnviar.getPregunta9() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta33() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta34() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta35() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta36() ===
+                                                        "" ||
+                                                      dataEnviar.getCorrecta9() ===
+                                                        "null"
                                                     ) {
                                                       {
                                                         const alert = await this.alerta.create(
@@ -7454,7 +8073,7 @@ export class CrearGuiasPage {
                                                     }
                                                     //Validacion que indica que se completo la tercer pregunta
                                                     if (
-                                                      dataEnviar.getPregunta9() !==
+                                                                                                             dataEnviar.getPregunta9() !==
                                                         'undefined' &&
                                                       dataEnviar.getRespuesta33() !==
                                                         'undefined' &&
@@ -7465,7 +8084,19 @@ export class CrearGuiasPage {
                                                       dataEnviar.getRespuesta36() !==
                                                         'undefined' &&
                                                       dataEnviar.getCorrecta9() !==
-                                                        'undefined'
+                                                        'undefined' &&
+                                                        dataEnviar.getPregunta9() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta33() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta34() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta35() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta36() !==
+                                                        "" &&
+                                                      dataEnviar.getCorrecta9() !==
+                                                        "null"
                                                     ) {
                                                       if (
                                                         dataEnviar.getRespuesta33() ===
@@ -7904,7 +8535,13 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() === 'undefined' ||
       dataEnviar.getRespuesta3() === 'undefined' ||
       dataEnviar.getRespuesta4() === 'undefined' ||
-      dataEnviar.getCorrecta1() === 'undefined'
+      dataEnviar.getCorrecta1() === 'undefined' ||
+      dataEnviar.getPregunta1() === '' ||
+      dataEnviar.getRespuesta1() === '' ||
+      dataEnviar.getRespuesta2() === '' ||
+      dataEnviar.getRespuesta3() === '' ||
+      dataEnviar.getRespuesta4() === '' ||
+      dataEnviar.getCorrecta1() === 'null'
     ) {
       {
         const alert = await this.alerta.create({
@@ -7943,7 +8580,19 @@ export class CrearGuiasPage {
       dataEnviar.getRespuesta2() !== 'undefined' &&
       dataEnviar.getRespuesta3() !== 'undefined' &&
       dataEnviar.getRespuesta4() !== 'undefined' &&
-      dataEnviar.getCorrecta1() !== 'undefined'
+      dataEnviar.getCorrecta1() !== 'undefined' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== 'null' &&
+      dataEnviar.getPregunta1() !== '' &&
+      dataEnviar.getRespuesta1() !== '' &&
+      dataEnviar.getRespuesta2() !== '' &&
+      dataEnviar.getRespuesta3() !== '' &&
+      dataEnviar.getRespuesta4() !== '' &&
+      dataEnviar.getCorrecta1() !== ''
     ) {
       if (
         dataEnviar.getRespuesta1() === dataEnviar.getRespuesta2() ||
@@ -8023,7 +8672,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() === 'undefined' ||
             dataEnviar.getRespuesta7() === 'undefined' ||
             dataEnviar.getRespuesta8() === 'undefined' ||
-            dataEnviar.getCorrecta2() === 'undefined'
+            dataEnviar.getCorrecta2() === 'undefined' ||
+            dataEnviar.getPregunta2() === '' ||
+            dataEnviar.getRespuesta5() === '' ||
+            dataEnviar.getRespuesta6() === '' ||
+            dataEnviar.getRespuesta7() === '' ||
+            dataEnviar.getRespuesta8() === '' ||
+            dataEnviar.getCorrecta2() === 'null'
           ) {
             {
               const alert = await this.alerta.create({
@@ -8062,7 +8717,13 @@ export class CrearGuiasPage {
             dataEnviar.getRespuesta6() !== 'undefined' &&
             dataEnviar.getRespuesta7() !== 'undefined' &&
             dataEnviar.getRespuesta8() !== 'undefined' &&
-            dataEnviar.getCorrecta2() !== 'undefined'
+            dataEnviar.getCorrecta2() !== 'undefined' &&
+            dataEnviar.getPregunta2() !== '' &&
+            dataEnviar.getRespuesta5() !== '' &&
+            dataEnviar.getRespuesta6() !== '' &&
+            dataEnviar.getRespuesta7() !== '' &&
+            dataEnviar.getRespuesta8() !== '' &&
+            dataEnviar.getCorrecta2() !== 'null'
           ) {
             if (
               dataEnviar.getRespuesta5() === dataEnviar.getRespuesta6() ||
@@ -8141,7 +8802,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() === 'undefined' ||
                   dataEnviar.getRespuesta11() === 'undefined' ||
                   dataEnviar.getRespuesta12() === 'undefined' ||
-                  dataEnviar.getCorrecta3() === 'undefined'
+                  dataEnviar.getCorrecta3() === 'undefined' ||
+                  dataEnviar.getPregunta3() === '' ||
+                  dataEnviar.getRespuesta9() === '' ||
+                  dataEnviar.getRespuesta10() === '' ||
+                  dataEnviar.getRespuesta11() === '' ||
+                  dataEnviar.getRespuesta12() === '' ||
+                  dataEnviar.getCorrecta3() === 'null'
                 ) {
                   {
                     const alert = await this.alerta.create({
@@ -8180,7 +8847,13 @@ export class CrearGuiasPage {
                   dataEnviar.getRespuesta10() !== 'undefined' &&
                   dataEnviar.getRespuesta11() !== 'undefined' &&
                   dataEnviar.getRespuesta12() !== 'undefined' &&
-                  dataEnviar.getCorrecta3() !== 'undefined'
+                  dataEnviar.getCorrecta3() !== 'undefined' &&
+                  dataEnviar.getPregunta3() !== '' &&
+                  dataEnviar.getRespuesta9() !== '' &&
+                  dataEnviar.getRespuesta10() !== '' &&
+                  dataEnviar.getRespuesta11() !== '' &&
+                  dataEnviar.getRespuesta12() !== '' &&
+                  dataEnviar.getCorrecta3() !== 'null'
                 ) {
                   if (
                     dataEnviar.getRespuesta9() ===
@@ -8269,7 +8942,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() === 'undefined' ||
                         dataEnviar.getRespuesta15() === 'undefined' ||
                         dataEnviar.getRespuesta16() === 'undefined' ||
-                        dataEnviar.getCorrecta4() === 'undefined'
+                        dataEnviar.getCorrecta4() === 'undefined' ||
+                        dataEnviar.getPregunta4() === '' ||
+                        dataEnviar.getRespuesta13() === '' ||
+                        dataEnviar.getRespuesta14() === '' ||
+                        dataEnviar.getRespuesta15() === '' ||
+                        dataEnviar.getRespuesta16() === '' ||
+                        dataEnviar.getCorrecta4() === 'null'
                       ) {
                         {
                           const alert = await this.alerta.create({
@@ -8309,7 +8988,13 @@ export class CrearGuiasPage {
                         dataEnviar.getRespuesta14() !== 'undefined' &&
                         dataEnviar.getRespuesta15() !== 'undefined' &&
                         dataEnviar.getRespuesta16() !== 'undefined' &&
-                        dataEnviar.getCorrecta4() !== 'undefined'
+                        dataEnviar.getCorrecta4() !== 'undefined' &&
+                        dataEnviar.getPregunta4() !== '' &&
+                        dataEnviar.getRespuesta13() !== '' &&
+                        dataEnviar.getRespuesta14() !== '' &&
+                        dataEnviar.getRespuesta15() !== '' &&
+                        dataEnviar.getRespuesta16() !== '' &&
+                        dataEnviar.getCorrecta4() !== 'null'
                       ) {
                         if (
                           dataEnviar.getRespuesta13() ===
@@ -8403,7 +9088,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() === 'undefined' ||
                               dataEnviar.getRespuesta19() === 'undefined' ||
                               dataEnviar.getRespuesta20() === 'undefined' ||
-                              dataEnviar.getCorrecta5() === 'undefined'
+                              dataEnviar.getCorrecta5() === 'undefined' ||
+                              dataEnviar.getPregunta5() === '' ||
+                              dataEnviar.getRespuesta17() === '' ||
+                              dataEnviar.getRespuesta18() === '' ||
+                              dataEnviar.getRespuesta19() === '' ||
+                              dataEnviar.getRespuesta20() === '' ||
+                              dataEnviar.getCorrecta5() === 'null'
                             ) {
                               {
                                 const alert = await this.alerta.create({
@@ -8443,7 +9134,13 @@ export class CrearGuiasPage {
                               dataEnviar.getRespuesta18() !== 'undefined' &&
                               dataEnviar.getRespuesta19() !== 'undefined' &&
                               dataEnviar.getRespuesta20() !== 'undefined' &&
-                              dataEnviar.getCorrecta5() !== 'undefined'
+                              dataEnviar.getCorrecta5() !== 'undefined' &&
+                              dataEnviar.getPregunta5() !== '' &&
+                              dataEnviar.getRespuesta17() !== '' &&
+                              dataEnviar.getRespuesta18() !== '' &&
+                              dataEnviar.getRespuesta19() !== '' &&
+                              dataEnviar.getRespuesta20() !== '' &&
+                              dataEnviar.getCorrecta5() !== 'null'
                             ) {
                               if (
                                 dataEnviar.getRespuesta17() ===
@@ -8541,7 +9238,13 @@ export class CrearGuiasPage {
                                       'undefined' ||
                                     dataEnviar.getRespuesta24() ===
                                       'undefined' ||
-                                    dataEnviar.getCorrecta6() === 'undefined'
+                                    dataEnviar.getCorrecta6() === 'undefined' ||
+                                    dataEnviar.getPregunta6() === '' ||
+                                    dataEnviar.getRespuesta21() === '' ||
+                                    dataEnviar.getRespuesta22() === '' ||
+                                    dataEnviar.getRespuesta23() === '' ||
+                                    dataEnviar.getRespuesta24() === '' ||
+                                    dataEnviar.getCorrecta6() === 'null'
                                   ) {
                                     {
                                       const alert = await this.alerta.create({
@@ -8585,7 +9288,13 @@ export class CrearGuiasPage {
                                       'undefined' &&
                                     dataEnviar.getRespuesta24() !==
                                       'undefined' &&
-                                    dataEnviar.getCorrecta6() !== 'undefined'
+                                    dataEnviar.getCorrecta6() !== 'undefined' &&
+                                    dataEnviar.getPregunta6() !== '' &&
+                                    dataEnviar.getRespuesta21() !== '' &&
+                                    dataEnviar.getRespuesta22() !== '' &&
+                                    dataEnviar.getRespuesta23() !== '' &&
+                                    dataEnviar.getRespuesta24() !== '' &&
+                                    dataEnviar.getCorrecta6() !== 'null'
                                   ) {
                                     if (
                                       dataEnviar.getRespuesta21() ===
@@ -8689,7 +9398,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() ===
                                             'undefined' ||
                                           dataEnviar.getCorrecta7() ===
-                                            'undefined'
+                                            'undefined' ||
+                                          dataEnviar.getPregunta7() === '' ||
+                                          dataEnviar.getRespuesta25() === '' ||
+                                          dataEnviar.getRespuesta26() === '' ||
+                                          dataEnviar.getRespuesta27() === '' ||
+                                          dataEnviar.getRespuesta28() === '' ||
+                                          dataEnviar.getCorrecta7() === 'null'
                                         ) {
                                           {
                                             const alert = await this.alerta.create(
@@ -8737,7 +9452,13 @@ export class CrearGuiasPage {
                                           dataEnviar.getRespuesta28() !==
                                             'undefined' &&
                                           dataEnviar.getCorrecta7() !==
-                                            'undefined'
+                                            'undefined' &&
+                                          dataEnviar.getPregunta7() !== '' &&
+                                          dataEnviar.getRespuesta25() !== '' &&
+                                          dataEnviar.getRespuesta26() !== '' &&
+                                          dataEnviar.getRespuesta27() !== '' &&
+                                          dataEnviar.getRespuesta28() !== '' &&
+                                          dataEnviar.getCorrecta7() !== 'null'
                                         ) {
                                           if (
                                             dataEnviar.getRespuesta25() ===
@@ -8849,7 +9570,18 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() ===
                                                   'undefined' ||
                                                 dataEnviar.getCorrecta8() ===
-                                                  'undefined'
+                                                  'undefined' ||
+                                                dataEnviar.getPregunta8() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta29() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta30() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta31() ===
+                                                  '' ||
+                                                dataEnviar.getRespuesta32() ===
+                                                  '' ||
+                                                dataEnviar.getCorrecta8() === 'null'
                                               ) {
                                                 {
                                                   const alert = await this.alerta.create(
@@ -8897,7 +9629,18 @@ export class CrearGuiasPage {
                                                 dataEnviar.getRespuesta32() !==
                                                   'undefined' &&
                                                 dataEnviar.getCorrecta8() !==
-                                                  'undefined'
+                                                  'undefined' &&
+                                                dataEnviar.getPregunta8() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta29() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta30() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta31() !==
+                                                  '' &&
+                                                dataEnviar.getRespuesta32() !==
+                                                  '' &&
+                                                dataEnviar.getCorrecta8() !== ''
                                               ) {
                                                 if (
                                                   dataEnviar.getRespuesta29() ===
@@ -9002,7 +9745,7 @@ export class CrearGuiasPage {
                                                     //NOVENA PREGUNTA
                                                     //Validacion que indica que no se completo la tercer pregunta
                                                     if (
-                                                      dataEnviar.getPregunta9() ===
+                                                                                                              dataEnviar.getPregunta9() ===
                                                         'undefined' ||
                                                       dataEnviar.getRespuesta33() ===
                                                         'undefined' ||
@@ -9013,7 +9756,19 @@ export class CrearGuiasPage {
                                                       dataEnviar.getRespuesta36() ===
                                                         'undefined' ||
                                                       dataEnviar.getCorrecta9() ===
-                                                        'undefined'
+                                                        'undefined'||
+                                                      dataEnviar.getPregunta9() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta33() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta34() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta35() ===
+                                                        "" ||
+                                                      dataEnviar.getRespuesta36() ===
+                                                        "" ||
+                                                      dataEnviar.getCorrecta9() ===
+                                                        "null"
                                                     ) {
                                                       {
                                                         const alert = await this.alerta.create(
@@ -9054,7 +9809,7 @@ export class CrearGuiasPage {
                                                     }
                                                     //Validacion que indica que se completo la tercer pregunta
                                                     if (
-                                                      dataEnviar.getPregunta9() !==
+                                                                                                             dataEnviar.getPregunta9() !==
                                                         'undefined' &&
                                                       dataEnviar.getRespuesta33() !==
                                                         'undefined' &&
@@ -9065,7 +9820,19 @@ export class CrearGuiasPage {
                                                       dataEnviar.getRespuesta36() !==
                                                         'undefined' &&
                                                       dataEnviar.getCorrecta9() !==
-                                                        'undefined'
+                                                        'undefined' &&
+                                                        dataEnviar.getPregunta9() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta33() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta34() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta35() !==
+                                                        "" &&
+                                                      dataEnviar.getRespuesta36() !==
+                                                        "" &&
+                                                      dataEnviar.getCorrecta9() !==
+                                                        "null"
                                                     ) {
                                                       if (
                                                         dataEnviar.getRespuesta33() ===
@@ -9175,7 +9942,7 @@ export class CrearGuiasPage {
                                                           //DECIMA PREGUNTA
                                                           //Validacion que indica que no se completo la tercer pregunta
                                                           if (
-                                                            dataEnviar.getPregunta10() ===
+                                                                                                                          dataEnviar.getPregunta10() ===
                                                               'undefined' ||
                                                             dataEnviar.getRespuesta37() ===
                                                               'undefined' ||
@@ -9186,7 +9953,19 @@ export class CrearGuiasPage {
                                                             dataEnviar.getRespuesta40() ===
                                                               'undefined' ||
                                                             dataEnviar.getCorrecta10() ===
-                                                              'undefined'
+                                                              'undefined'||
+                                                              dataEnviar.getPregunta10() ===
+                                                              "" ||
+                                                            dataEnviar.getRespuesta37() ===
+                                                              "" ||
+                                                            dataEnviar.getRespuesta38() ===
+                                                              "" ||
+                                                            dataEnviar.getRespuesta39() ===
+                                                              "" ||
+                                                            dataEnviar.getRespuesta40() ===
+                                                              "" ||
+                                                            dataEnviar.getCorrecta10() ===
+                                                              "null"
                                                           ) {
                                                             {
                                                               const alert = await this.alerta.create(
@@ -9229,7 +10008,7 @@ export class CrearGuiasPage {
                                                           }
                                                           //Validacion que indica que se completo la tercer pregunta
                                                           if (
-                                                            dataEnviar.getPregunta10() !==
+                                                                                                                           dataEnviar.getPregunta10() !==
                                                               'undefined' &&
                                                             dataEnviar.getRespuesta37() !==
                                                               'undefined' &&
@@ -9240,7 +10019,19 @@ export class CrearGuiasPage {
                                                             dataEnviar.getRespuesta40() !==
                                                               'undefined' &&
                                                             dataEnviar.getCorrecta10() !==
-                                                              'undefined'
+                                                              'undefined' &&
+                                                               dataEnviar.getPregunta10() !==
+                                                              "" &&
+                                                            dataEnviar.getRespuesta37() !==
+                                                              "" &&
+                                                            dataEnviar.getRespuesta38() !==
+                                                              "" &&
+                                                            dataEnviar.getRespuesta39() !==
+                                                              "" &&
+                                                            dataEnviar.getRespuesta40() !==
+                                                              "" &&
+                                                            dataEnviar.getCorrecta10() !==
+                                                              "null"
                                                           ) {
                                                             if (
                                                               dataEnviar.getRespuesta37() ===

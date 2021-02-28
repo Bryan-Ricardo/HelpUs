@@ -908,7 +908,7 @@ eleccionTexto40: string;
     localStorage.setItem("correcta9",correcta9)
   }
   public getCorrecta9() {
-    return localStorage.getItem("correcta");
+    return localStorage.getItem("correcta9");
   }
   public setEleccion9(eleccion9: string) {
     this.eleccion9 = eleccion9;
