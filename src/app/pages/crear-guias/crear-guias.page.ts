@@ -3440,9 +3440,21 @@ export class CrearGuiasPage {
                                       }
 
                                       console.log(
-                                        'Pregunta 6:\nHay varias respuestas iguales'
+                                        'Pregunta 6:\nHay varias respuestas iguales'+
+                                        "21" + dataEnviar.getRespuesta21()+ 
+                                        "22" +dataEnviar.getRespuesta22()+ 
+                                        "21" + dataEnviar.getRespuesta21() +
+                                        "23" + dataEnviar.getRespuesta23()+
+                                        "21" + dataEnviar.getRespuesta21()+ 
+                                        "24" + dataEnviar.getRespuesta24() +
+                                        "22" + dataEnviar.getRespuesta22() +
+                                        "23" + dataEnviar.getRespuesta23()+
+                                        "22" + dataEnviar.getRespuesta22() +
+                                        "24" +  dataEnviar.getRespuesta24()+ 
+                                        "23" + dataEnviar.getRespuesta23() +
+                                        "24" + dataEnviar.getRespuesta24()
                                       );
-                                    } else if (
+                                    } if (
                                       dataEnviar.getRespuesta21() !==
                                         dataEnviar.getRespuesta22() &&
                                       dataEnviar.getRespuesta21() !==

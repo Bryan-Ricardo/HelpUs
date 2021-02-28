@@ -1,10 +1,6 @@
 <ion-header>
   <script src="Crear-guias.js"></script>
   <ion-toolbar color="pink">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="nombre-guia"> </ion-back-button>
-    </ion-buttons>
-
     <ion-title> {{nombre}} </ion-title>
 
     <ion-button
@@ -139,8 +135,9 @@
 </ion-header>
 <ion-content [fullscreen]="true" class="background">
   <!--Inicio de eleccion de una preguntas-->
-  <!--Pregunta 1-->
+
   <div class="container_form" *ngIf="cantidadPreguntasI == 1">
+    <!--Pregunta 1-->
     <ion-list class="input1" input1="pregunta">
       <ion-item color="pink">
         <ion-text>{{pregunta1}}</ion-text>
@@ -167,7 +164,1587 @@
         <ion-text>{{respuesta4}}</ion-text>
       </ion-item>
     </ion-list>
+    <!--Fin de Pregunta 1-->
   </div>
-  <!--Fin de Pregunta 1-->
+  <!--Fin de eleccion de dos preguntas-->
+
+  <!--Inicio de eleccion de una preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 2">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+  </div>
   <!--Fin de eleccion de una preguntas-->
+  <!--Fin de eleccion de dos preguntas-->
+  <!--Inicio de eleccion de tres preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 3">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+  </div>
+  <!--Fin de eleccion de tres preguntas-->
+
+  <!--Inicio de eleccion de cuatro preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 4">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+  </div>
+  <!--Fin de eleccion de cuatro preguntas-->
+
+  <!--Inicio de eleccion de cinco preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 5">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+  </div>
+  <!--Fin de eleccion de cinco preguntas-->
+
+  <!--Inicio de eleccion de seis preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 6">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+
+       <!--Pregunta 6-->
+       <ion-list class="input1" input1="pregunta">
+        <ion-item color="pink">
+          <ion-text>{{pregunta6}}</ion-text>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list id="input_21">
+        <ion-item color="estilo2" (click)="eleccionPregunta6_Opc1()">
+          <ion-text>{{respuesta21}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_22">
+        <ion-item color="estilo2" (click)="eleccionPregunta6_Opc2()">
+          <ion-text>{{respuesta22}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_23">
+        <ion-item color="estilo2" (click)="eleccionPregunta6_Opc3()">
+          <ion-text>{{respuesta23}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list id="input_24">
+        <ion-item color="estilo2" (click)="eleccionPregunta6_Opc4()">
+          <ion-text>{{respuesta24}}</ion-text>
+        </ion-item>
+      </ion-list>
+      <!--Fin de Pregunta 6-->
+  </div>
+  <!--Fin de eleccion de seis preguntas-->
+
+  <!--Inicio de eleccion de ciete preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 7">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+
+        <!--Pregunta 6-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta6}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_21">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc1()">
+            <ion-text>{{respuesta21}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_22">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc2()">
+            <ion-text>{{respuesta22}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_23">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc3()">
+            <ion-text>{{respuesta23}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_24">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc4()">
+            <ion-text>{{respuesta24}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 6-->
+
+         <!--Pregunta 7-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta7}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_25">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc1()">
+            <ion-text>{{respuesta25}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_26">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc2()">
+            <ion-text>{{respuesta26}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_27">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc3()">
+            <ion-text>{{respuesta27}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_28">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc4()">
+            <ion-text>{{respuesta28}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 7-->
+  </div>
+  <!--Fin de eleccion de ciete preguntas-->
+
+  <!--Inicio de eleccion de ocho preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 8">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+
+        <!--Pregunta 6-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta6}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_21">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc1()">
+            <ion-text>{{respuesta21}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_22">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc2()">
+            <ion-text>{{respuesta22}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_23">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc3()">
+            <ion-text>{{respuesta23}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_24">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc4()">
+            <ion-text>{{respuesta24}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 6-->
+
+         <!--Pregunta 7-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta7}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_25">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc1()">
+            <ion-text>{{respuesta25}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_26">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc2()">
+            <ion-text>{{respuesta26}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_27">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc3()">
+            <ion-text>{{respuesta27}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_28">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc4()">
+            <ion-text>{{respuesta28}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 7-->
+
+         <!--Pregunta 8-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta8}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_29">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc1()">
+            <ion-text>{{respuesta29}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_30">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc2()">
+            <ion-text>{{respuesta30}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_31">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc3()">
+            <ion-text>{{respuesta31}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_32">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc4()">
+            <ion-text>{{respuesta32}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 8-->
+  </div>
+  <!--Fin de eleccion de ocho preguntas-->
+
+   <!--Inicio de eleccion de nueve preguntas-->
+
+   <div class="container_form" *ngIf="cantidadPreguntasI == 9">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+
+        <!--Pregunta 6-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta6}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_21">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc1()">
+            <ion-text>{{respuesta21}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_22">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc2()">
+            <ion-text>{{respuesta22}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_23">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc3()">
+            <ion-text>{{respuesta23}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_24">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc4()">
+            <ion-text>{{respuesta24}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 6-->
+
+         <!--Pregunta 7-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta7}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_25">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc1()">
+            <ion-text>{{respuesta25}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_26">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc2()">
+            <ion-text>{{respuesta26}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_27">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc3()">
+            <ion-text>{{respuesta27}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_28">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc4()">
+            <ion-text>{{respuesta28}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 7-->
+
+         <!--Pregunta 8-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta8}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_29">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc1()">
+            <ion-text>{{respuesta29}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_30">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc2()">
+            <ion-text>{{respuesta30}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_31">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc3()">
+            <ion-text>{{respuesta31}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_32">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc4()">
+            <ion-text>{{respuesta32}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 8-->
+
+        <!--Pregunta 9-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta9}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_33">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc1()">
+            <ion-text>{{respuesta33}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_34">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc2()">
+            <ion-text>{{respuesta34}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_35">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc3()">
+            <ion-text>{{respuesta35}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_36">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc4()">
+            <ion-text>{{respuesta36}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 9-->
+  </div>
+  <!--Fin de eleccion de nueve preguntas-->
+
+  <!--Inicio de eleccion de diez preguntas-->
+
+  <div class="container_form" *ngIf="cantidadPreguntasI == 10">
+    <!--Pregunta 1-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_1">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc1()">
+        <ion-text>{{respuesta1}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_2">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc2()">
+        <ion-text>{{respuesta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_3">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc3()">
+        <ion-text>{{respuesta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_4">
+      <ion-item color="estilo2" (click)="eleccionPregunta1_Opc4()">
+        <ion-text>{{respuesta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 1-->
+    <!--Pregunta 2-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta2}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_5">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc1()">
+        <ion-text>{{respuesta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_6">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc2()">
+        <ion-text>{{respuesta6}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_7">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc3()">
+        <ion-text>{{respuesta7}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_8">
+      <ion-item color="estilo2" (click)="eleccionPregunta2_Opc4()">
+        <ion-text>{{respuesta8}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 2-->
+     <!--Pregunta 3-->
+     <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta3}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_9">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc1()">
+        <ion-text>{{respuesta9}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_10">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc2()">
+        <ion-text>{{respuesta10}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_11">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc3()">
+        <ion-text>{{respuesta11}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_12">
+      <ion-item color="estilo2" (click)="eleccionPregunta3_Opc4()">
+        <ion-text>{{respuesta12}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 3-->
+    <!--Pregunta 4-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta4}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_13">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc1()">
+        <ion-text>{{respuesta13}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_14">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc2()">
+        <ion-text>{{respuesta14}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_15">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc3()">
+        <ion-text>{{respuesta15}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_16">
+      <ion-item color="estilo2" (click)="eleccionPregunta4_Opc4()">
+        <ion-text>{{respuesta16}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 4-->
+    <!--Pregunta 5-->
+    <ion-list class="input1" input1="pregunta">
+      <ion-item color="pink">
+        <ion-text>{{pregunta5}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="input_17">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc1()">
+        <ion-text>{{respuesta17}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_18">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc2()">
+        <ion-text>{{respuesta18}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_19">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc3()">
+        <ion-text>{{respuesta19}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-list id="input_20">
+      <ion-item color="estilo2" (click)="eleccionPregunta5_Opc4()">
+        <ion-text>{{respuesta20}}</ion-text>
+      </ion-item>
+    </ion-list>
+    <!--Fin de Pregunta 5-->
+
+        <!--Pregunta 6-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta6}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_21">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc1()">
+            <ion-text>{{respuesta21}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_22">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc2()">
+            <ion-text>{{respuesta22}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_23">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc3()">
+            <ion-text>{{respuesta23}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_24">
+          <ion-item color="estilo2" (click)="eleccionPregunta6_Opc4()">
+            <ion-text>{{respuesta24}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 6-->
+
+         <!--Pregunta 7-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta7}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_25">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc1()">
+            <ion-text>{{respuesta25}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_26">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc2()">
+            <ion-text>{{respuesta26}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_27">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc3()">
+            <ion-text>{{respuesta27}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_28">
+          <ion-item color="estilo2" (click)="eleccionPregunta7_Opc4()">
+            <ion-text>{{respuesta28}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 7-->
+
+         <!--Pregunta 8-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta8}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_29">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc1()">
+            <ion-text>{{respuesta29}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_30">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc2()">
+            <ion-text>{{respuesta30}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_31">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc3()">
+            <ion-text>{{respuesta31}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_32">
+          <ion-item color="estilo2" (click)="eleccionPregunta8_Opc4()">
+            <ion-text>{{respuesta32}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 8-->
+
+        <!--Pregunta 9-->
+        <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta9}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_33">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc1()">
+            <ion-text>{{respuesta33}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_34">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc2()">
+            <ion-text>{{respuesta34}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_35">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc3()">
+            <ion-text>{{respuesta35}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_36">
+          <ion-item color="estilo2" (click)="eleccionPregunta9_Opc4()">
+            <ion-text>{{respuesta36}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 9-->
+         <!--Pregunta 10-->
+         <ion-list class="input1" input1="pregunta">
+          <ion-item color="pink">
+            <ion-text>{{pregunta10}}</ion-text>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list id="input_37">
+          <ion-item color="estilo2" (click)="eleccionPregunta10_Opc1()">
+            <ion-text>{{respuesta37}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_38">
+          <ion-item color="estilo2" (click)="eleccionPregunta10_Opc2()">
+            <ion-text>{{respuesta38}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_39">
+          <ion-item color="estilo2" (click)="eleccionPregunta10_Opc3()">
+            <ion-text>{{respuesta39}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <ion-list id="input_40">
+          <ion-item color="estilo2" (click)="eleccionPregunta10_Opc4()">
+            <ion-text>{{respuesta40}}</ion-text>
+          </ion-item>
+        </ion-list>
+        <!--Fin de Pregunta 10-->
+  </div>
+  <!--Fin de eleccion de diez preguntas-->
 </ion-content>

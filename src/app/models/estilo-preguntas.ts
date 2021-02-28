@@ -692,14 +692,14 @@ eleccionTexto40: string;
     localStorage.setItem("respuesta22",respuesta22)
   }
   public getRespuesta22() {
-    return localStorage.getItem("repuesta22");
+    return localStorage.getItem("respuesta22");
   }
   public setRespuesta23(respuesta23: string) {
     this.respuesta23 = respuesta23;
     localStorage.setItem("respuesta23",respuesta23)
   }
   public getRespuesta23() {
-    return localStorage.getItem("repuesta23");
+    return localStorage.getItem("respuesta23");
   }
   public setRespuesta24(respuesta24: string) {
     this.respuesta24 = respuesta24;

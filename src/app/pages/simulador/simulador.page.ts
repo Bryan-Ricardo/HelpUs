@@ -329,6 +329,69 @@ export class SimuladorPage implements OnInit {
     console.log('Nombre: ' + this.nombre);
     if (this.cantidadPreguntasI == 1) {
       this.preguntaElegida1();
+    } else if (this.cantidadPreguntasI == 2) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+    } else if (this.cantidadPreguntasI == 3) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+    } else if (this.cantidadPreguntasI == 4) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+    } else if (this.cantidadPreguntasI == 5) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+    }else if (this.cantidadPreguntasI == 6) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+      this.preguntaElegida6();
+    }else if (this.cantidadPreguntasI == 7) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+      this.preguntaElegida6();
+      this.preguntaElegida7();
+    }else if (this.cantidadPreguntasI == 8) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+      this.preguntaElegida6();
+      this.preguntaElegida7();
+      this.preguntaElegida8();
+    }else if (this.cantidadPreguntasI == 9) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+      this.preguntaElegida6();
+      this.preguntaElegida7();
+      this.preguntaElegida8();
+      this.preguntaElegida9();
+    }else if (this.cantidadPreguntasI == 10) {
+      this.preguntaElegida1();
+      this.preguntaElegida2();
+      this.preguntaElegida3();
+      this.preguntaElegida4();
+      this.preguntaElegida5();
+      this.preguntaElegida6();
+      this.preguntaElegida7();
+      this.preguntaElegida8();
+      this.preguntaElegida9();
+      this.preguntaElegida10();
     }
   }
 
@@ -349,7 +412,7 @@ export class SimuladorPage implements OnInit {
         {
           text: 'Okay',
           handler: () => {
-            this.router.navigateByUrl('mis-guias');
+            this.router.navigateByUrl('inicio');
           },
         },
       ],
@@ -380,7 +443,7 @@ export class SimuladorPage implements OnInit {
 
   //eleccion1
   public eleccionPregunta1_Opc1() {
-    this.eleccion1 = "1";
+    this.eleccion1 = '1';
     var dataEnviar = new EstiloPreguntas();
     var dataExtraer = new EstiloPreguntas();
     dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta1());
@@ -392,7 +455,7 @@ export class SimuladorPage implements OnInit {
   }
   //eleccion2
   public eleccionPregunta1_Opc2() {
-    this.eleccion1 = "2";
+    this.eleccion1 = '2';
     var dataEnviar = new EstiloPreguntas();
     var dataExtraer = new EstiloPreguntas();
     dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta2());
@@ -404,7 +467,7 @@ export class SimuladorPage implements OnInit {
   }
   //eleccion3
   public eleccionPregunta1_Opc3() {
-    this.eleccion1 = "3";
+    this.eleccion1 = '3';
     var dataEnviar = new EstiloPreguntas();
     var dataExtraer = new EstiloPreguntas();
     dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta3());
@@ -416,7 +479,7 @@ export class SimuladorPage implements OnInit {
   }
   //eleccion4
   public eleccionPregunta1_Opc4() {
-    this.eleccion1 = "4";
+    this.eleccion1 = '4';
     var dataEnviar = new EstiloPreguntas();
     var dataExtraer = new EstiloPreguntas();
     dataEnviar.setEleccionTexto1(dataExtraer.getRespuesta4());
@@ -429,19 +492,18 @@ export class SimuladorPage implements OnInit {
 
   //Guardado
   public async save1() {
-
     var dataEnviar = new EstiloPreguntas();
     //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
     var dataExtraer = new EstiloPreguntas();
-    
-    /*************Validacion*************/
-    if(parseInt(this.eleccion1)>=1 && parseInt(this.eleccion1) <=4){
-      console.log('Guardado de 1 pregunta')
-      console.log('Seleccionastes la respuesta: '+this.eleccion1 )
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
       dataEnviar.setEleccion1(this.eleccion1);
-      this.router.navigateByUrl("resultados");
-    }else if(this.eleccion1==undefined){
-      console.log("No has selleccionado respuesta en la pregunta 1")
+      this.router.navigateByUrl('resultados');
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
 
       const alert = await this.alerta.create({
         header: 'ALERTA',
@@ -460,11 +522,2198 @@ export class SimuladorPage implements OnInit {
       });
 
       await alert.present();
-      
     }
-
   }
 
+  //TODA LA LOGICA DE DOS PREGUNTA
+  public preguntaElegida2() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta2 = dataExtraer.getPregunta2();
+    console.log('Pregunta2:' + this.pregunta2);
+    //Respuestas
+    this.respuesta5 = dataExtraer.getRespuesta5();
+    console.log('Respuesta5:' + this.respuesta5);
+    this.respuesta6 = dataExtraer.getRespuesta6();
+    console.log('Respuesta6:' + this.respuesta6);
+    this.respuesta7 = dataExtraer.getRespuesta7();
+    console.log('Respuesta7:' + this.respuesta7);
+    this.respuesta8 = dataExtraer.getRespuesta8();
+    console.log('Respuesta8:' + this.respuesta8);
+  }
+
+  //eleccion1
+  public eleccionPregunta2_Opc1() {
+    this.eleccion2 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto2(dataExtraer.getRespuesta5());
+    dataEnviar.setEleccion2(this.eleccion2);
+    document.getElementById('input_5').style.backgroundColor = 'green';
+    document.getElementById('input_6').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_7').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_8').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta2_Opc2() {
+    this.eleccion2 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto2(dataExtraer.getRespuesta6());
+    dataEnviar.setEleccion2(this.eleccion2);
+    document.getElementById('input_5').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_6').style.backgroundColor = 'green';
+    document.getElementById('input_7').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_8').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta2_Opc3() {
+    this.eleccion2 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto2(dataExtraer.getRespuesta7());
+    dataEnviar.setEleccion2(this.eleccion2);
+    document.getElementById('input_5').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_6').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_7').style.backgroundColor = 'green';
+    document.getElementById('input_8').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta2_Opc4() {
+    this.eleccion2 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto2(dataExtraer.getRespuesta8());
+    dataEnviar.setEleccion2(this.eleccion2);
+    document.getElementById('input_5').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_6').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_7').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_8').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save2() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        this.router.navigateByUrl('resultados');
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+  //TODA LA LOGICA DE TES PREGUNTAS
+  public preguntaElegida3() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta3 = dataExtraer.getPregunta3();
+    console.log('Pregunta3:' + this.pregunta3);
+    //Respuestas
+    this.respuesta9 = dataExtraer.getRespuesta9();
+    console.log('Respuesta9:' + this.respuesta9);
+    this.respuesta10 = dataExtraer.getRespuesta10();
+    console.log('Respuesta10:' + this.respuesta10);
+    this.respuesta11 = dataExtraer.getRespuesta11();
+    console.log('Respuesta11:' + this.respuesta11);
+    this.respuesta12 = dataExtraer.getRespuesta12();
+    console.log('Respuesta12:' + this.respuesta12);
+  }
+
+  //eleccion1
+  public eleccionPregunta3_Opc1() {
+    this.eleccion3 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto3(dataExtraer.getRespuesta9());
+    dataEnviar.setEleccion3(this.eleccion3);
+    document.getElementById('input_9').style.backgroundColor = 'green';
+    document.getElementById('input_10').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_11').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_12').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta3_Opc2() {
+    this.eleccion3 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto3(dataExtraer.getRespuesta10());
+    dataEnviar.setEleccion3(this.eleccion3);
+    document.getElementById('input_9').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_10').style.backgroundColor = 'green';
+    document.getElementById('input_11').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_12').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta3_Opc3() {
+    this.eleccion3 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto3(dataExtraer.getRespuesta11());
+    dataEnviar.setEleccion3(this.eleccion3);
+    document.getElementById('input_9').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_10').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_11').style.backgroundColor = 'green';
+    document.getElementById('input_12').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta3_Opc4() {
+    this.eleccion3 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto3(dataExtraer.getRespuesta12());
+    dataEnviar.setEleccion3(this.eleccion3);
+    document.getElementById('input_9').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_10').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_11').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_12').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save3() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          this.router.navigateByUrl('resultados');
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+  //TODA LA LOGICA DE CUATRO PREGUNTAS
+  public preguntaElegida4() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta4 = dataExtraer.getPregunta4();
+    console.log('Pregunta4:' + this.pregunta4);
+    //Respuestas
+    this.respuesta13 = dataExtraer.getRespuesta13();
+    console.log('Respuesta13:' + this.respuesta13);
+    this.respuesta14 = dataExtraer.getRespuesta14();
+    console.log('Respuesta14:' + this.respuesta14);
+    this.respuesta15 = dataExtraer.getRespuesta15();
+    console.log('Respuesta15:' + this.respuesta15);
+    this.respuesta16 = dataExtraer.getRespuesta16();
+    console.log('Respuesta16:' + this.respuesta16);
+  }
+
+  //eleccion1
+  public eleccionPregunta4_Opc1() {
+    this.eleccion4 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto4(dataExtraer.getRespuesta13());
+    dataEnviar.setEleccion4(this.eleccion4);
+    document.getElementById('input_13').style.backgroundColor = 'green';
+    document.getElementById('input_14').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_15').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_16').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta4_Opc2() {
+    this.eleccion4 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto4(dataExtraer.getRespuesta14());
+    dataEnviar.setEleccion4(this.eleccion4);
+    document.getElementById('input_13').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_14').style.backgroundColor = 'green';
+    document.getElementById('input_15').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_16').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta4_Opc3() {
+    this.eleccion4 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto4(dataExtraer.getRespuesta15());
+    dataEnviar.setEleccion4(this.eleccion4);
+    document.getElementById('input_13').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_14').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_15').style.backgroundColor = 'green';
+    document.getElementById('input_16').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta4_Opc4() {
+    this.eleccion4 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto4(dataExtraer.getRespuesta16());
+    dataEnviar.setEleccion4(this.eleccion4);
+    document.getElementById('input_13').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_14').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_15').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_16').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save4() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            this.router.navigateByUrl('resultados');
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+  //TODA LA LOGICA DE CINCO PREGUNTAS
+  public preguntaElegida5() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta5 = dataExtraer.getPregunta5();
+    console.log('Pregunta5:' + this.pregunta5);
+    //Respuestas
+    this.respuesta17 = dataExtraer.getRespuesta17();
+    console.log('Respuesta17:' + this.respuesta17);
+    this.respuesta18 = dataExtraer.getRespuesta18();
+    console.log('Respuesta18:' + this.respuesta18);
+    this.respuesta19 = dataExtraer.getRespuesta19();
+    console.log('Respuesta19:' + this.respuesta19);
+    this.respuesta20 = dataExtraer.getRespuesta20();
+    console.log('Respuesta20:' + this.respuesta20);
+  }
+
+  //eleccion1
+  public eleccionPregunta5_Opc1() {
+    this.eleccion5 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto5(dataExtraer.getRespuesta17());
+    dataEnviar.setEleccion5(this.eleccion5);
+    document.getElementById('input_17').style.backgroundColor = 'green';
+    document.getElementById('input_18').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_19').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_20').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta5_Opc2() {
+    this.eleccion5 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto5(dataExtraer.getRespuesta18());
+    dataEnviar.setEleccion5(this.eleccion5);
+    document.getElementById('input_17').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_18').style.backgroundColor = 'green';
+    document.getElementById('input_19').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_20').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta5_Opc3() {
+    this.eleccion5 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto5(dataExtraer.getRespuesta19());
+    dataEnviar.setEleccion5(this.eleccion5);
+    document.getElementById('input_17').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_18').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_19').style.backgroundColor = 'green';
+    document.getElementById('input_20').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta5_Opc4() {
+    this.eleccion5 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto5(dataExtraer.getRespuesta20());
+    dataEnviar.setEleccion5(this.eleccion5);
+    document.getElementById('input_17').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_18').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_19').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_20').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save5() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+  //TODA LA LOGICA DE SEIS PREGUNTAS
+  public preguntaElegida6() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta6 = dataExtraer.getPregunta6();
+    console.log('Pregunta6:' + this.pregunta6);
+    //Respuestas
+    this.respuesta21 = dataExtraer.getRespuesta21();
+    console.log('Respuesta21:' + this.respuesta21);
+    this.respuesta22 = dataExtraer.getRespuesta22();
+    console.log('Respuesta22:' + this.respuesta22);
+    this.respuesta23 = dataExtraer.getRespuesta23();
+    console.log('Respuesta23:' + this.respuesta23);
+    this.respuesta24 = dataExtraer.getRespuesta24();
+    console.log('Respuesta24:' + this.respuesta24);
+  }
+
+  //eleccion1
+  public eleccionPregunta6_Opc1() {
+    this.eleccion6 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto6(dataExtraer.getRespuesta21());
+    dataEnviar.setEleccion6(this.eleccion6);
+    document.getElementById('input_21').style.backgroundColor = 'green';
+    document.getElementById('input_22').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_23').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_24').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta6_Opc2() {
+    this.eleccion6 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto6(dataExtraer.getRespuesta22());
+    dataEnviar.setEleccion6(this.eleccion6);
+    document.getElementById('input_21').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_22').style.backgroundColor = 'green';
+    document.getElementById('input_23').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_24').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta6_Opc3() {
+    this.eleccion6 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto6(dataExtraer.getRespuesta23());
+    dataEnviar.setEleccion6(this.eleccion6);
+    document.getElementById('input_21').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_22').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_23').style.backgroundColor = 'green';
+    document.getElementById('input_24').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta6_Opc4() {
+    this.eleccion6 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto6(dataExtraer.getRespuesta24());
+    dataEnviar.setEleccion6(this.eleccion6);
+    document.getElementById('input_21').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_22').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_23').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_24').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save6() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              
+              /*************Validacion6*************/
+            if (
+              parseInt(this.eleccion6) >= 1 &&
+              parseInt(this.eleccion6) <= 4
+            ) {
+              console.log('Guardado de 6 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion6);
+              dataEnviar.setEleccion6(this.eleccion6);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion6 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 6');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA6: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+   //TODA LA LOGICA DE CIETE PREGUNTAS
+   public preguntaElegida7() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta7 = dataExtraer.getPregunta7();
+    console.log('Pregunta7:' + this.pregunta7);
+    //Respuestas
+    this.respuesta25 = dataExtraer.getRespuesta25();
+    console.log('Respuesta25:' + this.respuesta25);
+    this.respuesta26 = dataExtraer.getRespuesta26();
+    console.log('Respuesta26:' + this.respuesta26);
+    this.respuesta27 = dataExtraer.getRespuesta27();
+    console.log('Respuesta27:' + this.respuesta27);
+    this.respuesta28 = dataExtraer.getRespuesta28();
+    console.log('Respuesta28:' + this.respuesta28);
+  }
+
+  //eleccion1
+  public eleccionPregunta7_Opc1() {
+    this.eleccion7 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto7(dataExtraer.getRespuesta25());
+    dataEnviar.setEleccion7(this.eleccion7);
+    document.getElementById('input_25').style.backgroundColor = 'green';
+    document.getElementById('input_26').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_27').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_28').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta7_Opc2() {
+    this.eleccion7 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto7(dataExtraer.getRespuesta26());
+    dataEnviar.setEleccion7(this.eleccion7);
+    document.getElementById('input_25').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_26').style.backgroundColor = 'green';
+    document.getElementById('input_27').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_28').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta7_Opc3() {
+    this.eleccion7 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto7(dataExtraer.getRespuesta27());
+    dataEnviar.setEleccion7(this.eleccion7);
+    document.getElementById('input_25').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_26').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_27').style.backgroundColor = 'green';
+    document.getElementById('input_28').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta7_Opc4() {
+    this.eleccion7 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto7(dataExtraer.getRespuesta28());
+    dataEnviar.setEleccion7(this.eleccion7);
+    document.getElementById('input_24').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_25').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_26').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_27').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save7() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              
+              /*************Validacion6*************/
+            if (
+              parseInt(this.eleccion6) >= 1 &&
+              parseInt(this.eleccion6) <= 4
+            ) {
+              console.log('Guardado de 6 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion6);
+              dataEnviar.setEleccion6(this.eleccion6);
+              /*************Validacion7*************/
+            if (
+              parseInt(this.eleccion7) >= 1 &&
+              parseInt(this.eleccion7) <= 4
+            ) {
+              console.log('Guardado de 7 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion7);
+              dataEnviar.setEleccion7(this.eleccion7);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion7 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 7');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA7: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion6 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 6');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA6: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+  //TODA LA LOGICA DE OCHO PREGUNTAS
+  public preguntaElegida8() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta8 = dataExtraer.getPregunta8();
+    console.log('Pregunta8:' + this.pregunta8);
+    //Respuestas
+    this.respuesta29 = dataExtraer.getRespuesta29();
+    console.log('Respuesta29:' + this.respuesta29);
+    this.respuesta30 = dataExtraer.getRespuesta30();
+    console.log('Respuesta30:' + this.respuesta30);
+    this.respuesta31 = dataExtraer.getRespuesta31();
+    console.log('Respuesta31:' + this.respuesta31);
+    this.respuesta32 = dataExtraer.getRespuesta32();
+    console.log('Respuesta32:' + this.respuesta32);
+  }
+
+  //eleccion1
+  public eleccionPregunta8_Opc1() {
+    this.eleccion8 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto8(dataExtraer.getRespuesta29());
+    dataEnviar.setEleccion8(this.eleccion8);
+    document.getElementById('input_29').style.backgroundColor = 'green';
+    document.getElementById('input_30').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_31').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_32').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta8_Opc2() {
+    this.eleccion8 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto8(dataExtraer.getRespuesta30());
+    dataEnviar.setEleccion8(this.eleccion8);
+    document.getElementById('input_29').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_30').style.backgroundColor = 'green';
+    document.getElementById('input_31').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_32').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta8_Opc3() {
+    this.eleccion8 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto8(dataExtraer.getRespuesta31());
+    dataEnviar.setEleccion8(this.eleccion8);
+    document.getElementById('input_29').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_30').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_31').style.backgroundColor = 'green';
+    document.getElementById('input_32').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta8_Opc4() {
+    this.eleccion8 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto8(dataExtraer.getRespuesta32());
+    dataEnviar.setEleccion8(this.eleccion8);
+    document.getElementById('input_29').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_30').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_31').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_32').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save8() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              
+              /*************Validacion6*************/
+            if (
+              parseInt(this.eleccion6) >= 1 &&
+              parseInt(this.eleccion6) <= 4
+            ) {
+              console.log('Guardado de 6 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion6);
+              dataEnviar.setEleccion6(this.eleccion6);
+              /*************Validacion7*************/
+            if (
+              parseInt(this.eleccion7) >= 1 &&
+              parseInt(this.eleccion7) <= 4
+            ) {
+              console.log('Guardado de 7 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion7);
+              dataEnviar.setEleccion7(this.eleccion7);
+              /*************Validacion8*************/
+            if (
+              parseInt(this.eleccion8) >= 1 &&
+              parseInt(this.eleccion8) <= 4
+            ) {
+              console.log('Guardado de 8 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion8);
+              dataEnviar.setEleccion8(this.eleccion8);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion8 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 8');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA8: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion7 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 7');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA7: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion6 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 6');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA6: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+
+  //TODA LA LOGICA DE NUEVE PREGUNTAS
+  public preguntaElegida9() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta9 = dataExtraer.getPregunta9();
+    console.log('Pregunta9:' + this.pregunta9);
+    //Respuestas
+    this.respuesta33 = dataExtraer.getRespuesta33();
+    console.log('Respuesta33:' + this.respuesta33);
+    this.respuesta34 = dataExtraer.getRespuesta34();
+    console.log('Respuesta34:' + this.respuesta34);
+    this.respuesta35 = dataExtraer.getRespuesta35();
+    console.log('Respuesta35:' + this.respuesta35);
+    this.respuesta36 = dataExtraer.getRespuesta36();
+    console.log('Respuesta36:' + this.respuesta36);
+  }
+
+  //eleccion1
+  public eleccionPregunta9_Opc1() {
+    this.eleccion9 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto9(dataExtraer.getRespuesta33());
+    dataEnviar.setEleccion9(this.eleccion9);
+    document.getElementById('input_33').style.backgroundColor = 'green';
+    document.getElementById('input_34').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_35').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_36').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta9_Opc2() {
+    this.eleccion9 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto9(dataExtraer.getRespuesta34());
+    dataEnviar.setEleccion9(this.eleccion9);
+    document.getElementById('input_33').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_34').style.backgroundColor = 'green';
+    document.getElementById('input_35').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_36').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta9_Opc3() {
+    this.eleccion9 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto9(dataExtraer.getRespuesta35());
+    dataEnviar.setEleccion9(this.eleccion9);
+    document.getElementById('input_33').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_34').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_35').style.backgroundColor = 'green';
+    document.getElementById('input_36').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta9_Opc4() {
+    this.eleccion9 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto9(dataExtraer.getRespuesta36());
+    dataEnviar.setEleccion9(this.eleccion9);
+    document.getElementById('input_33').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_34').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_35').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_36').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save9() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              
+              /*************Validacion6*************/
+            if (
+              parseInt(this.eleccion6) >= 1 &&
+              parseInt(this.eleccion6) <= 4
+            ) {
+              console.log('Guardado de 6 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion6);
+              dataEnviar.setEleccion6(this.eleccion6);
+              /*************Validacion7*************/
+            if (
+              parseInt(this.eleccion7) >= 1 &&
+              parseInt(this.eleccion7) <= 4
+            ) {
+              console.log('Guardado de 7 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion7);
+              dataEnviar.setEleccion7(this.eleccion7);
+              /*************Validacion8*************/
+            if (
+              parseInt(this.eleccion8) >= 1 &&
+              parseInt(this.eleccion8) <= 4
+            ) {
+              console.log('Guardado de 8 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion8);
+              dataEnviar.setEleccion8(this.eleccion8);
+              /*************Validacion9*************/
+            if (
+              parseInt(this.eleccion9) >= 1 &&
+              parseInt(this.eleccion9) <= 4
+            ) {
+              console.log('Guardado de 9 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion9);
+              dataEnviar.setEleccion9(this.eleccion9);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion9 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 9');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA9: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion8 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 8');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA8: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion7 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 7');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA7: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion6 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 6');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA6: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
+
+
+  //TODA LA LOGICA DE DIEZ PREGUNTAS
+  public preguntaElegida10() {
+    var dataEnviar = new EstiloPreguntas();
+    console.log(dataEnviar);
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+    /*************Extrallendo Datos de la pregunta 1*************/
+    //Pregunta
+    this.pregunta10 = dataExtraer.getPregunta10();
+    console.log('Pregunta10:' + this.pregunta10);
+    //Respuestas
+    this.respuesta37 = dataExtraer.getRespuesta37();
+    console.log('Respuesta37:' + this.respuesta37);
+    this.respuesta38 = dataExtraer.getRespuesta38();
+    console.log('Respuesta38:' + this.respuesta38);
+    this.respuesta39 = dataExtraer.getRespuesta39();
+    console.log('Respuesta39:' + this.respuesta39);
+    this.respuesta40 = dataExtraer.getRespuesta40();
+    console.log('Respuesta40:' + this.respuesta40);
+  }
+
+  //eleccion1
+  public eleccionPregunta10_Opc1() {
+    this.eleccion10 = '1';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto10(dataExtraer.getRespuesta37());
+    dataEnviar.setEleccion10(this.eleccion10);
+    document.getElementById('input_37').style.backgroundColor = 'green';
+    document.getElementById('input_38').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_39').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_40').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion2
+  public eleccionPregunta10_Opc2() {
+    this.eleccion10 = '2';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto10(dataExtraer.getRespuesta38());
+    dataEnviar.setEleccion10(this.eleccion10);
+    document.getElementById('input_37').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_38').style.backgroundColor = 'green';
+    document.getElementById('input_39').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_40').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion3
+  public eleccionPregunta10_Opc3() {
+    this.eleccion10 = '3';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto10(dataExtraer.getRespuesta39());
+    dataEnviar.setEleccion10(this.eleccion10);
+    document.getElementById('input_37').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_38').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_39').style.backgroundColor = 'green';
+    document.getElementById('input_40').style.backgroundColor = '#fff5e5';
+  }
+  //eleccion4
+  public eleccionPregunta10_Opc4() {
+    this.eleccion10 = '4';
+    var dataEnviar = new EstiloPreguntas();
+    var dataExtraer = new EstiloPreguntas();
+    dataEnviar.setEleccionTexto10(dataExtraer.getRespuesta40());
+    dataEnviar.setEleccion10(this.eleccion10);
+    document.getElementById('input_37').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_38').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_39').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_40').style.backgroundColor = 'green';
+  }
+
+  //Guardado
+  public async save10() {
+    var dataEnviar = new EstiloPreguntas();
+    //EXTRALLENDO LOS DATOS DEL LOCAL STORAGE
+    var dataExtraer = new EstiloPreguntas();
+
+    /*************Validacion1*************/
+    if (parseInt(this.eleccion1) >= 1 && parseInt(this.eleccion1) <= 4) {
+      console.log('Guardado de 1 pregunta');
+      console.log('Seleccionastes la respuesta: ' + this.eleccion1);
+      dataEnviar.setEleccion1(this.eleccion1);
+      /*************Validacion2*************/
+      if (parseInt(this.eleccion2) >= 1 && parseInt(this.eleccion2) <= 4) {
+        console.log('Guardado de 2 pregunta');
+        console.log('Seleccionastes la respuesta: ' + this.eleccion2);
+        dataEnviar.setEleccion2(this.eleccion2);
+        /*************Validacion3*************/
+        if (parseInt(this.eleccion3) >= 1 && parseInt(this.eleccion3) <= 4) {
+          console.log('Guardado de 3 pregunta');
+          console.log('Seleccionastes la respuesta: ' + this.eleccion3);
+          dataEnviar.setEleccion3(this.eleccion3);
+          /*************Validacion4*************/
+          if (parseInt(this.eleccion4) >= 1 && parseInt(this.eleccion4) <= 4) {
+            console.log('Guardado de 4 pregunta');
+            console.log('Seleccionastes la respuesta: ' + this.eleccion4);
+            dataEnviar.setEleccion4(this.eleccion4);
+            /*************Validacion5*************/
+            if (
+              parseInt(this.eleccion5) >= 1 &&
+              parseInt(this.eleccion5) <= 4
+            ) {
+              console.log('Guardado de 5 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion5);
+              dataEnviar.setEleccion5(this.eleccion5);
+              
+              /*************Validacion6*************/
+            if (
+              parseInt(this.eleccion6) >= 1 &&
+              parseInt(this.eleccion6) <= 4
+            ) {
+              console.log('Guardado de 6 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion6);
+              dataEnviar.setEleccion6(this.eleccion6);
+              /*************Validacion7*************/
+            if (
+              parseInt(this.eleccion7) >= 1 &&
+              parseInt(this.eleccion7) <= 4
+            ) {
+              console.log('Guardado de 7 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion7);
+              dataEnviar.setEleccion7(this.eleccion7);
+              /*************Validacion8*************/
+            if (
+              parseInt(this.eleccion8) >= 1 &&
+              parseInt(this.eleccion8) <= 4
+            ) {
+              console.log('Guardado de 8 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion8);
+              dataEnviar.setEleccion8(this.eleccion8);
+              /*************Validacion9*************/
+            if (
+              parseInt(this.eleccion9) >= 1 &&
+              parseInt(this.eleccion9) <= 4
+            ) {
+              console.log('Guardado de 9 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion9);
+              dataEnviar.setEleccion9(this.eleccion9);
+              /*************Validacion10*************/
+            if (
+              parseInt(this.eleccion10) >= 1 &&
+              parseInt(this.eleccion10) <= 4
+            ) {
+              console.log('Guardado de 10 pregunta');
+              console.log('Seleccionastes la respuesta: ' + this.eleccion10);
+              dataEnviar.setEleccion10(this.eleccion10);
+              this.router.navigateByUrl('resultados');
+            } else if (this.eleccion10 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 10');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA10: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion9 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 9');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA9: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion8 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 8');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA8: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion7 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 7');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA7: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+            } else if (this.eleccion6 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 6');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA6: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+
+            } else if (this.eleccion5 == undefined) {
+              console.log('No has selleccionado respuesta en la pregunta 5');
+
+              const alert = await this.alerta.create({
+                header: 'ALERTA',
+                message: 'PREGUNTA5: No seleccionaste respuesta',
+                cssClass: 'alertcss',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    handler: () => {
+                      console.log('OK');
+                    },
+                    cssClass: 'buttoncss',
+                  },
+                ],
+                backdropDismiss: true,
+              });
+
+              await alert.present();
+            }
+          } else if (this.eleccion4 == undefined) {
+            console.log('No has selleccionado respuesta en la pregunta 4');
+
+            const alert = await this.alerta.create({
+              header: 'ALERTA',
+              message: 'PREGUNTA4: No seleccionaste respuesta',
+              cssClass: 'alertcss',
+              buttons: [
+                {
+                  text: 'Okay',
+                  handler: () => {
+                    console.log('OK');
+                  },
+                  cssClass: 'buttoncss',
+                },
+              ],
+              backdropDismiss: true,
+            });
+
+            await alert.present();
+          }
+        } else if (this.eleccion3 == undefined) {
+          console.log('No has selleccionado respuesta en la pregunta 3');
+
+          const alert = await this.alerta.create({
+            header: 'ALERTA',
+            message: 'PREGUNTA3: No seleccionaste respuesta',
+            cssClass: 'alertcss',
+            buttons: [
+              {
+                text: 'Okay',
+                handler: () => {
+                  console.log('OK');
+                },
+                cssClass: 'buttoncss',
+              },
+            ],
+            backdropDismiss: true,
+          });
+
+          await alert.present();
+        }
+      } else if (this.eleccion2 == undefined) {
+        console.log('No has selleccionado respuesta en la pregunta 2');
+
+        const alert = await this.alerta.create({
+          header: 'ALERTA',
+          message: 'PREGUNTA2: No seleccionaste respuesta',
+          cssClass: 'alertcss',
+          buttons: [
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('OK');
+              },
+              cssClass: 'buttoncss',
+            },
+          ],
+          backdropDismiss: true,
+        });
+
+        await alert.present();
+      }
+    } else if (this.eleccion1 == undefined) {
+      console.log('No has selleccionado respuesta en la pregunta 1');
+
+      const alert = await this.alerta.create({
+        header: 'ALERTA',
+        message: 'PREGUNTA1: No seleccionaste respuesta',
+        cssClass: 'alertcss',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('OK');
+            },
+            cssClass: 'buttoncss',
+          },
+        ],
+        backdropDismiss: true,
+      });
+
+      await alert.present();
+    }
+  }
 
   ngOnInit() {}
 }
