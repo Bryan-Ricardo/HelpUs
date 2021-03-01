@@ -1518,10 +1518,10 @@ export class SimuladorPage implements OnInit {
     var dataExtraer = new EstiloPreguntas();
     dataEnviar.setEleccionTexto7(dataExtraer.getRespuesta28());
     dataEnviar.setEleccion7(this.eleccion7);
-    document.getElementById('input_24').style.backgroundColor = '#fff5e5';
     document.getElementById('input_25').style.backgroundColor = '#fff5e5';
     document.getElementById('input_26').style.backgroundColor = '#fff5e5';
-    document.getElementById('input_27').style.backgroundColor = 'green';
+    document.getElementById('input_27').style.backgroundColor = '#fff5e5';
+    document.getElementById('input_28').style.backgroundColor = 'green';
   }
 
   //Guardado

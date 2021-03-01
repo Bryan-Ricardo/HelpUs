@@ -1053,8 +1053,6 @@ export class ResultadosPage implements OnInit {
 
   public listo() {
     this.router.navigateByUrl('inicio');
-    var borrarRespuestas = new borrarRespuestas();
-    borrarRespuestas();
     //Colocar un boton que reeinicie los valores de los resultados
   }
   ngOnInit() {}

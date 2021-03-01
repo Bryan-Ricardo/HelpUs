@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 //Componente de rutas
 import { Router } from '@angular/router';
+import { BorradorRespuestas } from 'src/app/models/borrador-respuestas';
 import { DatosPregunta } from 'src/app/models/datos-pregunta';
+
+//Boorador de respuestas
+
 
 @Component({
   selector: 'app-mis-guias',
@@ -18,6 +22,10 @@ export class MisGuiasPage implements OnInit {
 
   constructor(private router: Router) {
   
+    //Borrando datos
+    var borrarRespuestas = new BorradorRespuestas();
+    borrarRespuestas;
+
      /*Extrallendo los datos */
      var data = new DatosPregunta();
      console.log(data.getCantidadPreguntasLocalHost());

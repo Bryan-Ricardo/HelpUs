@@ -3,6 +3,9 @@ import { EstiloPreguntas } from "./estilo-preguntas";
 export class BorradorRespuestas{
 
     constructor(){
+    }
+
+    public borrar(){
       var dataExtraer = new EstiloPreguntas();
       dataExtraer.setEleccion1("0");
       dataExtraer.setEleccion2("0");
